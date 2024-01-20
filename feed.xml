@@ -1,0 +1,2899 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN"><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="zh-CN" /><updated>2024-01-20T20:44:52+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">起名苦难户</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2023/09/17/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2023-09-17T15:19:14+08:00</published><updated>2023-09-17T15:19:14+08:00</updated><id>http://localhost:4000/jekyll/update/2023/09/17/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2023/09/17/welcome-to-jekyll.html"><![CDATA[<p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+
+<p>Jekyll requires blog post files to be named according to the following format:</p>
+
+<p><code class="language-plaintext highlighter-rouge">YEAR-MONTH-DAY-title.MARKUP</code></p>
+
+<p>Where <code class="language-plaintext highlighter-rouge">YEAR</code> is a four-digit number, <code class="language-plaintext highlighter-rouge">MONTH</code> and <code class="language-plaintext highlighter-rouge">DAY</code> are both two-digit numbers, and <code class="language-plaintext highlighter-rouge">MARKUP</code> is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
+
+<p>Jekyll also offers powerful support for code snippets:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
+  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
+<span class="k">end</span>
+<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
+<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
+
+<p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>]]></content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html"><![CDATA[You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.]]></summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2023/09/17/test.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2023-09-17T15:19:14+08:00</published><updated>2023-09-17T15:19:14+08:00</updated><id>http://localhost:4000/jekyll/update/2023/09/17/test</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2023/09/17/test.html"><![CDATA[<p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+
+<p>Jekyll requires blog post files to be named according to the following format:</p>
+
+<p><code class="language-plaintext highlighter-rouge">YEAR-MONTH-DAY-title.MARKUP</code></p>
+
+<p>Where <code class="language-plaintext highlighter-rouge">YEAR</code> is a four-digit number, <code class="language-plaintext highlighter-rouge">MONTH</code> and <code class="language-plaintext highlighter-rouge">DAY</code> are both two-digit numbers, and <code class="language-plaintext highlighter-rouge">MARKUP</code> is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
+
+<p>Jekyll also offers powerful support for code snippets:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
+  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
+<span class="k">end</span>
+<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
+<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
+
+<p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>]]></content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html"><![CDATA[You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.]]></summary></entry><entry><title type="html">Jekyll 使用记录</title><link href="http://localhost:4000/2023/09/02/mark.html" rel="alternate" type="text/html" title="Jekyll 使用记录" /><published>2023-09-02T00:00:00+08:00</published><updated>2023-09-02T00:00:00+08:00</updated><id>http://localhost:4000/2023/09/02/mark</id><content type="html" xml:base="http://localhost:4000/2023/09/02/mark.html"><![CDATA[<h1 id="基本步骤">基本步骤</h1>
+
+<ol>
+  <li>配置环境</li>
+  <li>新建项目</li>
+  <li>关联 GitHub</li>
+  <li>克隆主题</li>
+</ol>
+
+<h1 id="jekyll">Jekyll</h1>
+
+<h2 id="安装步骤">安装步骤</h2>
+
+<ul>
+  <li>
+    <p><a href="https://rubyinstaller.org/downloads/">Downloads (rubyinstaller.org)</a> 选择 Ruby+Devkit（x64）</p>
+  </li>
+  <li>
+    <p><a href="https://rubygems.org/pages/download">下载 RubyGems  RubyGems.org  您的社区 Gem 托管中心</a></p>
+  </li>
+</ul>
+
+<ol>
+  <li>下载 <code class="language-plaintext highlighter-rouge">.zip</code> 文件，解压到安装目录</li>
+  <li>在安装目录下执行 <code class="language-plaintext highlighter-rouge">cmd</code> 输入 <code class="language-plaintext highlighter-rouge">ruby setup.rb</code> 安装 rubygems</li>
+  <li>安装完成标志 <code class="language-plaintext highlighter-rouge">rubygems ruby -v</code></li>
+</ol>
+
+<ul>
+  <li>ruby - rubygems - Jekyll</li>
+</ul>
+
+<pre><code class="language-cmd">gem install jekyll  #安装Jekyll
+gem install jekyll bundle #安装Jekyll bundle
+jekyll -v			# 查看Jekyll版本号
+</code></pre>
+
+<ul>
+  <li>ruby - bundle - Jekyll
+    <ul>
+      <li>【报错】Could not locate Gemfile or .bundle/ directory
+        <ul>
+          <li>缺少gemfile文件，<code class="language-plaintext highlighter-rouge">bundle init</code> 生成新的gemfile文件</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<pre><code class="language-cmd">gem install bundler
+bundle -v
+bundle install
+bundle exec jekyll server
+</code></pre>
+
+<h2 id="新建项目">新建项目</h2>
+
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">jekll new restlessManBlog</code> 在当前目录下新建文件夹，名为<code class="language-plaintext highlighter-rouge">restlessManBlog</code></li>
+  <li><code class="language-plaintext highlighter-rouge">cd restlessManBlog</code> 进入新建的目录</li>
+  <li><code class="language-plaintext highlighter-rouge">jekyll server</code> 启动服务</li>
+  <li>浏览器访问 <code class="language-plaintext highlighter-rouge">http://127.0.0.1:4000/</code></li>
+</ol>
+
+<h1 id="问题">问题</h1>
+
+<p>【警告】No GitHub API authentication could be found. Some fields may be missing or have incorrect data</p>
+
+<p>​	<a href="https://github.com/github/pages-gem/issues/399">“No GitHub API authentication” error · Issue #399 · github/pages-gem</a></p>
+
+<ul>
+  <li>生成GitHub Token ，添加到 <code class="language-plaintext highlighter-rouge">JEKYLL_GITHUB_TOKEN=&lt;your token&gt; jekyll serve</code></li>
+  <li>使用 <code class="language-plaintext highlighter-rouge">bundle exec jekyll serve</code> 启动项目</li>
+  <li>使用 <code class="language-plaintext highlighter-rouge">bundle exec jekyll serve -V</code> 局部启动项目</li>
+</ul>
+
+<p>【报错】cannot load such file – webrick</p>
+
+<p>无法加载 —— 从 Ruby 3.0 开始 webrick 已经不再绑定到 Ruby 中了，需要手动添加</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">bundle add webrick</code></li>
+</ul>
+
+<h1 id="关联-github">关联 GitHub</h1>
+
+<p>​	在我们创建的博客的目录找到 _site 目录，将 _site 目录下的所有文件都提交到Github上</p>
+
+<p>​	操作步骤：</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/helloRestlessMan/helloRestlessMan.github.io.git    
+#克隆远程代码到本地 
+拷贝_site 文件到 helloRestlessMan.github.io cd helloRestlessMan.github.io 
+git add .   #git 命令添加所有文件 
+git commit -m "创建 Jekyll 个人博客"      #git 提交文件 
+git push    #git 推送代码到远程
+</code></pre></div></div>
+
+<h2 id="问题汇总">问题汇总</h2>
+
+<ol>
+  <li>
+    <p>检查 git 邮箱、名称是否对得上仓库信息</p>
+
+    <p><code class="language-plaintext highlighter-rouge">git config --global user.email</code>/</p>
+
+    <p><code class="language-plaintext highlighter-rouge">git config --global user.name</code></p>
+  </li>
+  <li>
+    <p>OpenSSL SSL_read: Connection was reset, errno 10054</p>
+
+    <p>:one: ​关闭http 对 sll 证据校验：</p>
+
+    <p><code class="language-plaintext highlighter-rouge">git config --global http.sslVerify "false"</code></p>
+
+    <p><code class="language-plaintext highlighter-rouge">git config --global https.sslVerify "false"</code></p>
+  </li>
+  <li>
+    <p>Failed to connect to github.com port 443: Timed out</p>
+
+    <p>在翻墙的情况下依然提示连接错误，</p>
+
+    <p>:one: 检查github 对应的ip地址：</p>
+
+    <p>http://ping.chinaz.com/github.com</p>
+
+    <p>http://ping.chinaz.com/github.global.ssl.fastly.net</p>
+
+    <p>http://ping.chinaz.com/assets-cdn.github.com</p>
+
+    <p>:two: 修改hosts信息</p>
+
+    <p><code class="language-plaintext highlighter-rouge">C:\Windows\System32\drivers\etc</code></p>
+  </li>
+</ol>
+
+<p><img src="记录.assets/image-20230827211728755.png" alt="image-20230827211728755" /></p>
+
+ 	:three: 更新电脑ip配置 <code class="language-plaintext highlighter-rouge">ipconfig /flushdns</code> ，并检查丢包情况 <code class="language-plaintext highlighter-rouge">ping github.com</code>
+
+<p><img src="记录.assets/image-20230827211841527.png" alt="image-20230827211841527" /></p>
+
+<ol>
+  <li>
+    <p>Logon failed, use ctrl+c to cancel basic credential prompt.</p>
+
+    <p>push时 跳出需要登录界面</p>
+
+    <p>第一次跳出，填写 GitHub 登录名和登录密码</p>
+
+    <p>第二次跳出，填写 GitHub 申请的token 名称 和 token值</p>
+
+    <p>第三次跳出，与第二次填写相同</p>
+
+    <ul>
+      <li>token 值申请步骤：
+        <ol>
+          <li><img src="记录.assets/image-20230827212557765.png" alt="image-20230827212557765" /></li>
+        </ol>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><img src="记录.assets/image-20230827212649293.png" alt="image-20230827212649293" /></p>
+  </li>
+  <li>
+    <p><img src="记录.assets/image-20230827212742568.png" alt="image-20230827212742568" /></p>
+  </li>
+  <li>
+    <p><img src="记录.assets/image-20230827212950130.png" alt="image-20230827212950130" /></p>
+  </li>
+  <li>
+    <p><img src="记录.assets/image-20230827213203352.png" alt="image-20230827213203352" /></p>
+  </li>
+</ol>
+
+<p>6.<img src="记录.assets/image-20230827213303605.png" alt="image-20230827213303605" /></p>
+
+<h1 id="更新主题">更新主题</h1>
+
+<ul>
+  <li>官网 <a href="http://jekyllthemes.org/">Jekyll Themes</a>
+    <ul>
+      <li>选择主题 - HomePage - 去往Github - clone 到项目目录下</li>
+    </ul>
+  </li>
+  <li>Github 上的博客模板：<a href="https://link.zhihu.com/?target=https%3A//github.com/jekyll/jekyll/wiki/Sites">https://github.com/jekyll/jekyll/wiki/Sites</a></li>
+</ul>
+
+<table>
+  <tbody>
+    <tr>
+      <td>检查主题是否能被 <code class="language-plaintext highlighter-rouge">gem</code> 指令下载：[RubyGems.org</td>
+      <td>您的社区 Gem 托管中心](https://rubygems.org/)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>使用：</p>
+
+<ol>
+  <li>
+    <p>生成 Gemfile 文件：<code class="language-plaintext highlighter-rouge">bundle init</code></p>
+  </li>
+  <li>
+    <p>修改 /Gemfile 文件：  gem <u>"theme-name",</u> “~&gt; theme vision”</p>
+  </li>
+  <li>
+    <p>修改 _config.yml 文件： 添加</p>
+
+    <div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Build settings</span>
+<span class="na">theme</span><span class="pi">:</span> <span class="s">theme-name</span>
+<span class="na">plugins</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">jekyll-feed</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>更新配置：<code class="language-plaintext highlighter-rouge"> bundle update</code></p>
+  </li>
+  <li>
+    <p>重新启动：  <code class="language-plaintext highlighter-rouge">bundle exec jekyll serve -V</code></p>
+  </li>
+</ol>
+
+<p>问题：</p>
+
+<p>【报错】Could not locate the included file ‘XXX’ in any “_includes”</p>
+
+<ul>
+  <li>换掉这个主题！或删除有问题主题</li>
+  <li>在 主题2 中无法加载 主题1 的文件</li>
+</ul>
+
+<p><img src="记录.assets/image-20230904211819639.png" alt="image-20230904211819639" /></p>
+
+<p>【报错】in `rescue in block in require_with_graceful_fail’: jekyll-feed (Jekyll::Errors::MissingDependencyException)</p>
+
+<ul>
+  <li>在<code class="language-plaintext highlighter-rouge">_config.yml</code> 中添加 <code class="language-plaintext highlighter-rouge">gem "jekyll", "~&gt; 4.0"</code> 和 <code class="language-plaintext highlighter-rouge">gem "jekyll-feed", "~&gt; 0.17.0"</code></li>
+</ul>
+
+<p><img src="记录.assets/image-20230917183509600.png" alt="image-20230917183509600" /></p>
+
+<h1 id="在主题下新增加">在主题下新增加</h1>
+
+<ol>
+  <li>改变图标
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">Blog\Git-Name.github.io\_site\assets\img\favicons</code></li>
+    </ul>
+  </li>
+  <li>
+    <p>网站名称</p>
+  </li>
+  <li>文章</li>
+</ol>
+
+<p>地址：</p>
+
+<ul>
+  <li>
+    <p>``Blog\Git-Name.github.io_posts`</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">Blog\Git-Name.github.io\Theme-Name\_posts</code></p>
+  </li>
+</ul>
+
+<p>文章命名：<code class="language-plaintext highlighter-rouge">YYYY-MM-DD-TITLE.md</code></p>
+
+<p>在<code class="language-plaintext highlighter-rouge">_posts</code>下新建文件夹并不会产生新分类</p>]]></content><author><name></name></author><category term="sample" /><category term="document" /><summary type="html"><![CDATA[基本步骤]]></summary></entry><entry><title type="html">计算机网络</title><link href="http://localhost:4000/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/2022/06/14/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.html" rel="alternate" type="text/html" title="计算机网络" /><published>2022-06-14T00:00:00+08:00</published><updated>2022-06-14T00:00:00+08:00</updated><id>http://localhost:4000/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/2022/06/14/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C</id><content type="html" xml:base="http://localhost:4000/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/2022/06/14/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.html"><![CDATA[<h1 id="计算机网络">计算机网络</h1>
+
+<h2 id="网络分层模型">网络分层模型</h2>
+
+<p>OSI：开放式系统互联</p>
+
+<p>【物理链路层：物理层+链路层 – Link】【内核态】</p>
+
+<ul>
+  <li>物理层：bit，①物理接口，②怎样的信号表示比特</li>
+  <li>数据链路层：帧，①标识主机MAC，②识别MAC与数据地址访问媒介</li>
+</ul>
+
+<p>【网络层 – IP ICMP ARP】【内核态】</p>
+
+<ul>
+  <li>网络层：包，IP地址访问</li>
+</ul>
+
+<p>【传输层 – TCP UDP】【内核态】</p>
+
+<ul>
+  <li>传输层：段，不同主机用户进程的数据通信</li>
+</ul>
+
+<p>【应用层 – HTTP FTP DNS ..】【用户态】</p>
+
+<ul>
+  <li>会话层：数据，应用之间的通信机制</li>
+  <li>表示层：数据，信息语法问题</li>
+  <li>应用层：数据，进程间通信、提供网络和用户应用</li>
+</ul>
+
+<h2 id="各层传输设备">各层传输设备</h2>
+
+<p>【应用层 -（<strong>网关</strong>）- 传输层 - 网络层（<strong>路由器</strong>） - （<strong>交换机</strong>） - 数据链路层（网桥） - 物理层（<strong>集线器、中继器</strong>）】</p>
+
+<ul>
+  <li>网关：
+    <ul>
+      <li>实现复杂网络互连设备</li>
+      <li>仅用于 <u>高层协议不同的网络</u> 互通</li>
+      <li>可用于广域网，也可用于局域网</li>
+    </ul>
+  </li>
+  <li>路由器：路由选择、存储转发；隔离冲突域+广播域</li>
+  <li>交换机：
+    <ul>
+      <li>识别MAC地址信息，并进行转发</li>
+      <li>保存一份地址表，包括 MAC地址+端口</li>
+      <li>隔离冲突域，不隔离广播域</li>
+    </ul>
+  </li>
+  <li>网桥：
+    <ul>
+      <li>将两个LAN连接，根据MAC地址转发 帧</li>
+      <li>隔离冲突域，不隔离广播域</li>
+    </ul>
+  </li>
+  <li>集线器：纯硬件设备，连接网络终端</li>
+  <li>中继层：延长bite在网络传输距离</li>
+</ul>
+
+<h3 id="透明性">透明性？</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>[前导码]</th>
+      <th>[ETH]</th>
+      <th>[HTTP]</th>
+      <th>[TCP]</th>
+      <th>[IP]</th>
+      <th>[ETH]</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>[物理层]</td>
+      <td>[数据链路层]</td>
+      <td>[应用层]</td>
+      <td>[运输层]</td>
+      <td>[网络层]</td>
+      <td>[数据链路层]</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td> </td>
+      <td>HTTP报文</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td>TCP报文段</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td>IP数据报</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>帧</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>字节流</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="专业术语">专业术语</h2>
+
+<h4 id="实体">实体</h4>
+
+<h4 id="协议">协议</h4>
+
+<ol>
+  <li>控制两个对等实体的逻辑通信规范的集合</li>
+  <li>三要素：语法、语义、时序</li>
+</ol>
+
+<h2 id="链路层">链路层</h2>
+
+<ol>
+  <li>链路（Link）：两个结点间的物理线路</li>
+  <li>数据链路：把实现通信协议的硬件和软件，加到链路上</li>
+</ol>
+
+<ul>
+  <li><strong>封装成帧：加上帧头 帧尾</strong></li>
+  <li><strong>差错检测：帧尾的检验码</strong></li>
+  <li><strong>可靠传输：接收方发现帧验证错误，丢弃该帧而不接受</strong></li>
+</ul>
+
+<p>广播通道链路：将目标地址、源地址写入帧头</p>
+
+<p>共享式局域网信号碰撞问题：接入控制协议 CSMA/CD</p>
+
+<h3 id="封装成帧">封装成帧</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>1字节</th>
+      <th>1字节</th>
+      <th>1字节</th>
+      <th>2字节</th>
+      <th>&lt;1500字节</th>
+      <th>2字节</th>
+      <th>1字节</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>标志（开始）</td>
+      <td>地址</td>
+      <td>控制</td>
+      <td>协议</td>
+      <td>数据</td>
+      <td>FCS</td>
+      <td>标志（结束）</td>
+    </tr>
+    <tr>
+      <td>帧头</td>
+      <td> </td>
+      <td> </td>
+      <td>帧头</td>
+      <td> </td>
+      <td>帧尾</td>
+      <td>帧尾</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>帧定界：
+    <ul>
+      <li>帧头帧尾</li>
+      <li>MAC没有帧头定界标志，用物理层的前导码作为其帧开始标志</li>
+      <li>帧间间隔（96bite发送时间）作为标志</li>
+    </ul>
+  </li>
+  <li>透明传输：数据链路层 <u>对上层交付的数据没有任何限制</u>，就如同透明的一样
+    <ul>
+      <li>帧中出现数据与定界符一致，将导致接收方识别错误信息，不能实现透明</li>
+      <li>发送前扫描，将相似的数据添加转义 【面向字符类型：1字节，值27】【面向比特类型：每五个比特1插入一个0】</li>
+    </ul>
+  </li>
+  <li><strong>最大传输单元 MTU</strong>，数据部分应该尽可能大些，但为差错检查等数据链路层功能的保证，设定的值</li>
+</ul>
+
+<h3 id="差错检测">差错检测</h3>
+
+<ul>
+  <li>基本概念：
+    <ul>
+      <li>比特差错：比特在传输过程中可能发生的差错，1→0,0→1</li>
+      <li>误码率（BER，bit error rate）= 传输错误的比特 / 总比特</li>
+      <li>使用错误检测码 检验是否发生了错误</li>
+    </ul>
+  </li>
+  <li>奇偶校验
+    <ul>
+      <li>使整个数据（包括检验位）中“1”的个数为奇数 / 偶数；</li>
+      <li>出现偶个数误码，无法检出</li>
+    </ul>
+  </li>
+  <li>循环冗余校验（CRC，cyclic redundancy check）
+    <ul>
+      <li>双方约定的生成多项式G(x)，必须包含最低次项</li>
+      <li>发送方：计算出冗余码，添加到待传输数据后面</li>
+      <li>接收方：使用多项式计算数据，判断是否产生误码</li>
+      <li>漏检率极低，只能检测出发生差错，而不能定位</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>G(x) = x^4 +x^2 +X^1 + 1 
+ 	 = 1*x^4 + 0*x^3 + 1x^2 + 1x^1 + 1*x^0
+	 = 生成多项式各项系数构成的比特串：10111
+
+发送方：[ 待传输数据bit + G(x)最高次个0（4个0）]÷生成多项式各项系数构成的比特串 = 商 ···· 余数
+发生的数据：待传输数据bit + 补全的余数
+
+接收方：[ 接收数据 + 余数 ] ÷ 生成多项式各项系数构成的比特串 = 商 ···· 0 才是正确的
+</code></pre></div></div>
+
+<h3 id="可靠传输服务">可靠传输服务</h3>
+
+<p>​	当发生误码时，对帧的操作，取决于向上层提供的服务类型。</p>
+
+<ul>
+  <li>不可靠传输服务：仅仅丢弃（有线链路中使用，出现误码由上层负责）</li>
+  <li>可靠传输服务：检测到误码发生的位置（无线链路必须提供）</li>
+</ul>
+
+<h4 id="其它层级也可使用">其它层级也可使用</h4>
+
+<p>可靠传输服务不仅仅局限于数据链路层，其他层级也可能出现<strong>传输差错</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>比特差错</th>
+      <th>分组丢失</th>
+      <th>分组失序</th>
+      <th>分组重复</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>数据链路层</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>网络层 IP协议：无连接、不可靠</p>
+
+<p>运输层 TCP协议：连接、可靠</p>
+
+<p>运输层 UDP协议：无连接、不可靠</p>
+
+<h4 id="可靠传输的实现机制">可靠传输的实现机制</h4>
+
+<p>​	【三种方式，待补充】</p>
+
+<h2 id="网络层">网络层</h2>
+
+<p>​	实现网络互连，数据包在其之间的传输</p>
+
+<ul>
+  <li>
+    <p>向上层（运输层）提供怎样的服务？IP提供的是 <u>面向无连接，不可靠服务</u></p>
+  </li>
+  <li>
+    <p>网络寻址问题：A类地址、B类地址、C类地址</p>
+  </li>
+  <li>
+    <p>路由选择问题：路由表 + 目的地址</p>
+
+    <ul>
+      <li>路由表的数据来源：人工设置（小型，不改变）、路由选择协议中的选择算法</li>
+    </ul>
+
+    <p>因特网，使用TCP/IP协议，网络层使用<strong>网际协议IP</strong>，由此TCP/IP中的网络层又称为<strong>网际层</strong></p>
+  </li>
+</ul>
+
+<h3 id="提供的两种连接">提供的两种连接</h3>
+
+<ol>
+  <li>
+    <p>面向连接的虚电路</p>
+
+    <ol>
+      <li>可靠通信由<strong>网络</strong>来保障</li>
+      <li>建立网络层的连接——虚电路CV，沿着此电路发送分组</li>
+      <li>目的主机地址仅在建立初阶段使用，之后 <u>首部只携带虚电路的编号</u></li>
+      <li>通信结束后，需要释放所建立的虚电路</li>
+    </ol>
+
+    <p>虚电路 + 可靠传输协议 = 无传输差错</p>
+
+    <ul>
+      <li>虚电路是一条逻辑上的电路，事实上不存在</li>
+      <li>电话交换的电话通信，是建立一条物理上的电路</li>
+    </ul>
+  </li>
+  <li>
+    <p>无连接的数据报服务</p>
+
+    <ol>
+      <li>可靠通信由<strong>用户主机</strong>来保障</li>
+      <li>不建立网络层练级——每个分组可走不同的路径</li>
+      <li>目的主机的完整地址需要时刻携带</li>
+      <li>可能出现传输差错，但造价低廉，适应性强</li>
+    </ol>
+
+    <p>将复杂网络处理功能至于因特网边缘（用户主机和其内部的运输层）</p>
+  </li>
+</ol>
+
+<h3 id="ipv4">IPv4</h3>
+
+<p>​	每一台主机（或路由器）的每个接口，分配唯一的32bit的识别符</p>
+
+<p>​	点分十进制表示法，每8位分为一组</p>
+
+<h4 id="分类编址方式">分类编址方式</h4>
+
+<ol>
+  <li>A类地址：8位（网络号）+ 24位（主机号）
+    <ol>
+      <li>网络号第一个比特值一定为<code class="language-plaintext highlighter-rouge">0</code></li>
+      <li>最小网络号0，保留不指派
+        <ol>
+          <li>0.0.0.0是一个特殊的网络地址，表示“在本网络上的本主机”，只能作为源地址使用</li>
+        </ol>
+      </li>
+      <li>最大网络号127，作为本地环回测试地址，不指派
+        <ol>
+          <li>最小的：127.0.0.1</li>
+          <li>最大的：127.255.255.254</li>
+        </ol>
+      </li>
+      <li>可指派的网络地址1.0.0.0 - 126.0.0.0</li>
+    </ol>
+  </li>
+  <li>B类地址：16位（网络号）+ 16位（主机号）
+    <ol>
+      <li>网络号第一二个比特值一定为<code class="language-plaintext highlighter-rouge">10</code></li>
+      <li>最小网络号，也是第一个可指派的网络号 128.0</li>
+      <li>最大网络号，也是最后一个可指派的网络号 129.255</li>
+      <li>可指派的网络地址：128.0.0.0 - 191.255.0.0</li>
+    </ol>
+  </li>
+  <li>C类地址：24位（网络号）+ 8位（主机号）
+    <ol>
+      <li>网络号第一二三个比特值一定为<code class="language-plaintext highlighter-rouge">110</code></li>
+      <li>最小的网络号，也是第一个可指派的网络号 192.0.0</li>
+      <li>最大的网络号，也是最后一个可指派的网络号 223.255.255</li>
+      <li>可指派的网络地址：192.0.0.0 - 223.255.255.0</li>
+    </ol>
+  </li>
+  <li>D类地址：多播地址</li>
+  <li>E类地址：保留今后使用</li>
+  <li>广播地址：255.255.255.255，表示“只在本网络进行广播”，只能作为目的地址使用</li>
+</ol>
+
+<h4 id="子网划分">子网划分</h4>
+
+<ol>
+  <li>
+    <p>为什么要划分子网：</p>
+
+    <ol>
+      <li>申请更多的IP地址，会导致路由表记录数量怎多</li>
+      <li>浪费原有网络中剩余的IP地址</li>
+    </ol>
+  </li>
+  <li>
+    <p>子网地址计算</p>
+
+    <p>【例题】网络地址为218.75.230.0，使用子网掩码255.255.255.128对其子网划分。</p>
+
+    <ol>
+      <li>
+        <p>218.75.230.0：该网络为C类网络地址，前三个值为网络号，最后一位是主机号</p>
+      </li>
+      <li>
+        <p>255.255.255.128：</p>
+
+        <ol>
+          <li>前三个255表示连续24个比特1，对应了网络号部分，</li>
+        </ol>
+      </li>
+      <li>
+        <p>128化为二进制表示一个比特1，即从主机号中借用了一个比特作为子网号</p>
+      </li>
+    </ol>
+  </li>
+  <li>
+    <p>划分的子网数量 2^1 = 2，每个子网可分配的地址数量2^（8-1 ) - 2=126</p>
+
+    <p>[去掉主机号全为<code class="language-plaintext highlighter-rouge">0</code>的网络地址、全为<code class="language-plaintext highlighter-rouge">1</code>的广播地址]</p>
+  </li>
+  <li>
+    <p>默认子网</p>
+
+    <p>在未划分子网的情况下使用子网掩码</p>
+
+    <p>网络号对应掩码全为<code class="language-plaintext highlighter-rouge">1</code>，主机号的对应掩码全为<code class="language-plaintext highlighter-rouge">0</code></p>
+  </li>
+</ol>
+
+<h3 id="报文">报文</h3>
+
+<h4 id="首部格式">首部格式</h4>
+
+<p><img src="E:\Computer language\计算机网络\计算机网络\IP数据报首部格式.png" alt="IP数据报首部格式" /></p>
+
+<ul>
+  <li>首部长度：4个字节
+    <ul>
+      <li>最大值为15：固定部分 20字节 + 可变部分 40字节</li>
+      <li>最小值为10：固定部分 20字节</li>
+      <li>IP数据报的首部长度一定是4的整数倍</li>
+    </ul>
+  </li>
+  <li>区分服务
+    <ul>
+      <li>8bit，一般不使用</li>
+      <li>该字段的不同数值可提供不同等级的服务质量</li>
+    </ul>
+  </li>
+  <li>
+    <p>总长度</p>
+
+    <ul>
+      <li>首部长度 + 数据载荷</li>
+    </ul>
+  </li>
+  <li>
+    <p>【标识 + 标志 + 片偏移：IP数据报分片】</p>
+  </li>
+  <li>
+    <p>生存时间：防止数据报在网络中兜圈 – 路由环路</p>
+
+    <ul>
+      <li>以“时间”为计数，初始 - 当前路由花费的时间 = 剩余时间
+        <ul>
+          <li>＞0，转发；≤ 0，丢弃</li>
+        </ul>
+      </li>
+      <li>以“跳数”为计数，跳转指定次数
+        <ul>
+          <li>＞0，转发；≤ 0，丢弃</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>协议</p>
+
+    <ul>
+      <li>
+        <p>8bit，数据部分是何种协议数据单元</p>
+      </li>
+      <li>
+        <p>常用协议与字段值</p>
+
+        <p><img src="E:\Computer language\计算机网络\计算机网络.assets\常用协议与字段值.png" alt="常用协议与字段值" /></p>
+      </li>
+    </ul>
+  </li>
+  <li>首部检验和
+    <ul>
+      <li>16bit，检验首部在传输过程是否出现差错</li>
+      <li>IP层本身不提供可靠传输服务，因而IPv6将不再进行校验</li>
+    </ul>
+  </li>
+  <li>源IP地址和目的IP地址，各占32bit</li>
+</ul>
+
+<h4 id="分片方式">分片方式</h4>
+
+<ol>
+  <li>为什么要分片：
+    <ol>
+      <li>IP数据报需要打包成帧，而帧长度受限于的最大传输单位MTU</li>
+      <li>当IP数据报长度 &gt; 帧，需要 <strong>分片</strong> 成更小的数据报文</li>
+    </ol>
+  </li>
+  <li>标识：
+    <ol>
+      <li>16bit</li>
+      <li>同一个数据报的各分片应该具有相同的标识</li>
+      <li>IP软件维持一个计数器，每产生一个数据报计数器+1，赋值给标识字段</li>
+    </ol>
+  </li>
+  <li>标志
+    <ul>
+      <li>3bit</li>
+      <li>DF位：（Don’t 分片？）
+        <ul>
+          <li>1 – 不允许分片</li>
+          <li>0 – 允许分片</li>
+        </ul>
+      </li>
+      <li>MF为：（More 分片?）
+        <ul>
+          <li>1 – 后面还有分片</li>
+          <li>0 – 这是最后一个分片</li>
+        </ul>
+      </li>
+      <li>保留位，必须设置为0</li>
+    </ul>
+  </li>
+  <li>片偏移
+    <ol>
+      <li>13bit</li>
+      <li>分片数据报的数据载荷部分 在原数据报位置 偏移多少个位置</li>
+      <li>以8个字节为单位 – 数据载荷的第n个字符 / 8 （再次分片，第n遵循最初的位置）</li>
+    </ol>
+  </li>
+</ol>
+
+<h4 id="选路">选路？</h4>
+
+<h3 id="icmp">ICMP</h3>
+
+<p>​	为提高IP数据报 <strong>转发和交付成功的概率</strong>，在网际层使用网际控制报文协议Internet control message protocol</p>
+
+<p>​	被封装在IP数据报中发送</p>
+
+<p>​	应用场景：</p>
+
+<ol>
+  <li>分组网间探测PING
+    <ul>
+      <li>测试主机间的连通性</li>
+      <li>应用层直接使用网际层的ICMP（而不ton过运输层的TCP和UDP）</li>
+      <li>使用ICMP的回送请求和回答请求</li>
+    </ul>
+  </li>
+  <li>跟踪路由
+    <ul>
+      <li>测试IP数据报经过哪些路由传递</li>
+      <li>Windows系统
+        <ul>
+          <li>tracect命令</li>
+          <li>应用层直接只用网际层ICMP</li>
+          <li>ICMP回送请求、回答报文、差错报文</li>
+        </ul>
+      </li>
+      <li>Unix版本
+        <ul>
+          <li>traceroute命令</li>
+          <li>在运输层使用UDP协议</li>
+          <li>只使用了差错报文</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="查询报文2种">查询报文2种</h4>
+
+<ol>
+  <li><strong>回送请求和回答</strong>：
+    <ol>
+      <li>请求报文：向特定主机发出询问</li>
+      <li>回答报文：收到请求的主机必须回复</li>
+      <li>测试目的站是否可达+状态</li>
+    </ol>
+  </li>
+  <li><strong>时间戳请求和回答</strong>
+    <ol>
+      <li>请主机回答当前的日期和时间</li>
+      <li>时钟同步和测量时间</li>
+    </ol>
+  </li>
+</ol>
+
+<h4 id="差错报文5种">差错报文5种</h4>
+
+<ol>
+  <li><strong>终点不可达</strong>：目的主机、路由不能交付数据报</li>
+  <li><strong>源点抑制</strong>：目的拥塞而丢弃报文，通知源点数据发送速率放慢</li>
+  <li><strong>时间超过</strong>：
+    <ol>
+      <li>路由因TTL &lt; 0而丢弃报文时，要通知源点</li>
+      <li>规定时间内没有收到一个报文的全部报片，会将已收到的全部丢弃，并通知源点</li>
+    </ol>
+  </li>
+  <li><strong>参数问题</strong>：首部检验与字段发现传输中出现误码，丢弃且通知源点</li>
+  <li><strong>改变路由（重定向）</strong>：路由路径有更优解时</li>
+</ol>
+
+<p><strong>不可发送差错报文的情况：</strong></p>
+
+<ol>
+  <li>对<u>ICMP差错报文</u> 不再发送 差错报文
+    <ol>
+      <li>对<u>第一个分片的数据报片的所有后续数据报片</u> 都不再发送差错报文</li>
+      <li>对<u>具有多播地址的数据报</u> 都不发送ICMP差错报文</li>
+      <li>对<u>特殊地址的数据报</u> 不发送差错报文</li>
+    </ol>
+  </li>
+</ol>
+
+<h3 id="arp">ARP？</h3>
+
+<h2 id="运输层">运输层</h2>
+
+<p>​	主机到主机的通信：物理层 + 数据链路层 + 网络层</p>
+
+<p>​	主机进程间的通信：传输层</p>
+
+<p>​	如果为运行在不同主机的 <strong>应用进程的逻辑通信提供直接通信服务</strong>，又称为端到端协议（端口）</p>
+
+<p>​	向上层隐藏下面的网络服务核心细节，提供两种不同的运输协议</p>
+
+<ul>
+  <li>面向连接的TCP</li>
+  <li>面向无连接UDP</li>
+</ul>
+
+<h3 id="端口号">端口号</h3>
+
+<p>​	进程标识符PID，不同OS、不同进程的表示格式不同，使用统一的方法对TCP/IP体系的应用进程标识</p>
+
+<p>​	16bit表示，取值范围0~65535；</p>
+
+<ul>
+  <li>
+    <p>熟知端口号：0~1023；FTP 21/20; HTTP 80; DNS 53</p>
+  </li>
+  <li>
+    <p>登记端口号：1024~49151；必须登记手续</p>
+  </li>
+  <li>
+    <p>短暂端口号：49152~65535；动态端口号</p>
+
+    <p>【端口号只具有本地意义】不同OS、不同进程的端口号之间没有联系</p>
+  </li>
+</ul>
+
+<ol>
+  <li>复用：多个线程利用一个 <u>IP+端口</u> 发送信息称为 复用；</li>
+  <li>分用：多个线程利用一个 <u>IP+端口</u> 接收信息成为 分用；</li>
+</ol>
+
+<h3 id="udp">UDP</h3>
+
+<p>​	User Datagram Protocol 用户数据报协议</p>
+
+<ul>
+  <li>无连接的 — 支持单播、多播以及广播</li>
+  <li>面向应用报文：
+    <ul>
+      <li>以报文为单位</li>
+      <li>对应用层传输下来的报文既不合并也不拆分，保留报文的边界</li>
+    </ul>
+  </li>
+  <li>不可靠服务
+    <ul>
+      <li>运输层、网际层都是向上提供无连接、不可靠的传输服务</li>
+      <li>当报文出现误码、丢失时，接收方仅丢弃而什么都不做</li>
+    </ul>
+  </li>
+  <li>适用于IP电话、视频会议、直播等实时应用</li>
+</ul>
+
+<h4 id="数据报格式">数据报格式</h4>
+
+<p>​	首部（仅8字节） + 数据部分</p>
+
+<p><img src="E:\Computer language\计算机网络\计算机网络.assets\UDP数据报首部格式.png" alt="UDP数据报首部格式" style="zoom: 33%;" /></p>
+
+<h3 id="tcp">TCP</h3>
+
+<p>​	Transmission Control Protocol 传输控制协议</p>
+
+<ul>
+  <li>面向连接（逻辑上的连接，物理上仍然是无连接）— 仅支持单播</li>
+  <li>面向数据流：
+    <ul>
+      <li>传送字节流</li>
+      <li>不保证一次传完、只保证传输数据一致；</li>
+      <li>要求应用层有能力处理乱序字节流、多次传输的数据流拼接完整还原</li>
+    </ul>
+  </li>
+  <li>可靠的服务
+    <ul>
+      <li>网际层可能出现传输差错，但TCP可以使其差错重传</li>
+      <li>不会出现传输差错</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="数据报格式-1">数据报格式</h4>
+
+<p><img src="E:\Computer language\计算机网络\计算机网络.assets\TCP数据报格式.png" alt="TCP数据报格式" /></p>
+
+<ul>
+  <li>源端口、目的端口：
+    <ul>
+      <li>各16bit，用于识别发送、接受该TCP报文段的应用进程</li>
+      <li>源端口：填写暂时端口号（？</li>
+      <li>目的端口：填写该应用的熟知端口号（？</li>
+    </ul>
+  </li>
+  <li>序号：
+    <ul>
+      <li>32bit，增加到最后一个后又从0开始</li>
+      <li>指出本TCP报文段数据载荷的第一个字节序号</li>
+    </ul>
+  </li>
+  <li>确认号：
+    <ul>
+      <li>32bit，增加到最后一个后又从0开始</li>
+      <li>指出希望收到下一个数据载荷的第一个字节的序号；对之前收到的数据进行确认，收到数据的最后一个字节号+1</li>
+      <li><strong>！</strong>需要搭配 <u>标志位 ACK<u>使用：
+</u></u>        <ul>
+          <li>ACK=1时才有效，ACK=0时无效</li>
+          <li>TCP规定，在建立连接后TCP报文段必须把 ACK=1</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>数据偏移：
+    <ul>
+      <li>4bit，以4字节为单位</li>
+      <li>指出 数据载荷的起始 距离 TCP报文段的起始 处有多远</li>
+      <li>指出TCP报文的首部长度
+        <ul>
+          <li>首部固定长度为20字节，数据偏移量min = (0101) ~2~ = 5*4</li>
+          <li>首部最大长度为60字节，数据偏移量max = (1111) ~2~ = 15*4</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>窗口：
+    <ul>
+      <li>16bit，以字节为单位</li>
+      <li>指出 <u>发送本报文段的一方</u> 的接受窗口</li>
+      <li>根据接收方的接受能力 控制 发送方的发送能力，即流量控制</li>
+      <li>接收方 让 发送方 设置其发送窗口的依据之一：[拥塞窗口，接受窗口]~min~</li>
+    </ul>
+  </li>
+  <li>校验和
+    <ul>
+      <li>16bit，检查 TCP报文段的首部 + 数据载荷 两个部分</li>
+      <li>校验方式与UDP一样</li>
+    </ul>
+  </li>
+  <li>标识符
+    <ul>
+      <li>SYN：建立连接的同步符</li>
+      <li>FIN：释放连接的终止符</li>
+      <li>RST：复位TCP连接
+        <ul>
+          <li>表示连接出现异常，必须释放后重新建立连接</li>
+          <li>拒绝非法报文段 、 拒绝打开一个TCP连接</li>
+        </ul>
+      </li>
+      <li>PSH：推动标志位，该报文尽快推送上交应用进程，而不必等待接收缓存填满再上传</li>
+      <li>URG：紧急标志位，搭配 <u>紧急指针</u>使用
+        <ul>
+          <li>URG=1，紧急指针有效；URG=0，紧急指针无效</li>
+          <li>发送方有紧急数据时，可插队到发送缓存的最前面，并立即封装一个TCP段发送</li>
+          <li>紧急指针：数据载荷有多长的紧急数据，紧急数据之后的普通数据</li>
+          <li>接收方根据紧急指针取出紧急数据，直接上交应用进程，而不必等待接收缓存填满再上传</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>选项（可选）
+    <ul>
+      <li>最大报文段长度MSS选项：TCP报文的数据载荷最大长度</li>
+      <li>窗口扩大选项：为扩大窗口（提高吞吐率）</li>
+      <li>时间戳选项：
+        <ul>
+          <li>计算往返时间RTT</li>
+          <li>处理序号超范围情况，又称为凡是序号绕回PAWS</li>
+        </ul>
+      </li>
+      <li>选择确认选项</li>
+    </ul>
+  </li>
+  <li>填充：使整个首部长度能被4整除，数据偏移字段以4字节为单位</li>
+</ul>
+
+<h4 id="连接控制">连接控制</h4>
+
+<p>​	TCP面向连接，三个阶段</p>
+
+<ol>
+  <li>建立连接（三次握手）</li>
+  <li>数据传送</li>
+  <li>释放连接（四次挥手）</li>
+</ol>
+
+<h5 id="三次握手--连接">三次握手 — 连接</h5>
+
+<ol>
+  <li>解决问题：
+    <ol>
+      <li>确知对方的存在，协商参数（窗口值max，是否使用时间戳选项一级服务质量等）</li>
+      <li>双方对运输实体资源（缓存大小、连接表中的项目）进行分配</li>
+    </ol>
+  </li>
+  <li>双方先建立<code class="language-plaintext highlighter-rouge">传输控制块</code>：
+    <ol>
+      <li>TCP连接表</li>
+      <li>指针：发送和缓存的、重传队伍的</li>
+      <li>当前发送和接受的序号</li>
+    </ol>
+  </li>
+  <li>服务器等待客户端的连接，成为<code class="language-plaintext highlighter-rouge">被动打开连接</code></li>
+  <li>客户端主动发起的连接，称为<code class="language-plaintext highlighter-rouge">主动打开连接</code></li>
+</ol>
+
+<hr />
+
+<ol>
+  <li>
+    <p>三次握手：</p>
+
+    <p>在不可靠网络信道中建立可靠的连接</p>
+
+    <ul>
+      <li>
+        <p><strong>你听见我在说话了吗？</strong>（客户端发送<code class="language-plaintext highlighter-rouge">SYN=1,seq=x</code>，进入<code class="language-plaintext highlighter-rouge">SYN-SENT</code>同步已发送状态）</p>
+
+        <p>（SYN=1：不允许携带数据，但要消耗一个序号；seq=x：客户端进程所选择的初始序号；）</p>
+      </li>
+      <li>
+        <p><strong>我听见了，你能听见我在说话吗？</strong>（服务端回复<code class="language-plaintext highlighter-rouge">SYN=1,ACK=1,seq=y,ack=x+1</code>,进入<code class="language-plaintext highlighter-rouge">SYN-RCVD</code>同步已接收状态）</p>
+
+        <p>（SYN=1,ACK=1：TCP连接请求确认报文，不允许携带数据，但要消耗一个序号；）</p>
+
+        <p>（seq=y：服务器进程所选择的初始序号；ack=x+1：对客户端初始序号确认）</p>
+      </li>
+      <li>
+        <p><strong>我听见了你在说话了</strong>（客户端回复<code class="language-plaintext highlighter-rouge">ACK=1,seq=x+1,ack=y+1</code>，进入establish连接已建立状态）</p>
+
+        <p>（ACK =1：普通的确认报文；seq=x+1：请求连接报文已消耗掉一个序号；ack=y+1：对服务器初始序号的确认）</p>
+
+        <p>（TCP规定：普通的确认报文段可以携带数据，如不携带则不消耗序号；则下一个报文序号仍为<code class="language-plaintext highlighter-rouge">x+1</code>）</p>
+      </li>
+      <li>
+        <p>双方开始通话（服务器收到确认报文，也进入establish链接已建立状态）</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>为什么不使用两次握手？</p>
+
+    <p>防止已经出错的请求报文突然又传给服务器，而引起的错误</p>
+
+    <ul>
+      <li>
+        <p>你听到我在说话了吗？（客户端第一次发送SYN，滞留或丢失）</p>
+      </li>
+      <li>
+        <p>无回复</p>
+      </li>
+      <li>
+        <p>（客户端重新发送SYN包）你听到我在说话了吗？</p>
+      </li>
+      <li>
+        <p>我听见了，<u>我们开始聊天吧！</u>（服务端正常收到，并回复SYN + ASK）</p>
+
+        <p>（二次握手成功，双方开始建立连接）</p>
+      </li>
+      <li>
+        <p>第一次发送的SYN突然恢复，会出现两种情况</p>
+
+        <ul>
+          <li>双方正在连接，此时服务端以为客户端请求新的连接，发送回复SYN + ASK建立两次握手后，进入等待数据状态；服务端建立两个连接，而客户端只认可一个连接，导致状态不一致。</li>
+          <li>双方已释放连接，服务器以为客户端重新请求连接，发送回复SYN + ASK建立两次握手后，而进入等待数据状态；客户端无连接请求，将不会回复数据。
+            <h5 id="四次挥手--释放">四次挥手 – 释放</h5>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>服务器等待客户端的释放，成为<code class="language-plaintext highlighter-rouge">被动关闭</code></li>
+  <li>客户端主动发起的释放，称为<code class="language-plaintext highlighter-rouge">主动关闭</code></li>
+</ol>
+
+<hr />
+<ol>
+  <li>
+    <p><strong>我客户端说完了，要撤咯</strong>（客户端发送<code class="language-plaintext highlighter-rouge">FIN=1,ACK=1,seq=u,ack=v</code>，进入<code class="language-plaintext highlighter-rouge">FIN-WAIT-1</code>终止等待状态）</p>
+
+    <p>（FIN=1：即使不携带一个数据，也要消耗一个序号）</p>
+
+    <p>（seq=u：客户端最后已发送的最后一个字节序号+1；ack=v：客户端最后已收到的最后一个字节序号+1）</p>
+  </li>
+  <li>
+    <p><strong>知道了，我服务端还有话要说点</strong>（服务器发送确认报文<code class="language-plaintext highlighter-rouge">ACK=1,seq=v,ack=u+1</code>，进入CLOSE-WAIT关闭等待状态）</p>
+
+    <p>（普通的确认报文段， 服务器通知服务器进程关闭链接；）</p>
+
+    <p>（seq=v：服务器最后已发送的最后一个字节序号+1；ack=u+1：服务器最后已收到的最后一个字节序号+1）</p>
+
+    <p>（客户端收到报文，进入<code class="language-plaintext highlighter-rouge">FIN-WAIT-2</code>终止等待状态）</p>
+
+    <p>（两端的应用进程方向连接释放，进入 <strong>半关闭状态</strong>：客户进程无话要说，服务器进程可能有话要说，客户仍要开放接收）</p>
+  </li>
+  <li>
+    <p><strong>我服务端讲完了，听见没啊？</strong>（服务器发送<code class="language-plaintext highlighter-rouge">FIN=1,ACK=1,seq=w,ack=u+1</code>，并进入<code class="language-plaintext highlighter-rouge">LAST-ACK</code>最后确认状态）</p>
+
+    <p>（FIN=1,ACK=1：TCP连接释放报文，seq=w：半关闭状态下可能发送的数据序号，ack=u+1：对收到的报文进行重复确认）</p>
+  </li>
+  <li>
+    <p><strong>嗯嗯，听到你说的话了，等你先挂电话</strong>（客户端发送<code class="language-plaintext highlighter-rouge">ACK=1,seq=u+1,ack=w+1</code>，并进入<code class="language-plaintext highlighter-rouge">TIME-WAIT</code>超时等待状态）</p>
+
+    <p>（普通的确认报文段，seq=u+1：客户端之前已发送的序号，fin消耗掉一个序号；ack=w+1：客户端收到的序号确认）</p>
+
+    <p>（服务器收到报文，立即关闭连接，进入<code class="language-plaintext highlighter-rouge">closed</code>关闭状态）</p>
+  </li>
+  <li>
+    <p>（客户端超时等待结束，关闭连接）</p>
+  </li>
+</ol>
+
+<hr />
+<p><strong>超时等待状态</strong></p>
+
+<ol>
+  <li>为确保服务器端已收到ACK包；时间=2MSL，最长报文段寿命的两倍（一个来回）</li>
+  <li>ACK丢包！服务器会重新发送<code class="language-plaintext highlighter-rouge">FIN</code>包： <strong>喂？喂？喂！</strong>
+    <ol>
+      <li>客户端在超时等待中可捕获到这个包，而重新第四次挥手</li>
+      <li>立即断开连接，客户端无法捕获这个<code class="language-plaintext highlighter-rouge">FIN</code>包，没有第四次成功挥手，将会使得服务器一直处于连接状态</li>
+    </ol>
+  </li>
+</ol>
+
+<p><strong>保活计时器</strong></p>
+
+<p>​	【情景】客户端出现故障。服务端不会再收到信息，如果及时发现对方已下线？</p>
+
+<ul>
+  <li>服务器维护一个 保活计时器</li>
+  <li>客户端 → 服务器，服务器就重启保活计时器（2h）</li>
+  <li>保活计时器到时候，服务器 → 客户端发送 探测报文段；之后的75s/次，一连10次仍然没有响应，关闭连接</li>
+</ul>
+
+<h5 id="数据确认">数据确认</h5>
+
+<p>为解决丢包、乱序问题</p>
+
+<ol>
+  <li>
+    <p>为每一个连接建立 发送缓冲区，建立连接后的第一个字节序列号为0，此后序列号 + 1</p>
+  </li>
+  <li>
+    <p>发送报文格式：取其数据序列号 + 长度 + 数据内容</p>
+  </li>
+  <li>
+    <p>确认报文格式：ACK = 序列号 + 长度 = 下一包起始序列号</p>
+
+    <p>（可以连续发送多个发送报文，接收端只需回复一次ACK就可以）</p>
+
+    <p>（收到ACK确认报文，发送端可将已接受字段删除）</p>
+  </li>
+  <li>
+    <p>切割发送：根据序列号+长度重组 = 数据内容</p>
+  </li>
+  <li>
+    <p>丢失重发：ACK = 丢失报文的序列号</p>
+
+    <p>【全双工：以上过程部区分客户端、服务端】</p>
+  </li>
+</ol>
+
+<h4 id="流量控制">流量控制</h4>
+
+<p>​	Flow Control, 让发送方的发生效率不要太快，让接收方 <u>来得及</u> 接受；</p>
+
+<h5 id="滑动窗口">滑动窗口</h5>
+
+<p>​	依靠滑动窗口实现 可靠传输</p>
+
+<ol>
+  <li>发送窗口和接受窗口并不重视一样大
+    <ol>
+      <li>网络传输窗口值有一定的滞后</li>
+      <li>发送方可根据自身情况修改发送窗口</li>
+    </ol>
+  </li>
+  <li>不按序到达的数据，TCP无明确规定
+    <ol>
+      <li>接收方一律丢弃，管理简单但浪费资源，发送方需要重复发送数据</li>
+      <li>接收方暂存到接受窗口，等待数据齐全后，交付给上层的应用进程</li>
+    </ol>
+  </li>
+  <li>接收方必须有 <u>累计确认</u> 和 <u>捎带确认</u> 机制
+    <ol>
+      <li>捎带确认：可以在有数据发送的时候，吧确认信息捎带</li>
+      <li>不应该过分推迟确认：每隔一个报文段就发送一个确认</li>
+      <li>不经常发送，因为很少要求经常同时向两个方向发送</li>
+    </ol>
+  </li>
+  <li>TCP通信是全双工通信</li>
+</ol>
+
+<p>【举例】每个报文可携带<code class="language-plaintext highlighter-rouge">100</code>字节数据，将要发送的数据编号后以<code class="language-plaintext highlighter-rouge">100</code>为单位分割</p>
+
+<ul>
+  <li>
+    <p>建立TCP连接时，<code class="language-plaintext highlighter-rouge">接收方B</code>告诉<code class="language-plaintext highlighter-rouge">发送方A</code>：我的接收窗口为400</p>
+
+    <p>（A的发送窗口设置为400，在未收到B的<code class="language-plaintext highlighter-rouge">确认</code>，可将落入发送窗口的全部数据一直发送出去）</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">发送A</code>发送1~100字节数据，<code class="language-plaintext highlighter-rouge">seq=1,DATA</code>，还能发送300</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">发送A</code>发送101~200字节数据，<code class="language-plaintext highlighter-rouge">seq=101,DATA</code>，还能发送200</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">发送A</code>发送201~300字节数据，<code class="language-plaintext highlighter-rouge">seq=201,DATA(丢失)</code>，还能发送100</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">接受B</code>对<code class="language-plaintext highlighter-rouge">1~200</code>字节数据<code class="language-plaintext highlighter-rouge">累计确认</code>，并将接收窗口设置为300，<code class="language-plaintext highlighter-rouge">ACK=1,ack=201,rwnd=300</code></p>
+
+    <p>（ACK确认标志符，ack确认了n字节数之前的数据，rwnd重置的窗口的大小。）</p>
+
+    <p>（:number1: B对A进行 <u>流量控制</u>）</p>
+
+    <p>（A向前滑动发送窗口，到ack确认的字节数后<code class="language-plaintext highlighter-rouge">201</code>；调整发送窗口的大小<code class="language-plaintext highlighter-rouge">=300</code>；丢弃发送缓存中已被确认接收的数据<code class="language-plaintext highlighter-rouge">1~200</code>）</p>
+
+    <p>（201~300字节已发送但没有收到确认，重传计时器开始计时）</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">发送A</code>发送301~400字节数据，<code class="language-plaintext highlighter-rouge">seq=301,DATA</code>，还能发送100</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">发送A</code>发送401~500字节数据，<code class="language-plaintext highlighter-rouge">seq=401,DATA</code>，还能发送0，不能再发送新数据</p>
+
+    <p>（重传计数器到点，开始重传旧数据；300窗口为丢失数据保留一个100发送，但不能再发送新数据了）</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">发送A</code>发送201~300字节数据，<code class="language-plaintext highlighter-rouge">seq=201,DATA</code>，还能发送300</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">接受B</code>对<code class="language-plaintext highlighter-rouge">201~500</code>字节数据<code class="language-plaintext highlighter-rouge">累计确认</code>，并将接收窗口设置为100，<code class="language-plaintext highlighter-rouge">ACK=1，ack=501，rwnd=100</code></p>
+
+    <p>（:number2: B对A进行 <u>流量控制</u>）</p>
+
+    <p>（A向前滑动发送窗口，到ack确认的字节数后<code class="language-plaintext highlighter-rouge">501</code>；调整发送窗口的大小<code class="language-plaintext highlighter-rouge">=100</code>；丢弃发送缓存中已被确认接收的数据<code class="language-plaintext highlighter-rouge">201~500</code>）</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">发送A</code>发送501~600字节数据，<code class="language-plaintext highlighter-rouge">seq=501,DATA</code>，还能发送0，不能再发送新数据</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">接受B</code>对<code class="language-plaintext highlighter-rouge">600之前的</code>字节数据<code class="language-plaintext highlighter-rouge">累计确认</code>，并将接收窗口设置为100，<code class="language-plaintext highlighter-rouge">ACK=1，ack=601，rwnd=0</code></p>
+
+    <p>（:number3: B对A进行 <u>流量控制</u>）</p>
+
+    <p>（A向前滑动发送窗口，到ack确认的字节数后<code class="language-plaintext highlighter-rouge">601</code>；调整发送窗口的大小<code class="language-plaintext highlighter-rouge">=0</code>；丢弃发送缓存中已被确认接收的数据<code class="language-plaintext highlighter-rouge">501~600</code>）</p>
+  </li>
+</ul>
+
+<p>【窗口为0的确认】</p>
+
+<ol>
+  <li>
+    <p>当B接收缓存有了一些存储空间，于是发送<code class="language-plaintext highlighter-rouge">我要调整窗口为300</code>，但丢失了！</p>
+
+    <p>形成死锁：主机A等待B的非零窗口通知；主机B等待A的数据报文</p>
+  </li>
+  <li>
+    <p>A主动发送<code class="language-plaintext highlighter-rouge">零窗口探测报文</code>，携带1字节数据，询问接收方</p>
+  </li>
+  <li>
+    <p>每次A接收到<code class="language-plaintext highlighter-rouge">0窗口报文</code>后，启动<code class="language-plaintext highlighter-rouge">持续计时器</code>，超时时主动询问</p>
+  </li>
+  <li>
+    <p>B收到<code class="language-plaintext highlighter-rouge">零窗口探测报文</code>，需回复确认报文，并告知现在的窗口大小，<code class="language-plaintext highlighter-rouge">ACK=1,rwnd=300</code></p>
+
+    <p>B接受缓存已满，可以不接受一般报文，但必须接受紧急报文、确认报文和零窗口探测报文</p>
+  </li>
+</ol>
+
+<h5 id="拥塞控制">拥塞控制</h5>
+
+<h6 id="慢启动拥塞避免">慢启动、拥塞避免</h6>
+
+<ul>
+  <li>拥塞窗口cwnd：
+    <ul>
+      <li>值取决于 <u>网络拥塞程度</u>，并动态变化</li>
+      <li>维护原则：
+        <ul>
+          <li>网络未出现拥塞，cwnd值就大一些；</li>
+          <li>网络一旦出现拥塞，cwnd值就小一些；</li>
+        </ul>
+      </li>
+      <li>发送方的发送窗口swnd = cwnd</li>
+    </ul>
+  </li>
+  <li>网络拥塞的依据：没有按时收到应当到达的确认报文（发送超时重传）</li>
+  <li>两种控制的应用：慢开始门限 ssthresh
+    <ul>
+      <li>cwnd &lt; ssthresh，拥塞窗口 &lt; 慢开始门限 —- 使用慢开始算法（cwnd × 2）</li>
+      <li>cwnd &gt; ssthresh，拥塞窗口 &gt; 慢开始门限 —- 停止使用慢开始，而使用拥塞算法（cwnd + 1）</li>
+      <li>cwnd = ssthresh，拥塞窗口 = 慢开始门限 —- 可使用慢开始，也可使用拥塞算法</li>
+    </ul>
+  </li>
+  <li>维护一个 慢开始门限 ssthresh
+    <ul>
+      <li>设置一个初始值</li>
+      <li>每次发生网络拥塞时
+        <ul>
+          <li>拥塞窗口值cwnd / 2 = ssthresh</li>
+          <li>cwnd重置为初始值，并开始慢开始</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h6 id="快速重传快速恢复">快速重传、快速恢复</h6>
+
+<ul>
+  <li>不是所有的报文丢失由于网络拥塞导致的，当超时重传时判断是否为 网络拥塞
+    <ul>
+      <li>是网络拥塞，使用拥塞算法</li>
+      <li>不是网络拥塞，开启快重传、快恢复</li>
+    </ul>
+  </li>
+  <li>快速重传：
+    <ul>
+      <li>要求接收方每次收到报文，都要对其及时确认</li>
+      <li>若收到失序的报文，对失序报文重复确认（确认报文只能确认<strong>最高序号</strong>）</li>
+      <li>同时保留失序的报文</li>
+      <li>发送方接受三次重复的报文确认
+        <ul>
+          <li>网络未拥塞</li>
+          <li>一至两次重复确认，可能报文滞留在网络某处</li>
+          <li>三次确认可认为报文丢失，重发报文</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>快速恢复：
+    <ul>
+      <li>启用快重传后，抛弃慢启动，使用快速恢复</li>
+      <li>ssthresh = cwmd / 2</li>
+      <li>cwmd = ssthresh</li>
+      <li>拥塞避免算法</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="超时重传">超时重传</h4>
+
+<p>超时时间选择</p>
+
+<p>​	超时重传的时间ORT 应该略小于 一个报文段往返时间RTTO</p>
+
+<ul>
+  <li>过短：不必要的重传，网络拥塞</li>
+  <li>过长：不必要的等待，网络闲置</li>
+  <li><strong>略？</strong>：经过不同速率的网络、不同数量的路由等等因素</li>
+</ul>
+
+<p><strong>加权平均往返时间 RTTs – – 平滑的往返时间</strong>：多次测量的RTT样本加权平均</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>加权平均往返时间 RTTs
+	初始化：RTTs = RTT1
+	新的RTTs1 = （1 - α）× RTTs1 + α × 新的RTT样本（0 &lt;= α &lt; 1，α=1/8=0.125）
+RTT偏差的加权平均RTTd
+	初始化：RTTD = RTT1 ÷ 2
+	新的RTTD = （1 - β ）× RTTD1 + β × |RTTs1 - 新的RTT样本| （0 &lt;= β &lt; 1，β=1/4=0.25）
+超时重传时间 RTO
+	RTP = RTTs + 4 × RTTd
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p>RTT的测量准确与否非常重要</p>
+
+    <ul>
+      <li>
+        <p>RTT的测量有难度：</p>
+
+        <ul>
+          <li>数据报文段丢失后重发。距离收到确认报文的时间，是第一次报文还是第二次报文？</li>
+          <li>数据未收到确认而重发。距离收到确认报文的时间，是第一次报文还是第二次报文？</li>
+        </ul>
+      </li>
+      <li>
+        <p>Karn算法：只要报文重传，就不采用其RTT样本，RTO也不会重新计算</p>
+
+        <p>（若报文时延突然增大且持续很久，RTO内不会收到确认报文，于是重发，而不更新RTO，将一直重发）</p>
+      </li>
+      <li>
+        <p>修正Karn算法：报文重传，就把RTO增大一些（× 2）</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="应用层">应用层</h2>
+
+<p>​	网络体系结构的最顶层，享受下层提供的服务，无视下层具体操作活动；</p>
+
+<p>​	通过应用进程的交互，实现特定网络应用的问题；</p>
+
+<p>​	是设计和建立计算机网络的最终目的</p>
+
+<h3 id="cs-和-p2p">C/S 和 P2P</h3>
+
+<h4 id="cs">C/S</h4>
+
+<p>客户 / 服务器（Client/Server）</p>
+
+<ul>
+  <li>客户：是计算机、是进程，是服务请求方</li>
+  <li>服务器：
+    <ul>
+      <li>是计算机、是进程，是服务提供方</li>
+      <li>总是处于运行状态，等待客户请求</li>
+      <li>具有固定的端口号，主机有固定的IP地址</li>
+    </ul>
+  </li>
+  <li>服务集中型
+    <ul>
+      <li>应用服务集中 比客户端少得多的 服务器上</li>
+      <li>常会出现服务器跟不上客户端请求的情况</li>
+      <li>计算机群集（服务器场）构建一个强大的虚拟服务器</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="p2p">P2P</h4>
+
+<p>对等方式 （ Peer - to - Peer）</p>
+
+<ul>
+  <li>没有固定的请求者和提供者，应用进程对等、直接通信</li>
+  <li>服务分散型
+    <ul>
+      <li>大量对等计算机都是服务的提供和请求者</li>
+      <li>可扩展性：不会因为规模扩大而减低系统性能</li>
+    </ul>
+  </li>
+  <li>用户越多，速度越快；成本优势</li>
+</ul>
+
+<h3 id="dhcp">DHCP</h3>
+
+<p>​	动态主机配置协议，又称为即插即用网络。</p>
+
+<p>​	允许一台计算机加入新网络时，可以自动获取IP地址等网络配置信息而不用手工配置。</p>
+
+<p>​	TCP/IP的应用层协议，使用UDP传输</p>
+
+<p>​	DHCP	服务器的端口67；客户端的端口68</p>
+
+<h4 id="工作过程">工作过程</h4>
+
+<ol>
+  <li>
+    <p><em>*discover ** *寻找服务器</em></p>
+
+    <p>客户端 发送UDP用户数据报，包含DHCP发现报文；</p>
+
+    <ol>
+      <li>目的地址<code class="language-plaintext highlighter-rouge">255.255.255.255</code>：不知道当前网络中有多少个DHCP服务端，和他们具体的IP</li>
+      <li>源地址<code class="language-plaintext highlighter-rouge">0.0.0.0</code>：当前主机未分配到IP地址</li>
+      <li>目的端口号<code class="language-plaintext highlighter-rouge">67</code>：非DHCP服务器不监视该端口，收到但丢弃；仅DHCP服务器作出回复</li>
+      <li>数据域封装有 事务ID + DHCP客户端的MAC地址</li>
+    </ol>
+  </li>
+  <li>
+    <p><strong>Offer</strong> <em>提供一套方案</em></p>
+
+    <p>DHCP服务器收到该报文，</p>
+
+    <ol>
+      <li>拆分、查找是否有针对其MAC地址的配置信息
+        <ul>
+          <li>有：将该配置信息封装 → DHCP提供报文</li>
+          <li>无：默认配置信息封装 → DHCP提供报文</li>
+        </ul>
+      </li>
+      <li>封装回复报文
+        <ul>
+          <li>目的地址：<code class="language-plaintext highlighter-rouge">255.255.255.255</code>，目标设备未分配到IP地址</li>
+          <li>源地址：DHCP服务器地址</li>
+          <li>目的端口号<code class="language-plaintext highlighter-rouge">68</code>：非DHCP客户端不监视该接口，收到但丢弃；仅DHCP客户端作出回复</li>
+        </ul>
+      </li>
+    </ol>
+  </li>
+  <li>
+    <p><strong>Request</strong> <em>确认选择某一套方案</em></p>
+
+    <p>客户端收到回复：</p>
+
+    <ol>
+      <li>根据报文中的<code class="language-plaintext highlighter-rouge">事务ID</code>判断是否是自己所请求的报文</li>
+      <li>配置信息包括：IP地址（使用<u>ARP检测</u>确保该IP未被网络中的其他主机占用）、子网掩码、地址租期、默认网关、DNS服务器</li>
+      <li>挑选一个（先到的）报文作为自己的DHCP，发送 DHCP请求报文征求其同意：
+        <ul>
+          <li>目的地址<code class="language-plaintext highlighter-rouge">255.255.255.255</code>：告知所有的DHCP，我挑选到它啦</li>
+          <li>源地址<code class="language-plaintext highlighter-rouge">0.0.0.0</code>：现在未获得DHCP服务器的同意</li>
+          <li>报文内容：事务ID、DHCP客户端的MAC地址、接受租约的IP地址、提供租约的DHCP服务端IP地址等</li>
+        </ul>
+      </li>
+    </ol>
+  </li>
+  <li>
+    <p><strong>ACK</strong> <em>最终确认</em></p>
+
+    <p>服务端回复是否同意租约</p>
+
+    <ol>
+      <li>目的地址：<code class="language-plaintext highlighter-rouge">255.255.255.255</code></li>
+      <li>源地址：DHCP服务器</li>
+    </ol>
+  </li>
+  <li>
+    <p>客户端收到确认后，使用<u>ARP检测</u>所分配的IP地址是否被网络其他主机占用</p>
+
+    <ol>
+      <li>若未被占用，客户端可以开始使用该IP地址</li>
+      <li>若被占用，
+        <ol>
+          <li>给DHCP服务器发送 <strong>DHCP decline</strong>报文撤销IP地址租约</li>
+          <li>重发 <strong>DHCP discover</strong>报文寻找方案</li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+  <li>
+    <p><strong>续约</strong> 当租期过半时</p>
+
+    <ol>
+      <li>
+        <p>客户端请求续约 <strong>DHCP request</strong></p>
+
+        <ul>
+          <li>源地址：租用的地址</li>
+          <li>目的地址：DHCP服务器</li>
+        </ul>
+      </li>
+      <li>服务器不同的反应
+        <ol>
+          <li>若同意续约 <strong>DHCP ACK</strong>，得到新的租期</li>
+          <li>若不同意续约 <strong>DHCP NACK</strong>，客户端必须立即停用租用的IP地址并重新发送 <strong>DHCP discover</strong></li>
+          <li>若不响应，客户端等待一段时间</li>
+        </ol>
+      </li>
+      <li>等待到0.875 = 7/8的租期时间，客户端必须重新发送 续约 <strong>DHCP request</strong></li>
+      <li>等待到租期结束，客户端必须停用租用的IP地址并重新发送 <strong>DHCP discover</strong></li>
+    </ol>
+  </li>
+  <li>
+    <p><strong>解约</strong> 客户端可以随时放弃租用的IP地址，向提供DHCP服务器发送 <strong>DHCP release</strong>释放报文即可</p>
+  </li>
+</ol>
+
+<h4 id="中继代理">中继代理</h4>
+
+<p>​	某个网络拓扑中没有DHCP服务器，其客户端法发送的 DHCP discover请求使用广播地址<code class="language-plaintext highlighter-rouge">255.255.255.255</code>不能经过普通路由器转发而是丢弃，内部又没有可以相应其DHCP请求的服务，导致该网络拓扑中的主机无法自动获取网络配置信息。</p>
+
+<p>​	解决办法，为该路由器配置DHCP服务器的IP地址使之成为 <strong>DHCP中继代理</strong></p>
+
+<p>​	路由器收到广播的DHCP discover报文后，会单播转发给其他网络拓扑中存在的DHCP服务器，此后都如此交互</p>
+
+<p>​	使每个网络不必都配置DHCP服务器，至少有一个即可</p>
+
+<h3 id="dns">DNS</h3>
+
+<p>​	域名系统（Domain Name System），将域名翻译为IP地址寻址</p>
+
+<p>​	每台用户主机都需要经过DNS查找域名对应的IP地址，故DNS服务器不能只有一台，它应该在本地解析或一个分布式服务器集群</p>
+
+<p>​	因特网使用层次结构命名树 + 分布式域名系统，大多数域名在本地解析</p>
+
+<h4 id="域名空间">域名空间</h4>
+
+<p>​	1. 各级域名：由若干个分量，以<code class="language-plaintext highlighter-rouge">.</code>隔开，分别代表不同级别的域名</p>
+
+<p>​		每一级域名（&lt; 63个字符）有 英文（不区分大小写） + 数字 ，完整域名 &lt; 255个字符</p>
+
+<p>​		<code class="language-plaintext highlighter-rouge">···.三级域名.二级域名.顶级域名</code> 右边大，各级域名由其上级机构管理；顶级域名由因特网名称与数字分配机构ICMN管理</p>
+
+<ol>
+  <li>顶级域名TLD（Top Level Domain）分为三类
+    <ol>
+      <li>国家顶级域名nTLD：ISO 3166规定</li>
+      <li>通用顶级域名gTLD：常见七个（<code class="language-plaintext highlighter-rouge">com</code>公司企业、<code class="language-plaintext highlighter-rouge">net</code>网络服务机构、<code class="language-plaintext highlighter-rouge">org</code>非营利性组织、<code class="language-plaintext highlighter-rouge">int</code>国际组织、<code class="language-plaintext highlighter-rouge">edu</code>美国教育机构、<code class="language-plaintext highlighter-rouge">gov</code>美国政府部门、<code class="language-plaintext highlighter-rouge">mil</code>美国军事部门）</li>
+      <li>反向域名arpa：用以反向域名解析，即IP地址 → 域名</li>
+    </ol>
+  </li>
+  <li>二级域名
+    <ol>
+      <li>由国家自行规定</li>
+      <li>分为两类
+        <ol>
+          <li>类别域名：七个（<code class="language-plaintext highlighter-rouge">ac</code>科研机构、<code class="language-plaintext highlighter-rouge">com</code>工商金融等企业、<code class="language-plaintext highlighter-rouge">edu</code>教育机构、<code class="language-plaintext highlighter-rouge">gov</code>政府部门、<code class="language-plaintext highlighter-rouge">net</code>提供网络服务机构、<code class="language-plaintext highlighter-rouge">mil</code>军事机构、<code class="language-plaintext highlighter-rouge">org</code>非盈利组织）</li>
+          <li>行政区域名：34个，分配给各省、自治区、直辖市</li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+  <li>便于维护名字的唯一性，易查询；逻辑概念，而非物理地点</li>
+</ol>
+
+<h4 id="域名服务器">域名服务器</h4>
+
+<p>​	分布式实现</p>
+
+<ol>
+  <li>根 域名服务器
+    <ul>
+      <li>分布式构成的13个根域名服务器，是高层的域名服务器</li>
+      <li>不直接对域名解析，而是提供该域名所在的 顶级服务器IP地址</li>
+    </ul>
+  </li>
+  <li>顶级 域名服务器
+    <ul>
+      <li>管理该顶级域名下的 二级域名</li>
+      <li>返回下一级权限服务器的IP地址</li>
+    </ul>
+  </li>
+  <li>权限 域名服务器
+    <ul>
+      <li>管理某个区的域名，主机必须所管辖服务器注册登记</li>
+      <li>管辖的域名与IP地址的映射关系；下级服务器的地址</li>
+    </ul>
+  </li>
+  <li>本地 域名服务器
+    <ul>
+      <li>主机第一个经过的域名服务器，起着代管作用，对其转发</li>
+      <li>距离主机距离较近，一般四五个路由器</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="域名解析">域名解析</h4>
+
+<h5 id="解析过程">解析过程</h5>
+
+<ul>
+  <li>
+    <p>递归查询</p>
+
+    <p>直接一级一级向下查询，本地 – 根 – 顶级 – 权限，获得结果就往回传递</p>
+  </li>
+  <li>
+    <p>迭代查询</p>
+
+    <p>每向一节查询，拿着结果，向另一级查询。</p>
+
+    <p>本地 – 跟 = 顶级IP；本地 – 顶级IP = 权限IP；本地 – 权限 = 目标IP；本地服务器将目标IP交给主机</p>
+  </li>
+</ul>
+
+<p>递归查询对被查询的域名服务器负载要求大，所以采用两者相结合：</p>
+
+<ol>
+  <li>主机 – 本地：递归查询</li>
+  <li>本地 – 其余服务器：迭代查询</li>
+</ol>
+
+<h5 id="解析原理">解析原理（？）</h5>
+
+<p>DNS指针查询（反向查找、逆向解析）的基本原理</p>
+
+<h4 id="dns缓存">DNS缓存</h4>
+
+<p>​	为提高查询效率，减少查询报文数量，减轻服务器负荷</p>
+
+<p>​	域名服务器广泛使用 <strong>高速缓存</strong>，存放最近查询过的域名、何处获取的域名映射信息记录</p>
+
+<p>​	本地主机也需要维护好 域名：IP地址数据库</p>
+
+<p>​	缓存为每项内容设置计时器，并删除超过合理时间的项</p>
+
+<h3 id="ftp">FTP</h3>
+
+<p>​	文件传输协议（File Transfer Protocol）</p>
+
+<ul>
+  <li>交互式访问，允许指明文件类型与格式、文件存取权限（授权、口令）</li>
+  <li>屏蔽计算机系统细节，适用于异构网络中任意计算机之间</li>
+</ul>
+
+<h4 id="基本工作原理">基本工作原理</h4>
+
+<p>两种不同的传输模式</p>
+
+<p>主动模式</p>
+
+<ul>
+  <li>
+    <p>服务器监听 熟知端口号<code class="language-plaintext highlighter-rouge">21</code>，等待客户发起FTP连接</p>
+  </li>
+  <li>
+    <p><strong>控制连接</strong>：建立TCP连接，用于<strong>传送FTP相关控制命令</strong>，即<code class="language-plaintext highlighter-rouge">命令通道</code></p>
+  </li>
+  <li>
+    <p>如果有数据传输，客户端通过<code class="language-plaintext highlighter-rouge">命令通道</code>告知服务器：需要开放另一条TCP连接，作为<code class="language-plaintext highlighter-rouge">数据通道</code></p>
+  </li>
+  <li>
+    <p><strong>数据连接</strong>：服务器开放 <u>熟知端口号`20`</u>，向客户发起FTP连接（主动模式），用于<strong>传输FTP文件</strong></p>
+  </li>
+</ul>
+
+<p>被动模式</p>
+
+<ul>
+  <li><strong>控制连接</strong>一样</li>
+  <li>如果有数据传输，客户端通过<code class="language-plaintext highlighter-rouge">命令通道</code>告知服务器：需要开放另一条TCP连接，作为<code class="language-plaintext highlighter-rouge">数据通道</code></li>
+  <li><strong>数据连接</strong>：服务器开启 <u>临时端口</u>（双方协商好的端口号），被动等待客户连接（被动模式），建立数据通道</li>
+</ul>
+
+<p>两个TCP连接并行：</p>
+
+<p>​	控制连接需要在绘话期间一直保持打开；</p>
+
+<p>​	数据连接在每次文件传输时建立，结束时结束</p>
+
+<p>客户端的接口都是随机的</p>
+
+<h4>？</h4>
+
+<ol>
+  <li>控制连接 + 数据连接（为什要？</li>
+  <li>两种工作模式：PASV + PORT</li>
+  <li>
+    <p>指令和响应码</p>
+  </li>
+  <li>断电续传 + 匿名FTP</li>
+</ol>
+
+<h3 id="万维网www">万维网WWW</h3>
+
+<p>​	world wide web，运行在Internet中的分布式应用，而非某种特殊的计算机网络</p>
+
+<p>​	利用超链接，将不同网站的网页连接</p>
+
+<p><strong>统一资源定位符URL</strong>：<code class="language-plaintext highlighter-rouge">&lt;协议&gt;://&lt;主机&gt;:&lt;端口&gt;/&lt;路径&gt;</code></p>
+
+<p><strong>连接方式两种</strong>：</p>
+
+<ul>
+  <li>非持续连接
+    <ul>
+      <li>HTTP / 1.0</li>
+      <li>每次请求就建立TCP连接，收到响应后立即关闭连接</li>
+      <li>请求一个WWW文档时间 = 2RTT + 文档传送时延</li>
+      <li>为减少时延，通常会建立多个并行TCP同时请求多个对象；但占用服务器资源</li>
+    </ul>
+  </li>
+  <li>持续连接
+    <ul>
+      <li>HTTP / 1.1</li>
+      <li>同一个浏览器与该服务器的TCP连接可以继续传送请求和响应</li>
+      <li>流水线模式：收到响应之前连续发送多个请求，而后服务器一个接一个响应</li>
+      <li>非流水线模式：只有上一个请求被响应后才可以发送下一个请求</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="http">HTTP</h4>
+
+<h4 id="报文格式">报文格式</h4>
+
+<p>HTTP是 <strong>面向文本</strong>，报文的每一个字段都是一些ASCII码率，且长度不确定</p>
+
+<h6 id="请求格式各种字段">请求格式（+各种字段）</h6>
+
+<p><img src="E:\Computer language\计算机网络\计算机网络.assets\HTTP请求报文格式.png" alt="HTTP请求报文格式" /></p>
+
+<ul>
+  <li>请求行
+    <ul>
+      <li>指明方法：GET POST PUT</li>
+      <li>资源地址：URL</li>
+      <li>HTTP 版本</li>
+    </ul>
+  </li>
+  <li>首部行
+    <ul>
+      <li>Connect：close — 告诉服务器发送完请求文档后可释放连接</li>
+      <li>User-Agent：Mozilla/5.0 — 告诉服务器 浏览器使用的类型和版本</li>
+      <li>Accept-Language：cn — 告诉服务器 用户希望优先得到中文版本的文档</li>
+    </ul>
+  </li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>方法</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>HEAD</td>
+      <td>请求URL标志的文档首部</td>
+    </tr>
+    <tr>
+      <td>CONNECT</td>
+      <td>用于代理服务器</td>
+    </tr>
+    <tr>
+      <td>OPTIONS</td>
+      <td>请求一些选项信息</td>
+    </tr>
+    <tr>
+      <td>TRACE</td>
+      <td>用来进行环回测试</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>GET</td>
+      <td>请求URL标志的文档</td>
+    </tr>
+    <tr>
+      <td>POST</td>
+      <td>向服务器发送数据</td>
+    </tr>
+    <tr>
+      <td>PUT</td>
+      <td>在指明的URL下存档一个文档</td>
+    </tr>
+    <tr>
+      <td>DELETE</td>
+      <td>删除URL标志的文档</td>
+    </tr>
+    <tr>
+      <td>PATCH</td>
+      <td>对PUT方法补充，对已知资源进行局部更新</td>
+    </tr>
+  </tbody>
+</table>
+
+<h6 id="响应各种字段">响应（+各种字段）</h6>
+
+<p><img src="E:\Computer language\计算机网络\计算机网络.assets\HTTP响应报文格式.png" alt="HTTP响应报文格式" /></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>状态码</th>
+      <th>（五大类，33种）描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1XX</td>
+      <td>表示通知信息，如：请求收到了、正在进行处理</td>
+    </tr>
+    <tr>
+      <td>2XX</td>
+      <td>表示成功，如：接受了、知道了</td>
+    </tr>
+    <tr>
+      <td>3XX</td>
+      <td>表示重定向，即要完成请求还必须采取进一步的行动</td>
+    </tr>
+    <tr>
+      <td>4XX</td>
+      <td>表示客户的差错，如：请求中有错误的语法、或不能完成</td>
+    </tr>
+    <tr>
+      <td>5XX</td>
+      <td>表示服务器的差错，如：服务器失效无法完成请求</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="cookie">Cookie</h4>
+
+<p>​	HTTP为无状态协议，使用Cookie对其进行状态化的技术</p>
+
+<ol>
+  <li>双方建立TCP连接成功时，服务器为用户生成唯一的cookie识别码Set-Cookie</li>
+  <li>用户端将Cookie信息存放到文档</li>
+  <li>每次用户端发送请求，读取Cookie码并将其携带上</li>
+  <li>服务器根据Cookie码识别用户，并返回个性化页面</li>
+</ol>
+
+<h3 id="https">HTTPS（？</h3>
+
+<ol>
+  <li>详细握手过程</li>
+  <li>摘要算法、数字签名、数字证书的原理和过程</li>
+</ol>
+
+<h3 id="电子邮件">电子邮件</h3>
+
+<p>​	电子邮件系统上采用 客户/服务器方式，有三个部件构成：用户代理，邮件服务器，电子邮件所需的协议</p>
+
+<ul>
+  <li>用户代理：用户与电子邮件系统的接口，又称 电子邮件客户端软件</li>
+  <li>邮件服务器：
+    <ul>
+      <li>电子邮件系统的基础设施，Internet所有的ISP（Internet Service Provider，互联网服务提供商）都有邮件服务器</li>
+      <li>其功能是发送和接受邮件，维护用户的邮箱</li>
+    </ul>
+  </li>
+  <li>协议：邮件发送协议（SMTP）+邮件读取协议（POP3，IMAP）</li>
+</ul>
+
+<h4 id="邮件协议的使用范围">邮件协议的使用范围</h4>
+
+<p><img src="E:\Computer language\计算机网络\计算机网络.assets\邮件协议的使用范围.jpg" alt="邮件协议的使用范围" /></p>
+
+<h4 id="smtp">SMTP</h4>
+
+<h5 id="smtp-与-mime">SMTP 与 MIME</h5>
+
+<ol>
+  <li>SMTP协议
+    <ol>
+      <li>只能传送ASCII码文本数据，不能传送可执行文件或其他的二进制对象。</li>
+      <li>不能满足传送多媒体邮件（例如带有图片、音频或视频数据）的需要。</li>
+      <li>许多其他非英语国家的文字（例如中文、俄文、甚至带有重音符号的法文或德文）也无法用SMTP传送。</li>
+    </ol>
+  </li>
+  <li>MIME（多用途因特网邮件扩展，Multipurpose Internet Mail Extensions）
+    <ol>
+      <li>为解决SMTP传送非ASCII码文本的问题，</li>
+      <li>增加了5个新的邮件首部字段，这些字段提供了有关邮件主体的信息。</li>
+      <li>定义了许多邮件内容的格式，对多媒体电子邮件的表示方法进行了标准化。</li>
+      <li>定义了传送编码，可对任何内容格式进行转换，而不会被邮件系统改变。</li>
+    </ol>
+  </li>
+</ol>
+
+<p>实际上，MIME不仅仅用于SMTP，也用于后来的同样面向ASCII字符的HTTP</p>
+
+<h5 id="基本工作原理-1">基本工作原理</h5>
+
+<p><img src="E:\Computer language\计算机网络\计算机网络.assets\STMP的基本工作原理.png" alt="STMP的基本工作原理" /></p>
+
+<h4 id="信息格式">信息格式</h4>
+
+<p><img src="E:\Computer language\计算机网络\计算机网络.assets\电子邮件的信息格式.png" alt="电子邮件的信息格式" /></p>
+
+<h4 id="邮件读取协议">邮件读取协议</h4>
+
+<p>​	都使用基于TCP连接的客户/服务器方式</p>
+
+<h5 id="pop-邮局协议">POP 邮局协议</h5>
+
+<p>​	Post Office Protacol，是Internet的正式标准。</p>
+
+<ul>
+  <li>非常简单，功能有限</li>
+  <li>用户只能 下载+删除、下载+保留的方式 获取邮件到计算机</li>
+  <li>不允许用户在邮件服务器上管理自己的邮件</li>
+  <li>熟知端口110</li>
+</ul>
+
+<h5 id="imap-internet邮件访问协议">IMAP Internet邮件访问协议</h5>
+
+<p>​	Internet Message Access Protocol，是Internet的建议标准</p>
+
+<ul>
+  <li>功能强大，是一个联机协议</li>
+  <li>用户可以在计算机上操作邮件服务器的邮箱</li>
+  <li>熟知端口143</li>
+</ul>
+
+<h4 id="基于万维网的电子邮件">基于万维网的电子邮件</h4>
+
+<p>​	通过浏览器 → 邮件服务器万维网，撰写、收发、阅读和管理；无需安装软件</p>
+
+<p>TCP 区分应用进程；实现可靠传输</p>
+
+<p>添加ETH 使之成为（以太网）帧</p>
+
+<p>帧：目的地址 + 源地址 + 类型 + 包 + 4字节校验码</p>
+
+<p>前导码：1字节帧开始界定符 + 7字节前同步码 让目的主机做好接受帧的准备</p>]]></content><author><name>Ana</name></author><category term="计算机网络" /><category term="writing" /><summary type="html"><![CDATA[计算机网络]]></summary></entry><entry><title type="html">Customize the Favicon</title><link href="http://localhost:4000/jekyll-theme-chirpy/blogging/tutorial/2019/08/11/customize-the-favicon.html" rel="alternate" type="text/html" title="Customize the Favicon" /><published>2019-08-11T00:34:00+08:00</published><updated>2019-08-11T00:34:00+08:00</updated><id>http://localhost:4000/jekyll-theme-chirpy/blogging/tutorial/2019/08/11/customize-the-favicon</id><content type="html" xml:base="http://localhost:4000/jekyll-theme-chirpy/blogging/tutorial/2019/08/11/customize-the-favicon.html"><![CDATA[<p>The <a href="https://www.favicon-generator.org/about/">favicons</a> of <a href="https://github.com/cotes2020/jekyll-theme-chirpy/"><strong>Chirpy</strong></a> are placed in the directory <code class="language-plaintext filepath highlighter-rouge">assets/img/favicons/</code>. You may want to replace them with your own. The following sections will guide you to create and replace the default favicons.</p>
+
+<h2 id="generate-the-favicon">Generate the favicon</h2>
+
+<p>Prepare a square image (PNG, JPG, or SVG) with a size of 512x512 or more, and then go to the online tool <a href="https://realfavicongenerator.net/"><strong>Real Favicon Generator</strong></a> and click the button <kbd>Select your Favicon image</kbd> to upload your image file.</p>
+
+<p>In the next step, the webpage will show all usage scenarios. You can keep the default options, scroll to the bottom of the page, and click the button <kbd>Generate your Favicons and HTML code</kbd> to generate the favicon.</p>
+
+<h2 id="download--replace">Download &amp; Replace</h2>
+
+<p>Download the generated package, unzip and delete the following two from the extracted files:</p>
+
+<ul>
+  <li><code class="language-plaintext filepath highlighter-rouge">browserconfig.xml</code></li>
+  <li><code class="language-plaintext filepath highlighter-rouge">site.webmanifest</code></li>
+</ul>
+
+<p>And then copy the remaining image files (<code class="language-plaintext filepath highlighter-rouge">.PNG</code> and <code class="language-plaintext filepath highlighter-rouge">.ICO</code>) to cover the original files in the directory <code class="language-plaintext filepath highlighter-rouge">assets/img/favicons/</code> of your Jekyll site. If your Jekyll site doesn’t have this directory yet, just create one.</p>
+
+<p>The following table will help you understand the changes to the favicon files:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>File(s)</th>
+      <th style="text-align: center">From Online Tool</th>
+      <th style="text-align: center">From Chirpy</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">*.PNG</code></td>
+      <td style="text-align: center">✓</td>
+      <td style="text-align: center">✗</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">*.ICO</code></td>
+      <td style="text-align: center">✓</td>
+      <td style="text-align: center">✗</td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote class="prompt-info">
+  <p>✓ means keep, ✗ means delete.</p>
+</blockquote>
+
+<p>The next time you build the site, the favicon will be replaced with a customized edition.</p>]]></content><author><name>Cotes Chung</name></author><category term="jekyll-theme-chirpy" /><category term="Blogging" /><category term="Tutorial" /><category term="favicon" /><summary type="html"><![CDATA[The favicons of Chirpy are placed in the directory assets/img/favicons/. You may want to replace them with your own. The following sections will guide you to create and replace the default favicons.]]></summary></entry><entry><title type="html">Getting Started</title><link href="http://localhost:4000/jekyll-theme-chirpy/blogging/tutorial/2019/08/09/getting-started.html" rel="alternate" type="text/html" title="Getting Started" /><published>2019-08-09T20:55:00+08:00</published><updated>2019-08-09T20:55:00+08:00</updated><id>http://localhost:4000/jekyll-theme-chirpy/blogging/tutorial/2019/08/09/getting-started</id><content type="html" xml:base="http://localhost:4000/jekyll-theme-chirpy/blogging/tutorial/2019/08/09/getting-started.html"><![CDATA[<h2 id="prerequisites">Prerequisites</h2>
+
+<p>Follow the instructions in the <a href="https://jekyllrb.com/docs/installation/">Jekyll Docs</a> to complete the installation of the basic environment. <a href="https://git-scm.com/">Git</a> also needs to be installed.</p>
+
+<h2 id="installation">Installation</h2>
+
+<h3 id="creating-a-new-site">Creating a New Site</h3>
+
+<p>There are two ways to create a new repository for this theme:</p>
+
+<ul>
+  <li><a href="#option-1-using-the-chirpy-starter"><strong>Using the Chirpy Starter</strong></a> - Easy to upgrade, isolates irrelevant project files so you can focus on writing.</li>
+  <li><a href="#option-2-github-fork"><strong>GitHub Fork</strong></a> - Convenient for custom development, but difficult to upgrade. Unless you are familiar with Jekyll and are determined to tweak or contribute to this project, this approach is not recommended.</li>
+</ul>
+
+<h4 id="option-1-using-the-chirpy-starter">Option 1. Using the Chirpy Starter</h4>
+
+<p>Sign in to GitHub and browse to <a href="https://github.com/cotes2020/chirpy-starter"><strong>Chirpy Starter</strong></a>, click the button <kbd>Use this template</kbd> &gt; <kbd>Create a new repository</kbd>, and name the new repository <code class="language-plaintext highlighter-rouge">USERNAME.github.io</code>, where <code class="language-plaintext highlighter-rouge">USERNAME</code> represents your GitHub username.</p>
+
+<h4 id="option-2-github-fork">Option 2. GitHub Fork</h4>
+
+<p>Sign in to GitHub to <a href="https://github.com/cotes2020/jekyll-theme-chirpy/fork">fork <strong>Chirpy</strong></a>, and then rename it to <code class="language-plaintext highlighter-rouge">USERNAME.github.io</code> (<code class="language-plaintext highlighter-rouge">USERNAME</code> means your username).</p>
+
+<p>Next, clone your site to local machine. In order to build JavaScript files later, we need to install <a href="https://nodejs.org/">Node.js</a>, and then run the tool:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>bash tools/init
+</code></pre></div></div>
+
+<blockquote class="prompt-info">
+  <p>If you don’t want to deploy your site on GitHub Pages, append option <code class="language-plaintext highlighter-rouge">--no-gh</code> at the end of the above command.</p>
+</blockquote>
+
+<p>The above command will:</p>
+
+<ol>
+  <li>Check out the code to the <a href="https://github.com/cotes2020/jekyll-theme-chirpy/tags">latest tag</a> (to ensure the stability of your site: as the code for the default branch is under development).</li>
+  <li>Remove non-essential sample files and take care of GitHub-related files.</li>
+  <li>Build JavaScript files and export to <code class="language-plaintext filepath highlighter-rouge">assets/js/dist/</code>, then make them tracked by Git.</li>
+  <li>Automatically create a new commit to save the changes above.</li>
+</ol>
+
+<h3 id="installing-dependencies">Installing Dependencies</h3>
+
+<p>Before running local server for the first time, go to the root directory of your site and run:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>bundle
+</code></pre></div></div>
+
+<h2 id="usage">Usage</h2>
+
+<h3 id="configuration">Configuration</h3>
+
+<p>Update the variables of <code class="language-plaintext filepath highlighter-rouge">_config.yml</code> as needed. Some of them are typical options:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">url</code></li>
+  <li><code class="language-plaintext highlighter-rouge">avatar</code></li>
+  <li><code class="language-plaintext highlighter-rouge">timezone</code></li>
+  <li><code class="language-plaintext highlighter-rouge">lang</code></li>
+</ul>
+
+<h3 id="customizing-stylesheet">Customizing Stylesheet</h3>
+
+<p>If you need to customize the stylesheet, copy the theme’s <code class="language-plaintext filepath highlighter-rouge">assets/css/style.scss</code> to the same path on your Jekyll site, and then add the custom style at the end of it.</p>
+
+<p>Starting with version <code class="language-plaintext highlighter-rouge">4.1.0</code>, if you want to overwrite the SASS variables defined in <code class="language-plaintext filepath highlighter-rouge">_sass/addon/variables.scss</code>, copy the main sass file <code class="language-plaintext filepath highlighter-rouge">_sass/jekyll-theme-chirpy.scss</code> into the <code class="language-plaintext filepath highlighter-rouge">_sass</code> directory in your site’s source, then create a new file <code class="language-plaintext filepath highlighter-rouge">_sass/variables-hook.scss</code> and assign new value.</p>
+
+<h3 id="customing-static-assets">Customing Static Assets</h3>
+
+<p>Static assets configuration was introduced in version <code class="language-plaintext highlighter-rouge">5.1.0</code>. The CDN of the static assets is defined by file <code class="language-plaintext filepath highlighter-rouge">_data/origin/cors.yml</code>, and you can replace some of them according to the network conditions in the region where your website is published.</p>
+
+<p>Also, if you’d like to self-host the static assets, please refer to the <a href="https://github.com/cotes2020/chirpy-static-assets#readme"><em>chirpy-static-assets</em></a>.</p>
+
+<h3 id="running-local-server">Running Local Server</h3>
+
+<p>You may want to preview the site contents before publishing, so just run it by:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>bundle <span class="nb">exec </span>jekyll s
+</code></pre></div></div>
+
+<p>Or run the site on Docker with the following command:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>docker run <span class="nt">-it</span> <span class="nt">--rm</span> <span class="se">\</span>
+<span class="gp">    --volume="$</span>PWD:/srv/jekyll<span class="s2">" </span><span class="se">\</span><span class="s2">
+</span><span class="go">    -p 4000:4000 jekyll/jekyll \
+    jekyll serve
+</span></code></pre></div></div>
+
+<p>After a few seconds, the local service will be published at <em><a href="http://127.0.0.1:4000">http://127.0.0.1:4000</a></em>.</p>
+
+<h2 id="deployment">Deployment</h2>
+
+<p>Before the deployment begins, check out the file <code class="language-plaintext filepath highlighter-rouge">_config.yml</code> and make sure the <code class="language-plaintext highlighter-rouge">url</code> is configured correctly. Furthermore, if you prefer the <a href="https://help.github.com/en/github/working-with-github-pages/about-github-pages#types-of-github-pages-sites"><strong>project site</strong></a> and don’t use a custom domain, or you want to visit your website with a base URL on a web server other than <strong>GitHub Pages</strong>, remember to change the <code class="language-plaintext highlighter-rouge">baseurl</code> to your project name that starts with a slash, e.g, <code class="language-plaintext highlighter-rouge">/project-name</code>.</p>
+
+<p>Now you can choose <em>ONE</em> of the following methods to deploy your Jekyll site.</p>
+
+<h3 id="deploy-by-using-github-actions">Deploy by Using GitHub Actions</h3>
+
+<p>There are a few things to get ready for.</p>
+
+<ul>
+  <li>If you’re on the GitHub Free plan, keep your site repository public.</li>
+  <li>
+    <p>If you have committed <code class="language-plaintext filepath highlighter-rouge">Gemfile.lock</code> to the repository, and your local machine is not running Linux, go the the root of your site and update the platform list of the lock-file:</p>
+
+    <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>bundle lock <span class="nt">--add-platform</span> x86_64-linux
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p>Next, configure the <em>Pages</em> service.</p>
+
+<ol>
+  <li>
+    <p>Browse to your repository on GitHub. Select the tab <em>Settings</em>, then click <em>Pages</em> in the left navigation bar. Then, in the <strong>Source</strong> section (under <em>Build and deployment</em>), select <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-with-a-custom-github-actions-workflow"><strong>GitHub Actions</strong></a> from the dropdown menu.<br />
+<img src="pages-source-light.png" alt="Build source" class="light border normal" w="375" h="140" />
+<img src="pages-source-dark.png" alt="Build source" class="dark normal" w="375" h="140" /></p>
+  </li>
+  <li>
+    <p>Push any commits to GitHub to trigger the <em>Actions</em> workflow. In the <em>Actions</em> tab of your repository, you should see the workflow <em>Build and Deploy</em> running. Once the build is complete and successful, the site will be deployed automatically.</p>
+  </li>
+</ol>
+
+<p>At this point, you can go to the URL indicated by GitHub to access your site.</p>
+
+<h3 id="manually-build-and-deploy">Manually Build and Deploy</h3>
+
+<p>On self-hosted servers, you cannot enjoy the convenience of <strong>GitHub Actions</strong>. Therefore, you should build the site on your local machine and then upload the site files to the server.</p>
+
+<p>Go to the root of the source project, and build your site as follows:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span><span class="nv">JEKYLL_ENV</span><span class="o">=</span>production bundle <span class="nb">exec </span>jekyll b
+</code></pre></div></div>
+
+<p>Or build the site on Docker:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>docker run <span class="nt">-it</span> <span class="nt">--rm</span> <span class="se">\</span>
+<span class="go">    --env JEKYLL_ENV=production \
+</span><span class="gp">    --volume="$</span>PWD:/srv/jekyll<span class="s2">" </span><span class="se">\</span><span class="s2">
+</span><span class="go">    jekyll/jekyll \
+    jekyll build
+</span></code></pre></div></div>
+
+<p>Unless you specified the output path, the generated site files will be placed in folder <code class="language-plaintext filepath highlighter-rouge">_site</code> of the project’s root directory. Now you should upload those files to the target server.</p>]]></content><author><name>Cotes Chung</name></author><category term="jekyll-theme-chirpy" /><category term="Blogging" /><category term="Tutorial" /><category term="getting started" /><summary type="html"><![CDATA[Prerequisites]]></summary></entry><entry><title type="html">Writing a New Post</title><link href="http://localhost:4000/jekyll-theme-chirpy/blogging/tutorial/2019/08/08/write-a-new-post.html" rel="alternate" type="text/html" title="Writing a New Post" /><published>2019-08-08T14:10:00+08:00</published><updated>2019-08-08T14:10:00+08:00</updated><id>http://localhost:4000/jekyll-theme-chirpy/blogging/tutorial/2019/08/08/write-a-new-post</id><content type="html" xml:base="http://localhost:4000/jekyll-theme-chirpy/blogging/tutorial/2019/08/08/write-a-new-post.html"><![CDATA[<p>This tutorial will guide you how to write a post in the <em>Chirpy</em> template, and it’s worth reading even if you’ve used Jekyll before, as many features require specific variables to be set.</p>
+
+<h2 id="naming-and-path">Naming and Path</h2>
+
+<p>Create a new file named <code class="language-plaintext filepath highlighter-rouge">YYYY-MM-DD-TITLE.EXTENSION</code> and put it in the <code class="language-plaintext filepath highlighter-rouge">_posts</code> of the root directory. Please note that the <code class="language-plaintext filepath highlighter-rouge">EXTENSION</code> must be one of <code class="language-plaintext filepath highlighter-rouge">md</code> and <code class="language-plaintext filepath highlighter-rouge">markdown</code>. If you want to save time of creating files, please consider using the plugin <a href="https://github.com/jekyll/jekyll-compose"><code class="language-plaintext highlighter-rouge">Jekyll-Compose</code></a> to accomplish this.</p>
+
+<h2 id="front-matter">Front Matter</h2>
+
+<p>Basically, you need to fill the <a href="https://jekyllrb.com/docs/front-matter/">Front Matter</a> as below at the top of the post:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s">TITLE</span>
+<span class="na">date</span><span class="pi">:</span> <span class="s">YYYY-MM-DD HH:MM:SS +/-TTTT</span>
+<span class="na">categories</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">TOP_CATEGORIE</span><span class="pi">,</span> <span class="nv">SUB_CATEGORIE</span><span class="pi">]</span>
+<span class="na">tags</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">TAG</span><span class="pi">]</span>     <span class="c1"># TAG names should always be lowercase</span>
+<span class="nn">---</span>
+</code></pre></div></div>
+
+<blockquote class="prompt-tip">
+  <p>The posts’ <em>layout</em> has been set to <code class="language-plaintext highlighter-rouge">post</code> by default, so there is no need to add the variable <em>layout</em> in the Front Matter block.</p>
+</blockquote>
+
+<h3 id="timezone-of-date">Timezone of Date</h3>
+
+<p>In order to accurately record the release date of a post, you should not only set up the <code class="language-plaintext highlighter-rouge">timezone</code> of <code class="language-plaintext filepath highlighter-rouge">_config.yml</code> but also provide the post’s timezone in variable <code class="language-plaintext highlighter-rouge">date</code> of its Front Matter block. Format: <code class="language-plaintext highlighter-rouge">+/-TTTT</code>, e.g. <code class="language-plaintext highlighter-rouge">+0800</code>.</p>
+
+<h3 id="categories-and-tags">Categories and Tags</h3>
+
+<p>The <code class="language-plaintext highlighter-rouge">categories</code> of each post are designed to contain up to two elements, and the number of elements in <code class="language-plaintext highlighter-rouge">tags</code> can be zero to infinity. For instance:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">categories</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">Animal</span><span class="pi">,</span> <span class="nv">Insect</span><span class="pi">]</span>
+<span class="na">tags</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">bee</span><span class="pi">]</span>
+<span class="nn">---</span>
+</code></pre></div></div>
+
+<h3 id="author-information">Author Information</h3>
+
+<p>The author information of the post usually does not need to be filled in the <em>Front Matter</em> , they will be obtained from variables <code class="language-plaintext highlighter-rouge">social.name</code> and the first entry of <code class="language-plaintext highlighter-rouge">social.links</code> of the configuration file by default. But you can also override it as follows:</p>
+
+<p>Adding author information in <code class="language-plaintext highlighter-rouge">_data/authors.yml</code> (If your website doesn’t have this file, don’t hesitate to create one).</p>
+
+<div file="_data/authors.yml" class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">&lt;author_id&gt;</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">&lt;full name&gt;</span>
+  <span class="na">twitter</span><span class="pi">:</span> <span class="s">&lt;twitter_of_author&gt;</span>
+  <span class="na">url</span><span class="pi">:</span> <span class="s">&lt;homepage_of_author&gt;</span>
+</code></pre></div></div>
+
+<p>And then use <code class="language-plaintext highlighter-rouge">author</code> to specify a single entry or <code class="language-plaintext highlighter-rouge">authors</code> to specify multiple entries:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">author</span><span class="pi">:</span> <span class="s">&lt;author_id&gt;</span>                     <span class="c1"># for single entry</span>
+<span class="c1"># or</span>
+<span class="na">authors</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">&lt;author1_id&gt;</span><span class="pi">,</span> <span class="nv">&lt;author2_id&gt;</span><span class="pi">]</span>   <span class="c1"># for multiple entries</span>
+<span class="nn">---</span>
+</code></pre></div></div>
+
+<p>Having said that, the key <code class="language-plaintext highlighter-rouge">author</code> can also identify multiple entries.</p>
+
+<blockquote class="prompt-info">
+  <p>The benefit of reading the author information from the file <code class="language-plaintext filepath highlighter-rouge">_data/authors.yml</code> is that the page will have the meta tag <code class="language-plaintext highlighter-rouge">twitter:creator</code>, which enriches the <a href="https://developer.twitter.com/en/docs/twitter-for-websites/cards/guides/getting-started#card-and-content-attribution">Twitter Cards</a> and is good for SEO.</p>
+</blockquote>
+
+<h2 id="table-of-contents">Table of Contents</h2>
+
+<p>By default, the <strong>T</strong>able <strong>o</strong>f <strong>C</strong>ontents (TOC) is displayed on the right panel of the post. If you want to turn it off globally, go to <code class="language-plaintext filepath highlighter-rouge">_config.yml</code> and set the value of variable <code class="language-plaintext highlighter-rouge">toc</code> to <code class="language-plaintext highlighter-rouge">false</code>. If you want to turn off TOC for a specific post, add the following to the post’s <a href="https://jekyllrb.com/docs/front-matter/">Front Matter</a>:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">toc</span><span class="pi">:</span> <span class="kc">false</span>
+<span class="nn">---</span>
+</code></pre></div></div>
+
+<h2 id="comments">Comments</h2>
+
+<p>The global switch of comments is defined by variable <code class="language-plaintext highlighter-rouge">comments.active</code> in the file <code class="language-plaintext filepath highlighter-rouge">_config.yml</code>. After selecting a comment system for this variable, comments will be turned on for all posts.</p>
+
+<p>If you want to close the comment for a specific post, add the following to the <strong>Front Matter</strong> of the post:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">comments</span><span class="pi">:</span> <span class="kc">false</span>
+<span class="nn">---</span>
+</code></pre></div></div>
+
+<h2 id="mathematics">Mathematics</h2>
+
+<p>For website performance reasons, the mathematical feature won’t be loaded by default. But it can be enabled by:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">math</span><span class="pi">:</span> <span class="kc">true</span>
+<span class="nn">---</span>
+</code></pre></div></div>
+
+<h2 id="mermaid">Mermaid</h2>
+
+<p><a href="https://github.com/mermaid-js/mermaid"><strong>Mermaid</strong></a> is a great diagrams generation tool. To enable it on your post, add the following to the YAML block:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">mermaid</span><span class="pi">:</span> <span class="kc">true</span>
+<span class="nn">---</span>
+</code></pre></div></div>
+
+<p>Then you can use it like other markdown languages: surround the graph code with <code class="language-plaintext highlighter-rouge">```mermaid</code> and <code class="language-plaintext highlighter-rouge">```</code>.</p>
+
+<h2 id="images">Images</h2>
+
+<h3 id="caption">Caption</h3>
+
+<p>Add italics to the next line of an image，then it will become the caption and appear at the bottom of the image:</p>
+
+<div class="language-markdown nolineno highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">![</span><span class="nv">img-description</span><span class="p">](</span><span class="sx">/path/to/image</span><span class="p">)</span>
+<span class="ge">_Image Caption_</span>
+</code></pre></div></div>
+
+<h3 id="size">Size</h3>
+
+<p>In order to prevent the page content layout from shifting when the image is loaded, we should set the width and height for each image.</p>
+
+<div class="language-markdown nolineno highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">![</span><span class="nv">Desktop View</span><span class="p">](</span><span class="sx">/assets/img/sample/mockup.png</span><span class="p">)</span>{: width="700" height="400" }
+</code></pre></div></div>
+
+<blockquote class="prompt-info">
+  <p>For an SVG, you have to at least specify its <em>width</em>, otherwise it won’t be rendered.</p>
+</blockquote>
+
+<p>Starting from <em>Chirpy v5.0.0</em>, <code class="language-plaintext highlighter-rouge">height</code> and <code class="language-plaintext highlighter-rouge">width</code> support abbreviations (<code class="language-plaintext highlighter-rouge">height</code> → <code class="language-plaintext highlighter-rouge">h</code>, <code class="language-plaintext highlighter-rouge">width</code> → <code class="language-plaintext highlighter-rouge">w</code>). The following example has the same effect as the above:</p>
+
+<div class="language-markdown nolineno highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">![</span><span class="nv">Desktop View</span><span class="p">](</span><span class="sx">/assets/img/sample/mockup.png</span><span class="p">)</span>{: w="700" h="400" }
+</code></pre></div></div>
+
+<h3 id="position">Position</h3>
+
+<p>By default, the image is centered, but you can specify the position by using one of the classes <code class="language-plaintext highlighter-rouge">normal</code>, <code class="language-plaintext highlighter-rouge">left</code>, and <code class="language-plaintext highlighter-rouge">right</code>.</p>
+
+<blockquote class="prompt-warning">
+  <p>Once the position is specified, the image caption should not be added.</p>
+</blockquote>
+
+<ul>
+  <li>
+    <p><strong>Normal position</strong></p>
+
+    <p>Image will be left aligned in below sample:</p>
+
+    <div class="language-markdown nolineno highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">![</span><span class="nv">Desktop View</span><span class="p">](</span><span class="sx">/assets/img/sample/mockup.png</span><span class="p">)</span>{: .normal }
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong>Float to the left</strong></p>
+
+    <div class="language-markdown nolineno highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">![</span><span class="nv">Desktop View</span><span class="p">](</span><span class="sx">/assets/img/sample/mockup.png</span><span class="p">)</span>{: .left }
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong>Float to the right</strong></p>
+
+    <div class="language-markdown nolineno highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">![</span><span class="nv">Desktop View</span><span class="p">](</span><span class="sx">/assets/img/sample/mockup.png</span><span class="p">)</span>{: .right }
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h3 id="darklight-mode">Dark/Light mode</h3>
+
+<p>You can make images follow theme preferences in dark/light mode. This requires you to prepare two images, one for dark mode and one for light mode, and then assign them a specific class (<code class="language-plaintext highlighter-rouge">dark</code> or <code class="language-plaintext highlighter-rouge">light</code>):</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">![</span><span class="nv">Light mode only</span><span class="p">](</span><span class="sx">/path/to/light-mode.png</span><span class="p">)</span>{: .light }
+<span class="p">![</span><span class="nv">Dark mode only</span><span class="p">](</span><span class="sx">/path/to/dark-mode.png</span><span class="p">)</span>{: .dark }
+</code></pre></div></div>
+
+<h3 id="shadow">Shadow</h3>
+
+<p>The screenshots of the program window can be considered to show the shadow effect:</p>
+
+<div class="language-markdown nolineno highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">![</span><span class="nv">Desktop View</span><span class="p">](</span><span class="sx">/assets/img/sample/mockup.png</span><span class="p">)</span>{: .shadow }
+</code></pre></div></div>
+
+<h3 id="cdn-url">CDN URL</h3>
+
+<p>If you host the images on the CDN, you can save the time of repeatedly writing the CDN URL by assigning the variable <code class="language-plaintext highlighter-rouge">img_cdn</code> of <code class="language-plaintext filepath highlighter-rouge">_config.yml</code> file:</p>
+
+<div class="language-yaml nolineno highlighter-rouge" file="_config.yml"><div class="highlight"><pre class="highlight"><code><span class="na">img_cdn</span><span class="pi">:</span> <span class="s">https://cdn.com</span>
+</code></pre></div></div>
+
+<p>Once <code class="language-plaintext highlighter-rouge">img_cdn</code> is assigned, the CDN URL will be added to the path of all images (images of site avatar and posts) starting with <code class="language-plaintext highlighter-rouge">/</code>.</p>
+
+<p>For instance, when using images:</p>
+
+<div class="language-markdown nolineno highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">![</span><span class="nv">The flower</span><span class="p">](</span><span class="sx">/path/to/flower.png</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>The parsing result will automatically add the CDN prefix <code class="language-plaintext highlighter-rouge">https://cdn.com</code> before the image path:</p>
+
+<div class="language-html nolineno highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://cdn.com/path/to/flower.png"</span> <span class="na">alt=</span><span class="s">"The flower"</span><span class="nt">&gt;</span>
+</code></pre></div></div>
+
+<h3 id="image-path">Image Path</h3>
+
+<p>When a post contains many images, it will be a time-consuming task to repeatedly define the path of the images. To solve this, we can define this path in the YAML block of the post:</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">img_path</span><span class="pi">:</span> <span class="s">/img/path/</span>
+<span class="nn">---</span>
+</code></pre></div></div>
+
+<p>And then, the image source of Markdown can write the file name directly:</p>
+
+<div class="language-md nolineno highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">![</span><span class="nv">The flower</span><span class="p">](</span><span class="sx">flower.png</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>The output will be:</p>
+
+<div class="language-html nolineno highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"/img/path/flower.png"</span> <span class="na">alt=</span><span class="s">"The flower"</span><span class="nt">&gt;</span>
+</code></pre></div></div>
+
+<h3 id="preview-image">Preview Image</h3>
+
+<p>If you want to add an image at the top of the post, please provide an image with a resolution of <code class="language-plaintext highlighter-rouge">1200 x 630</code>. Please note that if the image aspect ratio does not meet <code class="language-plaintext highlighter-rouge">1.91 : 1</code>, the image will be scaled and cropped.</p>
+
+<p>Knowing these prerequisites, you can start setting the image’s attribute:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">image</span><span class="pi">:</span>
+  <span class="na">path</span><span class="pi">:</span> <span class="s">/path/to/image</span>
+  <span class="na">alt</span><span class="pi">:</span> <span class="s">image alternative text</span>
+<span class="nn">---</span>
+</code></pre></div></div>
+
+<p>Note that the <a href="#image-path"><code class="language-plaintext highlighter-rouge">img_path</code></a> can also be passed to the preview image, that is, when it has been set, the  attribute <code class="language-plaintext highlighter-rouge">path</code> only needs the image file name.</p>
+
+<p>For simple use, you can also just use <code class="language-plaintext highlighter-rouge">image</code> to define the path.</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">image</span><span class="pi">:</span> <span class="s">/path/to/image</span>
+<span class="nn">---</span>
+</code></pre></div></div>
+
+<h3 id="lqip">LQIP</h3>
+
+<p>For preview images:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">image</span><span class="pi">:</span>
+  <span class="na">lqip</span><span class="pi">:</span> <span class="s">/path/to/lqip-file</span> <span class="c1"># or base64 URI</span>
+<span class="nn">---</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>You can observe LQIP in the preview image of post <a href="/posts/text-and-typography/"><em>Text and Typography</em></a>.</p>
+</blockquote>
+
+<p>For normal images:</p>
+
+<div class="language-markdown nolineno highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">![</span><span class="nv">Image description</span><span class="p">](</span><span class="sx">/path/to/image</span><span class="p">)</span>{: lqip="/path/to/lqip-file" }
+</code></pre></div></div>
+
+<h2 id="pinned-posts">Pinned Posts</h2>
+
+<p>You can pin one or more posts to the top of the home page, and the fixed posts are sorted in reverse order according to their release date. Enable by:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">pin</span><span class="pi">:</span> <span class="kc">true</span>
+<span class="nn">---</span>
+</code></pre></div></div>
+
+<h2 id="prompts">Prompts</h2>
+
+<p>There are several types of prompts: <code class="language-plaintext highlighter-rouge">tip</code>, <code class="language-plaintext highlighter-rouge">info</code>, <code class="language-plaintext highlighter-rouge">warning</code>, and <code class="language-plaintext highlighter-rouge">danger</code>. They can be generated by adding the class <code class="language-plaintext highlighter-rouge">prompt-{type}</code> to the blockquote. For example, define a prompt of type <code class="language-plaintext highlighter-rouge">info</code> as follows:</p>
+
+<div class="language-md nolineno highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gt">&gt; Example line for prompt.</span>
+{: .prompt-info }
+</code></pre></div></div>
+
+<h2 id="syntax">Syntax</h2>
+
+<h3 id="inline-code">Inline Code</h3>
+
+<div class="language-md nolineno highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="sb">`inline code part`</span>
+</code></pre></div></div>
+
+<h3 id="filepath-hightlight">Filepath Hightlight</h3>
+
+<div class="language-md nolineno highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="sb">`/path/to/a/file.extend`</span>{: .filepath}
+</code></pre></div></div>
+
+<h3 id="code-block">Code Block</h3>
+
+<p>Markdown symbols <code class="language-plaintext highlighter-rouge">```</code> can easily create a code block as follows:</p>
+
+<div class="language-md highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="p">```</span><span class="nl">
+</span>This is a plaintext code snippet.
+<span class="p">```</span>
+
+</code></pre></div></div>
+
+<h4 id="specifying-language">Specifying Language</h4>
+
+<p>Using <code class="language-plaintext highlighter-rouge">```{language}</code> you will get a code block with syntax highlight:</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>​<span class="sb">```yaml
+key: value
+```</span>
+</code></pre></div></div>
+
+<blockquote class="prompt-danger">
+  <p>The Jekyll tag <code class="language-plaintext highlighter-rouge">{% highlight %}</code> is not compatible with this theme.</p>
+</blockquote>
+
+<h4 id="line-number">Line Number</h4>
+
+<p>By default, all languages except <code class="language-plaintext highlighter-rouge">plaintext</code>, <code class="language-plaintext highlighter-rouge">console</code>, and <code class="language-plaintext highlighter-rouge">terminal</code> will display line numbers. When you want to hide the line number of a code block, add the class <code class="language-plaintext highlighter-rouge">nolineno</code> to it:</p>
+
+<p>​````markdown
+​```shell
+echo ‘No more line numbers!’</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{: .nolineno }
+</code></pre></div></div>
+
+<h4 id="specifying-the-filename">Specifying the Filename</h4>
+
+<p>You may have noticed that the code language will be displayed at the top of the code block. If you want to replace it with the file name, you can add the attribute <code class="language-plaintext highlighter-rouge">file</code> to achieve this:</p>
+
+<p>​````markdown
+​```shell</p>
+<h1 id="content">content</h1>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{: file="path/to/file" }
+</code></pre></div></div>
+
+<h4 id="liquid-codes">Liquid Codes</h4>
+
+<p>If you want to display the <strong>Liquid</strong> snippet, surround the liquid code with <code class="language-plaintext highlighter-rouge">{% raw %}</code> and <code class="language-plaintext highlighter-rouge">{% endraw %}</code>:</p>
+
+<p>​````markdown
+{% raw %}
+​```liquid
+{% if product.title contains ‘Pack’ %}
+  This product’s title contains the word Pack.
+{% endif %}</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{% endraw %}
+</code></pre></div></div>
+
+<p>Or adding <code class="language-plaintext highlighter-rouge">render_with_liquid: false</code> (Requires Jekyll 4.0 or higher) to the post’s YAML block.</p>
+
+<h2 id="videos">Videos</h2>
+
+<p>You can embed a video with the following syntax:</p>
+
+<p>​<code class="language-plaintext highlighter-rouge">liquid
+{% include embed/{Platform}.html id='{ID}' %}
+</code>
+Where <code class="language-plaintext highlighter-rouge">Platform</code> is the lowercase of the platform name, and <code class="language-plaintext highlighter-rouge">ID</code> is the video ID.</p>
+
+<p>The following table shows how to get the two parameters we need in a given video URL, and you can also know the currently supported video platforms.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Video URL</th>
+      <th>Platform</th>
+      <th style="text-align: left">ID</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://www.youtube.com/watch?v=H-B46URT4mg">https://www.<strong>youtube</strong>.com/watch?v=<strong>H-B46URT4mg</strong></a></td>
+      <td><code class="language-plaintext highlighter-rouge">youtube</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">H-B46URT4mg</code></td>
+    </tr>
+    <tr>
+      <td><a href="https://www.twitch.tv/videos/1634779211">https://www.<strong>twitch</strong>.tv/videos/<strong>1634779211</strong></a></td>
+      <td><code class="language-plaintext highlighter-rouge">twitch</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">1634779211</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="learn-more">Learn More</h2>
+
+<p>For more knowledge about Jekyll posts, visit the <a href="https://jekyllrb.com/docs/posts/">Jekyll Docs: Posts</a>.</p>]]></content><author><name>Cotes Chung</name></author><category term="jekyll-theme-chirpy" /><category term="Blogging" /><category term="Tutorial" /><category term="writing" /><summary type="html"><![CDATA[This tutorial will guide you how to write a post in the Chirpy template, and it’s worth reading even if you’ve used Jekyll before, as many features require specific variables to be set.]]></summary></entry><entry><title type="html">Text and Typography</title><link href="http://localhost:4000/jekyll-theme-chirpy/blogging/demo/2019/08/08/text-and-typography.html" rel="alternate" type="text/html" title="Text and Typography" /><published>2019-08-08T11:33:00+08:00</published><updated>2019-08-08T11:33:00+08:00</updated><id>http://localhost:4000/jekyll-theme-chirpy/blogging/demo/2019/08/08/text-and-typography</id><content type="html" xml:base="http://localhost:4000/jekyll-theme-chirpy/blogging/demo/2019/08/08/text-and-typography.html"><![CDATA[<p>This post is to show Markdown syntax rendering on <a href="https://github.com/cotes2020/jekyll-theme-chirpy/fork"><strong>Chirpy</strong></a>, you can also use it as an example of writing. Now, let’s start looking at text and typography.</p>
+
+<h2 id="headings">Headings</h2>
+
+<h1 class="mt-5">H1 - heading</h1>
+
+<h2 data-toc-skip="">H2 - heading</h2>
+
+<h3 data-toc-skip="">H3 - heading</h3>
+
+<h4 data-toc-skip="">H4 - heading</h4>
+
+<h2 id="paragraph">Paragraph</h2>
+
+<p>Quisque egestas convallis ipsum, ut sollicitudin risus tincidunt a. Maecenas interdum malesuada egestas. Duis consectetur porta risus, sit amet vulputate urna facilisis ac. Phasellus semper dui non purus ultrices sodales. Aliquam ante lorem, ornare a feugiat ac, finibus nec mauris. Vivamus ut tristique nisi. Sed vel leo vulputate, efficitur risus non, posuere mi. Nullam tincidunt bibendum rutrum. Proin commodo ornare sapien. Vivamus interdum diam sed sapien blandit, sit amet aliquam risus mattis. Nullam arcu turpis, mollis quis laoreet at, placerat id nibh. Suspendisse venenatis eros eros.</p>
+
+<h2 id="lists">Lists</h2>
+
+<h3 id="ordered-list">Ordered list</h3>
+
+<ol>
+  <li>Firstly</li>
+  <li>Secondly</li>
+  <li>Thirdly</li>
+</ol>
+
+<h3 id="unordered-list">Unordered list</h3>
+
+<ul>
+  <li>Chapter
+    <ul>
+      <li>Section
+        <ul>
+          <li>Paragraph</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="todo-list">ToDo list</h3>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Job
+    <ul class="task-list">
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Step 1</li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Step 2</li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Step 3</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="description-list">Description list</h3>
+
+<dl>
+  <dt>Sun</dt>
+  <dd>the star around which the earth orbits</dd>
+  <dt>Moon</dt>
+  <dd>the natural satellite of the earth, visible by reflected light from the sun</dd>
+</dl>
+
+<h2 id="block-quote">Block Quote</h2>
+
+<blockquote>
+  <p>This line shows the <em>block quote</em>.</p>
+</blockquote>
+
+<h2 id="prompts">Prompts</h2>
+
+<blockquote class="prompt-tip">
+  <p>An example showing the <code class="language-plaintext highlighter-rouge">tip</code> type prompt.</p>
+</blockquote>
+
+<blockquote class="prompt-info">
+  <p>An example showing the <code class="language-plaintext highlighter-rouge">info</code> type prompt.</p>
+</blockquote>
+
+<blockquote class="prompt-warning">
+  <p>An example showing the <code class="language-plaintext highlighter-rouge">warning</code> type prompt.</p>
+</blockquote>
+
+<blockquote class="prompt-danger">
+  <p>An example showing the <code class="language-plaintext highlighter-rouge">danger</code> type prompt.</p>
+</blockquote>
+
+<h2 id="tables">Tables</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Company</th>
+      <th style="text-align: left">Contact</th>
+      <th style="text-align: right">Country</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Alfreds Futterkiste</td>
+      <td style="text-align: left">Maria Anders</td>
+      <td style="text-align: right">Germany</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Island Trading</td>
+      <td style="text-align: left">Helen Bennett</td>
+      <td style="text-align: right">UK</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Magazzini Alimentari Riuniti</td>
+      <td style="text-align: left">Giovanni Rovelli</td>
+      <td style="text-align: right">Italy</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="links">Links</h2>
+
+<p><a href="http://127.0.0.1:4000">http://127.0.0.1:4000</a></p>
+
+<h2 id="footnote">Footnote</h2>
+
+<p>Click the hook will locate the footnote<sup id="fnref:footnote" role="doc-noteref"><a href="#fn:footnote" class="footnote" rel="footnote">1</a></sup>, and here is another footnote<sup id="fnref:fn-nth-2" role="doc-noteref"><a href="#fn:fn-nth-2" class="footnote" rel="footnote">2</a></sup>.</p>
+
+<h2 id="inline-code">Inline code</h2>
+
+<p>This is an example of <code class="language-plaintext highlighter-rouge">Inline Code</code>.</p>
+
+<h2 id="filepath">Filepath</h2>
+
+<p>Here is the <code class="language-plaintext filepath highlighter-rouge">/path/to/the/file.extend</code>.</p>
+
+<h2 id="code-blocks">Code blocks</h2>
+
+<h3 id="common">Common</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>This is a common code snippet, without syntax highlight and line number.
+</code></pre></div></div>
+
+<h3 id="specific-language">Specific Language</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> <span class="nt">-ne</span> 0 <span class="o">]</span><span class="p">;</span> <span class="k">then
+  </span><span class="nb">echo</span> <span class="s2">"The command was not successful."</span><span class="p">;</span>
+  <span class="c">#do the needful / exit</span>
+<span class="k">fi</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h3 id="specific-filename">Specific filename</h3>
+
+<div file="_sass/jekyll-theme-chirpy.scss" class="language-sass highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@import</span>
+  <span class="s2">"colors/light-typography"</span><span class="o">,</span>
+  <span class="s2">"colors/dark-typography"</span><span class="o">;</span>
+</code></pre></div></div>
+
+<h2 id="mathematics">Mathematics</h2>
+
+<p>The mathematics powered by <a href="https://www.mathjax.org/"><strong>MathJax</strong></a>:</p>
+
+\[\sum_{n=1}^\infty 1/n^2 = \frac{\pi^2}{6}\]
+
+<p>When $a \ne 0$, there are two solutions to $ax^2 + bx + c = 0$ and they are</p>
+
+\[x = {-b \pm \sqrt{b^2-4ac} \over 2a}\]
+
+<h2 id="mermaid-svg">Mermaid SVG</h2>
+
+<pre><code class="language-mermaid"> gantt
+  title  Adding GANTT diagram functionality to mermaid
+  apple :a, 2017-07-20, 1w
+  banana :crit, b, 2017-07-23, 1d
+  cherry :active, c, after b a, 1d
+</code></pre>
+
+<h2 id="images">Images</h2>
+
+<h3 id="default-with-caption">Default (with caption)</h3>
+
+<p><img src="/posts/20190808/mockup.png" alt="Desktop View" width="972" height="589" />
+<em>Full screen width and center alignment</em></p>
+
+<h3 id="left-aligned">Left aligned</h3>
+
+<p><img src="/posts/20190808/mockup.png" alt="Desktop View" width="972" height="589" class="w-75 normal" /></p>
+
+<h3 id="float-to-left">Float to left</h3>
+
+<p><img src="/posts/20190808/mockup.png" alt="Desktop View" width="972" height="589" class="w-50 left" />
+Praesent maximus aliquam sapien. Sed vel neque in dolor pulvinar auctor. Maecenas pharetra, sem sit amet interdum posuere, tellus lacus eleifend magna, ac lobortis felis ipsum id sapien. Proin ornare rutrum metus, ac convallis diam volutpat sit amet. Phasellus volutpat, elit sit amet tincidunt mollis, felis mi scelerisque mauris, ut facilisis leo magna accumsan sapien. In rutrum vehicula nisl eget tempor. Nullam maximus ullamcorper libero non maximus. Integer ultricies velit id convallis varius. Praesent eu nisl eu urna finibus ultrices id nec ex. Mauris ac mattis quam. Fusce aliquam est nec sapien bibendum, vitae malesuada ligula condimentum.</p>
+
+<h3 id="float-to-right">Float to right</h3>
+
+<p><img src="/posts/20190808/mockup.png" alt="Desktop View" width="972" height="589" class="w-50 right" />
+Praesent maximus aliquam sapien. Sed vel neque in dolor pulvinar auctor. Maecenas pharetra, sem sit amet interdum posuere, tellus lacus eleifend magna, ac lobortis felis ipsum id sapien. Proin ornare rutrum metus, ac convallis diam volutpat sit amet. Phasellus volutpat, elit sit amet tincidunt mollis, felis mi scelerisque mauris, ut facilisis leo magna accumsan sapien. In rutrum vehicula nisl eget tempor. Nullam maximus ullamcorper libero non maximus. Integer ultricies velit id convallis varius. Praesent eu nisl eu urna finibus ultrices id nec ex. Mauris ac mattis quam. Fusce aliquam est nec sapien bibendum, vitae malesuada ligula condimentum.</p>
+
+<h3 id="darklight-mode--shadow">Dark/Light mode &amp; Shadow</h3>
+
+<p>The image below will toggle dark/light mode based on theme preference, notice it has shadows.</p>
+
+<p><img src="/posts/20190808/devtools-light.png" alt="light mode only" class="light w-75 shadow rounded-10" w="1212" h="668" />
+<img src="/posts/20190808/devtools-dark.png" alt="dark mode only" class="dark w-75 shadow rounded-10" w="1212" h="668" /></p>
+
+<h2 id="video">Video</h2>
+
+<iframe class="embed-video youtube lazyload" src="https://www.youtube.com/embed/Balreaj8Yqs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<h2 id="reverse-footnote">Reverse Footnote</h2>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:footnote" role="doc-endnote">
+      <p>The footnote source <a href="#fnref:footnote" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:fn-nth-2" role="doc-endnote">
+      <p>The 2nd footnote source <a href="#fnref:fn-nth-2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>]]></content><author><name>Cotes Chung</name></author><category term="jekyll-theme-chirpy" /><category term="Blogging" /><category term="Demo" /><category term="typography" /><summary type="html"><![CDATA[This post is to show Markdown syntax rendering on Chirpy, you can also use it as an example of writing. Now, let’s start looking at text and typography.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/commons/devices-mockup.png" /><media:content medium="image" url="http://localhost:4000/commons/devices-mockup.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
