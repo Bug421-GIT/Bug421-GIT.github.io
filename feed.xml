@@ -1,0 +1,290 @@
+
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>http://localhost:4000/</id>
+  <title>安置屋</title>
+  <subtitle>好记性不如烂笔头，处处记不如时时用</subtitle>
+  <updated>2024-04-27T19:58:49+08:00</updated>
+  <author>
+    <name>Ana-Anan</name>
+    <uri>http://localhost:4000/</uri>
+  </author>
+  <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml"/>
+  <link rel="alternate" type="text/html" hreflang="zh-CN"
+    href="http://localhost:4000/"/>
+  <generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator>
+  <rights> © 2024 Ana-Anan </rights>
+  <icon>/assets/img/favicons/favicon.ico</icon>
+  <logo>/assets/img/favicons/favicon-96x96.png</logo>
+
+
+  
+  <entry>
+    <title>共享工作者线程</title>
+    <link href="http://localhost:4000/posts/%E5%85%B1%E4%BA%AB%E5%B7%A5%E4%BD%9C%E8%80%85%E7%BA%BF%E7%A8%8B/" rel="alternate" type="text/html" title="共享工作者线程" />
+    <published>2024-01-29T00:00:00+08:00</published>
+  
+    <updated>2024-01-29T00:00:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/%E5%85%B1%E4%BA%AB%E5%B7%A5%E4%BD%9C%E8%80%85%E7%BA%BF%E7%A8%8B/</id>
+    <content src="http://localhost:4000/posts/%E5%85%B1%E4%BA%AB%E5%B7%A5%E4%BD%9C%E8%80%85%E7%BA%BF%E7%A8%8B/" />
+    <author>
+      <name>Ana-Ana</name>
+    </author>
+
+  
+    
+    <category term="javascriptThread" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      共享工作者线程
+
+​	ShareWorker被多个可信任的执行上下文访问，消息接口外部和内部接口与Worker有些不同。可以减少共享线程计算性消耗的情形，一个ShareWorker可以管理多个同源页面web Socket消息，或成为上下文之间的通信线程。
+
+🎈	在行内脚本中创建的共享工作者线程始终是唯一的：只有标识不存在时，才会创建新线程；否则静默新建失败，且调用connect与已有线程建立连接。
+
+​	共享工作者线程的标识：解析后的URL、工作者线程名称、文档源
+
+new ShareWorker('./worker.js',{name:'foo'})
+new ShareWorker('https://www.example.com/worker.js',{name:'foo'})
+
+
+🎈	ShareWorker.port：特殊属性，专门用来与共享线程通信的Message
+
+🎈	Sh...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>专用工作者线程</title>
+    <link href="http://localhost:4000/posts/%E4%B8%93%E7%94%A8%E5%B7%A5%E4%BD%9C%E8%80%85%E7%BA%BF%E7%A8%8B/" rel="alternate" type="text/html" title="专用工作者线程" />
+    <published>2024-01-26T00:00:00+08:00</published>
+  
+    <updated>2024-01-26T00:00:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/%E4%B8%93%E7%94%A8%E5%B7%A5%E4%BD%9C%E8%80%85%E7%BA%BF%E7%A8%8B/</id>
+    <content src="http://localhost:4000/posts/%E4%B8%93%E7%94%A8%E5%B7%A5%E4%BD%9C%E8%80%85%E7%BA%BF%E7%A8%8B/" />
+    <author>
+      <name>Ana-Ana</name>
+    </author>
+
+  
+    
+    <category term="javascriptThread" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      专用工作者线程
+
+​	用以执行页面主线程之外的其他任务，如发生网络请求、执行文件输入/输出、密集的计算、处理大量的数据，通过与父页面交换消息，完成不适合在主线程执行的任务。（不能直接操作页面DOM元素）又被称为 后台脚本（background script），由初始化线程时提供的脚本控制线程的各个方面，包括生命周期、代码路径、输入输出。
+
+// main.js
+location.href; // "https://...com/"
+const worker = new Worker(location.href + 'backgroudScript.js');  // worker是工作者线程与主线程通信的连接点
+
+
+​	new Worker() 参数必须是一个脚本文件，专用工作者线程只能被生成它的脚本所使用。
+
+​	初始化工作者线程是需要时间的（初始化延迟），且完全独立于main.j...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>工作者线程</title>
+    <link href="http://localhost:4000/posts/%E5%B7%A5%E4%BD%9C%E8%80%85%E7%BA%BF%E7%A8%8B/" rel="alternate" type="text/html" title="工作者线程" />
+    <published>2024-01-20T00:00:00+08:00</published>
+  
+    <updated>2024-01-20T00:00:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/%E5%B7%A5%E4%BD%9C%E8%80%85%E7%BA%BF%E7%A8%8B/</id>
+    <content src="http://localhost:4000/posts/%E5%B7%A5%E4%BD%9C%E8%80%85%E7%BA%BF%E7%A8%8B/" />
+    <author>
+      <name>Ana-Ana</name>
+    </author>
+
+  
+    
+    <category term="javascriptThread" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      工作者线程
+
+​	允许把主线程的工作转移到独立的实体，而不改变现有的单线程模式。浏览器主线程负责与处理用户事件和页面绘制等。
+
+​	JavaScript环境实际是运行在托管操作系统的虚拟环境。每个页面都有自己的环境，内存、事件循环、DOM等等，不会影响到其他页面。所有页面环境都是并行处理的。
+
+​	使用工作者线程，可以在原始页面环境之外，在分配一个完全独立的二级子环境，与主线程不能直接通信只能使用 消息 完成，不能与依赖单线程交互的API（如DOM）互操作，但可以与父环境并行执行。工作者线程相对较重，通常占用较大内存，不建议大量使用；调度之间存在性能损耗，所以应该谨慎使用线程，给常驻的、启动成本高的、计算量较大的工作分配。
+
+​	🎈	以实际线程实现的，对应着底层的线程。
+
+​	🎈	环境内的指令是可以并行执行的
+
+​	🎈	可以共享某些内存，但不完全共享全部内存。可以使用sharedAr...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>11. 垃圾回收机制</title>
+    <link href="http://localhost:4000/posts/11.%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E6%9C%BA%E5%88%B6/" rel="alternate" type="text/html" title="11. 垃圾回收机制" />
+    <published>2022-09-05T00:00:00+08:00</published>
+  
+    <updated>2022-09-05T00:00:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/11.%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E6%9C%BA%E5%88%B6/</id>
+    <content src="http://localhost:4000/posts/11.%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E6%9C%BA%E5%88%B6/" />
+    <author>
+      <name>Ana-Ana</name>
+    </author>
+
+  
+    
+    <category term="JavaScript" />
+    
+    <category term="Object" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      
+  回收对象 —— 当一个变量没有被其他变量或属性引用的时候
+    
+      全局变量 ：持续到浏览器页面关闭
+      局部变量 ：函数执行结束后
+    
+  
+
+
+数据存储
+
+
+  
+    基本数据类型 —— 栈
+  
+  
+    引用数据类型 —— 堆，在栈中存储实际对象引用
+
+    当引用数据类型引用目标改变时，旧的栈实际对象失去引用，这变成需要回收的垃圾
+  
+
+
+
+  
+    两种常用方法
+
+    ​	垃圾回收并不是实时的，因为开销比较大，所以垃圾回收器会周期性的释放程序中已经不在被引用的垃圾对象。浏览器常使用到两种标准策略：标记清理、引用计数
+
+    1. 标记清除法（大部分浏览器） Mark-Sweep
+
+    两个阶段：
+
+    
+      
+        标记：从根节点遍历，给每个可访问的对象打上标记，表示对象可达
+
+       ...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>10. 事件</title>
+    <link href="http://localhost:4000/posts/10.%E4%BA%8B%E4%BB%B6/" rel="alternate" type="text/html" title="10. 事件" />
+    <published>2022-09-02T00:00:00+08:00</published>
+  
+    <updated>2022-09-02T00:00:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/10.%E4%BA%8B%E4%BB%B6/</id>
+    <content src="http://localhost:4000/posts/10.%E4%BA%8B%E4%BB%B6/" />
+    <author>
+      <name>Ana-Ana</name>
+    </author>
+
+  
+    
+    <category term="JavaScript" />
+    
+    <category term="Event" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      
+  JavaScript 与 HTML 交互通过 事件 实现；代表文档document 或 浏览器窗口中某个意义的时刻
+  监听器 ，订阅事件（处理程序） 监听事件发生时执行
+  触发事件以测试：dispatchEvent()
+
+
+事件流
+
+​	事件流描述了页面接受事件的顺序
+
+
+  IE 支持事件冒泡流
+    
+      IE事件流被称为事件冒泡
+      事件从最具体的元素（文档树中最深的节点）开始出发，然后向上传播到没有那么具体的元素（Document）
+      IE5.5及早期版本跳过&amp;lt;html&amp;gt; (&amp;lt;body&amp;gt; -&amp;gt; &amp;lt;document&amp;gt;)
+    
+  
+  Netscape Comuunicator 支持事件捕获流
+    
+      事件捕获：为在事件达到最终目标前拦截事件（新版本浏览器都支持事件捕获，但旧版本不...
+    </summary>
+  
+
+  </entry>
+
+</feed>
+
+
