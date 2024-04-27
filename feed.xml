@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>安置屋</title>
   <subtitle>好记性不如烂笔头，处处记不如时时用</subtitle>
-  <updated>2024-01-21T22:29:09+08:00</updated>
+  <updated>2024-04-27T16:23:25+08:00</updated>
   <author>
     <name>Ana-Anan</name>
     <uri>http://localhost:4000/</uri>
@@ -20,21 +20,21 @@
 
   
   <entry>
-    <title>6.网络层</title>
-    <link href="http://localhost:4000/posts/6.%E7%BD%91%E7%BB%9C%E5%B1%82/" rel="alternate" type="text/html" title="6.网络层" />
-    <published>2022-06-18T00:00:00+08:00</published>
+    <title>共享工作者线程</title>
+    <link href="http://localhost:4000/posts/%E5%85%B1%E4%BA%AB%E5%B7%A5%E4%BD%9C%E8%80%85%E7%BA%BF%E7%A8%8B/" rel="alternate" type="text/html" title="共享工作者线程" />
+    <published>2024-01-29T00:00:00+08:00</published>
   
-    <updated>2022-06-18T00:00:00+08:00</updated>
+    <updated>2024-01-29T00:00:00+08:00</updated>
   
-    <id>http://localhost:4000/posts/6.%E7%BD%91%E7%BB%9C%E5%B1%82/</id>
-    <content src="http://localhost:4000/posts/6.%E7%BD%91%E7%BB%9C%E5%B1%82/" />
+    <id>http://localhost:4000/posts/%E5%85%B1%E4%BA%AB%E5%B7%A5%E4%BD%9C%E8%80%85%E7%BA%BF%E7%A8%8B/</id>
+    <content src="http://localhost:4000/posts/%E5%85%B1%E4%BA%AB%E5%B7%A5%E4%BD%9C%E8%80%85%E7%BA%BF%E7%A8%8B/" />
     <author>
       <name>Ana-Ana</name>
     </author>
 
   
     
-    <category term="计算机网络" />
+    <category term="javascriptThread" />
     
   
 
@@ -46,44 +46,21 @@
 
 
 
-      
+      共享工作者线程
 
-​	网络体系结构的最顶层，享受下层提供的服务，无视下层具体操作活动；
+​	ShareWorker被多个可信任的执行上下文访问，消息接口外部和内部接口与Worker有些不同。可以减少共享线程计算性消耗的情形，一个ShareWorker可以管理多个同源页面web Socket消息，或成为上下文之间的通信线程。
 
-​	通过应用进程的交互，实现特定网络应用的问题；
+🎈	在行内脚本中创建的共享工作者线程始终是唯一的：只有标识不存在时，才会创建新线程；否则静默新建失败，且调用connect与已有线程建立连接。
 
-​	是设计和建立计算机网络的最终目的
+​	共享工作者线程的标识：解析后的URL、工作者线程名称、文档源
 
-C/S 和 P2P
-
-C/S
-
-客户 / 服务器（Client/Server）
+new ShareWorker('./worker.js',{name:'foo'})
+new ShareWorker('https://www.example.com/worker.js',{name:'foo'})
 
 
-  客户：是计算机、是进程，是服务请求方
-  服务器：
-    
-      是计算机、是进程，是服务提供方
-      总是处于运行状态，等待客户请求
-      具有固定的端口号，主机有固定的IP地址
-    
-  
-  服务集中型
-    
-      应用服务集中 比客户端少得多的 服务器上
-      常会出现服务器跟不上客户端请求的情况
-      计算机群集（服务器场）构建一个强大的虚拟服务器
-    
-  
+🎈	ShareWorker.port：特殊属性，专门用来与共享线程通信的Message
 
-
-P2P
-
-对等方式 （ Peer - to - Peer）
-
-
-  没有固定的请求者和提供者，应用进程对等、直...
+🎈	Sh...
     </summary>
   
 
@@ -91,21 +68,21 @@ P2P
 
   
   <entry>
-    <title>5. 运输层</title>
-    <link href="http://localhost:4000/posts/5.%E8%BF%90%E8%BE%93%E5%B1%82/" rel="alternate" type="text/html" title="5. 运输层" />
-    <published>2022-06-16T00:00:00+08:00</published>
+    <title>专用工作者线程</title>
+    <link href="http://localhost:4000/posts/%E4%B8%93%E7%94%A8%E5%B7%A5%E4%BD%9C%E8%80%85%E7%BA%BF%E7%A8%8B/" rel="alternate" type="text/html" title="专用工作者线程" />
+    <published>2024-01-26T00:00:00+08:00</published>
   
-    <updated>2022-06-16T00:00:00+08:00</updated>
+    <updated>2024-01-26T00:00:00+08:00</updated>
   
-    <id>http://localhost:4000/posts/5.%E8%BF%90%E8%BE%93%E5%B1%82/</id>
-    <content src="http://localhost:4000/posts/5.%E8%BF%90%E8%BE%93%E5%B1%82/" />
+    <id>http://localhost:4000/posts/%E4%B8%93%E7%94%A8%E5%B7%A5%E4%BD%9C%E8%80%85%E7%BA%BF%E7%A8%8B/</id>
+    <content src="http://localhost:4000/posts/%E4%B8%93%E7%94%A8%E5%B7%A5%E4%BD%9C%E8%80%85%E7%BA%BF%E7%A8%8B/" />
     <author>
       <name>Ana-Ana</name>
     </author>
 
   
     
-    <category term="计算机网络" />
+    <category term="javascriptThread" />
     
   
 
@@ -117,43 +94,18 @@ P2P
 
 
 
-      
+      专用工作者线程
 
-​	主机到主机的通信：物理层 + 数据链路层 + 网络层
+​	用以执行页面主线程之外的其他任务，如发生网络请求、执行文件输入/输出、密集的计算、处理大量的数据，通过与父页面交换消息，完成不适合在主线程执行的任务。（不能直接操作页面DOM元素）又被称为 后台脚本（background script），由初始化线程时提供的脚本控制线程的各个方面，包括生命周期、代码路径、输入输出。
 
-​	主机进程间的通信：传输层
-
-​	如果为运行在不同主机的 应用进程的逻辑通信提供直接通信服务，又称为端到端协议（端口）
-
-​	向上层隐藏下面的网络服务核心细节，提供两种不同的运输协议
+// main.js
+location.href; // "https://...com/"
+const worker = new Worker(location.href + 'backgroudScript.js');  // worker是工作者线程与主线程通信的连接点
 
 
-  面向连接的TCP
-  面向无连接UDP
+​	new Worker() 参数必须是一个脚本文件，专用工作者线程只能被生成它的脚本所使用。
 
-
-端口号
-
-​	进程标识符PID，不同OS、不同进程的表示格式不同，使用统一的方法对TCP/IP体系的应用进程标识
-
-​	16bit表示，取值范围0~65535；
-
-
-  
-    熟知端口号：0~1023；FTP 21/20; HTTP 80; DNS 53
-  
-  
-    登记端口号：1024~49151；必须登记手续
-  
-  
-    短暂端口号：49152~65535；动态端口号
-
-    【端口号只具有本地意义】不同OS、不同进程的端口号之间没有联系
-  
-
-
-
-  复用：...
+​	初始化工作者线程是需要时间的（初始化延迟），且完全独立于main.j...
     </summary>
   
 
@@ -161,21 +113,21 @@ P2P
 
   
   <entry>
-    <title>4. 网络层</title>
-    <link href="http://localhost:4000/posts/4.%E7%BD%91%E7%BB%9C%E5%B1%82/" rel="alternate" type="text/html" title="4. 网络层" />
-    <published>2022-06-14T00:00:00+08:00</published>
+    <title>工作者线程</title>
+    <link href="http://localhost:4000/posts/%E5%B7%A5%E4%BD%9C%E8%80%85%E7%BA%BF%E7%A8%8B/" rel="alternate" type="text/html" title="工作者线程" />
+    <published>2024-01-20T00:00:00+08:00</published>
   
-    <updated>2022-06-14T00:00:00+08:00</updated>
+    <updated>2024-01-20T00:00:00+08:00</updated>
   
-    <id>http://localhost:4000/posts/4.%E7%BD%91%E7%BB%9C%E5%B1%82/</id>
-    <content src="http://localhost:4000/posts/4.%E7%BD%91%E7%BB%9C%E5%B1%82/" />
+    <id>http://localhost:4000/posts/%E5%B7%A5%E4%BD%9C%E8%80%85%E7%BA%BF%E7%A8%8B/</id>
+    <content src="http://localhost:4000/posts/%E5%B7%A5%E4%BD%9C%E8%80%85%E7%BA%BF%E7%A8%8B/" />
     <author>
       <name>Ana-Ana</name>
     </author>
 
   
     
-    <category term="计算机网络" />
+    <category term="javascriptThread" />
     
   
 
@@ -187,42 +139,19 @@ P2P
 
 
 
-      
+      工作者线程
 
-​	实现网络互连，数据包在其之间的传输
+​	允许把主线程的工作转移到独立的实体，而不改变现有的单线程模式。浏览器主线程负责与处理用户事件和页面绘制等。
 
+​	JavaScript环境实际是运行在托管操作系统的虚拟环境。每个页面都有自己的环境，内存、事件循环、DOM等等，不会影响到其他页面。所有页面环境都是并行处理的。
 
-  
-    向上层（运输层）提供怎样的服务？IP提供的是 面向无连接，不可靠服务
-  
-  
-    网络寻址问题：A类地址、B类地址、C类地址
-  
-  
-    路由选择问题：路由表 + 目的地址
+​	使用工作者线程，可以在原始页面环境之外，在分配一个完全独立的二级子环境，与主线程不能直接通信只能使用 消息 完成，不能与依赖单线程交互的API（如DOM）互操作，但可以与父环境并行执行。工作者线程相对较重，通常占用较大内存，不建议大量使用；调度之间存在性能损耗，所以应该谨慎使用线程，给常驻的、启动成本高的、计算量较大的工作分配。
 
-    
-      路由表的数据来源：人工设置（小型，不改变）、路由选择协议中的选择算法
-    
+​	🎈	以实际线程实现的，对应着底层的线程。
 
-    因特网，使用TCP/IP协议，网络层使用网际协议IP，由此TCP/IP中的网络层又称为网际层
-  
+​	🎈	环境内的指令是可以并行执行的
 
-
-提供的两种连接
-
-
-  
-    面向连接的虚电路
-
-    
-      可靠通信由网络来保障
-      建立网络层的连接——虚电路CV，沿着此电路发送分组
-      目的主机地址仅在建立初阶段使用，之后 首部只携带虚电路的编号
-      通信结束后，需要释放所建立的虚电路
-    
-
-    虚电路 + 可靠传输...
+​	🎈	可以共享某些内存，但不完全共享全部内存。可以使用sharedAr...
     </summary>
   
 
@@ -230,21 +159,23 @@ P2P
 
   
   <entry>
-    <title>3. 链路层</title>
-    <link href="http://localhost:4000/posts/3.%E9%93%BE%E8%B7%AF%E5%B1%82/" rel="alternate" type="text/html" title="3. 链路层" />
-    <published>2022-06-13T00:00:00+08:00</published>
+    <title>11. 垃圾回收机制</title>
+    <link href="http://localhost:4000/posts/11.%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E6%9C%BA%E5%88%B6/" rel="alternate" type="text/html" title="11. 垃圾回收机制" />
+    <published>2022-09-05T00:00:00+08:00</published>
   
-    <updated>2022-06-13T00:00:00+08:00</updated>
+    <updated>2022-09-05T00:00:00+08:00</updated>
   
-    <id>http://localhost:4000/posts/3.%E9%93%BE%E8%B7%AF%E5%B1%82/</id>
-    <content src="http://localhost:4000/posts/3.%E9%93%BE%E8%B7%AF%E5%B1%82/" />
+    <id>http://localhost:4000/posts/11.%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E6%9C%BA%E5%88%B6/</id>
+    <content src="http://localhost:4000/posts/11.%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E6%9C%BA%E5%88%B6/" />
     <author>
       <name>Ana-Ana</name>
     </author>
 
   
     
-    <category term="计算机网络" />
+    <category term="JavaScript" />
+    
+    <category term="Object" />
     
   
 
@@ -256,53 +187,43 @@ P2P
 
 
 
-      链路层
+      
+  回收对象 —— 当一个变量没有被其他变量或属性引用的时候
+    
+      全局变量 ：持续到浏览器页面关闭
+      局部变量 ：函数执行结束后
+    
+  
 
 
-  链路（Link）：两个结点间的物理线路
-  数据链路：把实现通信协议的硬件和软件，加到链路上
-
-
-
-  封装成帧：加上帧头 帧尾
-  差错检测：帧尾的检验码
-  可靠传输：接收方发现帧验证错误，丢弃该帧而不接受
-
-
-广播通道链路：将目标地址、源地址写入帧头
-
-共享式局域网信号碰撞问题：接入控制协议 CSMA/CD
-
-封装成帧
+数据存储
 
 
   
-    
-      1字节
-      1字节
-      1字节
-      2字节
-      &amp;lt;1500字节
-      2字节
-      1字节
-    
+    基本数据类型 —— 栈
   
   
+    引用数据类型 —— 堆，在栈中存储实际对象引用
+
+    当引用数据类型引用目标改变时，旧的栈实际对象失去引用，这变成需要回收的垃圾
+  
+
+
+
+  
+    两种常用方法
+
+    ​	垃圾回收并不是实时的，因为开销比较大，所以垃圾回收器会周期性的释放程序中已经不在被引用的垃圾对象。浏览器常使用到两种标准策略：标记清理、引用计数
+
+    1. 标记清除法（大部分浏览器） Mark-Sweep
+
+    两个阶段：
+
     
-      标志（开始）
-      地址
-      控制
-      协议
-      数据
-      FCS
-      标志（结束）
-    
-    
-      帧头
-       
-       
-      帧头
-      ...
+      
+        标记：从根节点遍历，给每个可访问的对象打上标记，表示对象可达
+
+       ...
     </summary>
   
 
@@ -310,21 +231,23 @@ P2P
 
   
   <entry>
-    <title>2. 计算机网络用语</title>
-    <link href="http://localhost:4000/posts/2.%E4%B8%93%E4%B8%9A%E6%9C%AF%E8%AF%AD/" rel="alternate" type="text/html" title="2. 计算机网络用语" />
-    <published>2022-06-12T00:00:00+08:00</published>
+    <title>10. 事件</title>
+    <link href="http://localhost:4000/posts/10.%E4%BA%8B%E4%BB%B6/" rel="alternate" type="text/html" title="10. 事件" />
+    <published>2022-09-02T00:00:00+08:00</published>
   
-    <updated>2022-06-12T00:00:00+08:00</updated>
+    <updated>2022-09-02T00:00:00+08:00</updated>
   
-    <id>http://localhost:4000/posts/2.%E4%B8%93%E4%B8%9A%E6%9C%AF%E8%AF%AD/</id>
-    <content src="http://localhost:4000/posts/2.%E4%B8%93%E4%B8%9A%E6%9C%AF%E8%AF%AD/" />
+    <id>http://localhost:4000/posts/10.%E4%BA%8B%E4%BB%B6/</id>
+    <content src="http://localhost:4000/posts/10.%E4%BA%8B%E4%BB%B6/" />
     <author>
       <name>Ana-Ana</name>
     </author>
 
   
     
-    <category term="计算机网络" />
+    <category term="JavaScript" />
+    
+    <category term="Event" />
     
   
 
@@ -336,17 +259,27 @@ P2P
 
 
 
-      专业术语
-
-实体
-
-协议
-
-
-  控制两个对等实体的逻辑通信规范的集合
-  三要素：语法、语义、时序
+      
+  JavaScript 与 HTML 交互通过 事件 实现；代表文档document 或 浏览器窗口中某个意义的时刻
+  监听器 ，订阅事件（处理程序） 监听事件发生时执行
+  触发事件以测试：dispatchEvent()
 
 
+事件流
+
+​	事件流描述了页面接受事件的顺序
+
+
+  IE 支持事件冒泡流
+    
+      IE事件流被称为事件冒泡
+      事件从最具体的元素（文档树中最深的节点）开始出发，然后向上传播到没有那么具体的元素（Document）
+      IE5.5及早期版本跳过&amp;lt;html&amp;gt; (&amp;lt;body&amp;gt; -&amp;gt; &amp;lt;document&amp;gt;)
+    
+  
+  Netscape Comuunicator 支持事件捕获流
+    
+      事件捕获：为在事件达到最终目标前拦截事件（新版本浏览器都支持事件捕获，但旧版本不...
     </summary>
   
 
