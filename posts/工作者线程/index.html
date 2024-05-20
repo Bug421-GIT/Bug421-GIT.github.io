@@ -1132,6 +1132,18 @@
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     
 
 
@@ -1225,6 +1237,48 @@ location....
 ​	ShareWorker被多个可信任的执行上下文访问，消息接口外部和内部接口与Worker有些不同。可以减少共享线程计算性消耗的情形，一个ShareWorker可以管理多个同源页面web Socket消息，或成为上下文之间的通信线程。
 
 🎈	在行内脚本中创建的共享工作者线程始终是唯一的：只有标识不存在时，才会创建新线程；否则静默新建失败，且调用connect与已有线程建立...
+                </p>
+              </div>
+            </div>
+          </a>
+        </article>
+      
+        <article class="col">
+          <a href="/posts/%E6%9C%8D%E5%8A%A1%E5%B7%A5%E4%BD%9C%E8%80%85%E7%BA%BF%E7%A8%8B/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1706544000"
+  data-df="YYYY/MM/DD"
+  
+>
+  2024/01/30
+</time>
+
+              <h4 class="pt-0 my-2">服务工作者线程</h4>
+              <div class="text-muted">
+                <p>
+                  
+
+
+
+
+
+                  ​	服务工作者线程拦截外出请求、缓存响应，可以让页面在没有网络时正常使用，因为部分或全部页面从服务工作者线程中提供服务。来自一个域的多个页面共享一个服务工作者线程，相关页面关闭后线程也不会关闭，而是等待到来的推送事件。
+
+​	主要任务：充当网络请求的缓存层 &amp;amp; 启用推送通知
+
+线程基础
+
+​	没有全局构造函数，通过 ServiceWorkerContainer管理，它的实例保存在na...
                 </p>
               </div>
             </div>

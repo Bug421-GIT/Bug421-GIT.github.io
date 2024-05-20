@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>安置屋</title>
   <subtitle>好记性不如烂笔头，处处记不如时时用</subtitle>
-  <updated>2024-05-11T20:17:02+08:00</updated>
+  <updated>2024-05-20T17:18:07+08:00</updated>
   <author>
     <name>Ana-Anan</name>
     <uri>http://localhost:4000/</uri>
@@ -17,6 +17,52 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>服务工作者线程</title>
+    <link href="http://localhost:4000/posts/%E6%9C%8D%E5%8A%A1%E5%B7%A5%E4%BD%9C%E8%80%85%E7%BA%BF%E7%A8%8B/" rel="alternate" type="text/html" title="服务工作者线程" />
+    <published>2024-01-30T00:00:00+08:00</published>
+  
+    <updated>2024-01-30T00:00:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/%E6%9C%8D%E5%8A%A1%E5%B7%A5%E4%BD%9C%E8%80%85%E7%BA%BF%E7%A8%8B/</id>
+    <content src="http://localhost:4000/posts/%E6%9C%8D%E5%8A%A1%E5%B7%A5%E4%BD%9C%E8%80%85%E7%BA%BF%E7%A8%8B/" />
+    <author>
+      <name>Ana-Ana</name>
+    </author>
+
+  
+    
+    <category term="javascriptThread" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      ​	服务工作者线程拦截外出请求、缓存响应，可以让页面在没有网络时正常使用，因为部分或全部页面从服务工作者线程中提供服务。来自一个域的多个页面共享一个服务工作者线程，相关页面关闭后线程也不会关闭，而是等待到来的推送事件。
+
+​	主要任务：充当网络请求的缓存层 &amp;amp; 启用推送通知
+
+线程基础
+
+​	没有全局构造函数，通过 ServiceWorkerContainer管理，它的实例保存在navigator.serviceWorker属性中。
+
+if('serviceWorker' in navigator){
+    window.addEventListener('load', ()=&amp;gt;{
+        // 创建服务工作者线程
+        navigator.serviceWorke.register('./serviceWorker.js')
+			.then(co...
+    </summary>
+  
+
+  </entry>
 
   
   <entry>
@@ -224,62 +270,6 @@ const worker = new Worker(location.href + 'backgroudScript.js');  // worker是�
         标记：从根节点遍历，给每个可访问的对象打上标记，表示对象可达
 
        ...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>10. 事件</title>
-    <link href="http://localhost:4000/posts/10.%E4%BA%8B%E4%BB%B6/" rel="alternate" type="text/html" title="10. 事件" />
-    <published>2022-09-02T00:00:00+08:00</published>
-  
-    <updated>2022-09-02T00:00:00+08:00</updated>
-  
-    <id>http://localhost:4000/posts/10.%E4%BA%8B%E4%BB%B6/</id>
-    <content src="http://localhost:4000/posts/10.%E4%BA%8B%E4%BB%B6/" />
-    <author>
-      <name>Ana-Ana</name>
-    </author>
-
-  
-    
-    <category term="JavaScript" />
-    
-    <category term="Event" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      
-  JavaScript 与 HTML 交互通过 事件 实现；代表文档document 或 浏览器窗口中某个意义的时刻
-  监听器 ，订阅事件（处理程序） 监听事件发生时执行
-  触发事件以测试：dispatchEvent()
-
-
-事件流
-
-​	事件流描述了页面接受事件的顺序
-
-
-  IE 支持事件冒泡流
-    
-      IE事件流被称为事件冒泡
-      事件从最具体的元素（文档树中最深的节点）开始出发，然后向上传播到没有那么具体的元素（Document）
-      IE5.5及早期版本跳过&amp;lt;html&amp;gt; (&amp;lt;body&amp;gt; -&amp;gt; &amp;lt;document&amp;gt;)
-    
-  
-  Netscape Comuunicator 支持事件捕获流
-    
-      事件捕获：为在事件达到最终目标前拦截事件（新版本浏览器都支持事件捕获，但旧版本不...
     </summary>
   
 

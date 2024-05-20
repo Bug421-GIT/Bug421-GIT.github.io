@@ -35,25 +35,25 @@
   
     <!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.3.2" />
-<meta property="og:title" content="共享工作者线程" />
+<meta property="og:title" content="服务工作者线程" />
 <meta name="author" content="张晓岸" />
 <meta property="og:locale" content="zh_CN" />
-<meta name="description" content="共享工作者线程" />
-<meta property="og:description" content="共享工作者线程" />
-<link rel="canonical" href="http://localhost:4000/posts/%E5%85%B1%E4%BA%AB%E5%B7%A5%E4%BD%9C%E8%80%85%E7%BA%BF%E7%A8%8B/" />
-<meta property="og:url" content="http://localhost:4000/posts/%E5%85%B1%E4%BA%AB%E5%B7%A5%E4%BD%9C%E8%80%85%E7%BA%BF%E7%A8%8B/" />
+<meta name="description" content="​ 服务工作者线程拦截外出请求、缓存响应，可以让页面在没有网络时正常使用，因为部分或全部页面从服务工作者线程中提供服务。来自一个域的多个页面共享一个服务工作者线程，相关页面关闭后线程也不会关闭，而是等待到来的推送事件。" />
+<meta property="og:description" content="​ 服务工作者线程拦截外出请求、缓存响应，可以让页面在没有网络时正常使用，因为部分或全部页面从服务工作者线程中提供服务。来自一个域的多个页面共享一个服务工作者线程，相关页面关闭后线程也不会关闭，而是等待到来的推送事件。" />
+<link rel="canonical" href="http://localhost:4000/posts/%E6%9C%8D%E5%8A%A1%E5%B7%A5%E4%BD%9C%E8%80%85%E7%BA%BF%E7%A8%8B/" />
+<meta property="og:url" content="http://localhost:4000/posts/%E6%9C%8D%E5%8A%A1%E5%B7%A5%E4%BD%9C%E8%80%85%E7%BA%BF%E7%A8%8B/" />
 <meta property="og:site_name" content="安置屋" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2024-01-29T00:00:00+08:00" />
+<meta property="article:published_time" content="2024-01-30T00:00:00+08:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="共享工作者线程" />
+<meta property="twitter:title" content="服务工作者线程" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"张晓岸"},"dateModified":"2024-01-29T00:00:00+08:00","datePublished":"2024-01-29T00:00:00+08:00","description":"共享工作者线程","headline":"共享工作者线程","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/%E5%85%B1%E4%BA%AB%E5%B7%A5%E4%BD%9C%E8%80%85%E7%BA%BF%E7%A8%8B/"},"url":"http://localhost:4000/posts/%E5%85%B1%E4%BA%AB%E5%B7%A5%E4%BD%9C%E8%80%85%E7%BA%BF%E7%A8%8B/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"张晓岸"},"dateModified":"2024-01-30T00:00:00+08:00","datePublished":"2024-01-30T00:00:00+08:00","description":"​ 服务工作者线程拦截外出请求、缓存响应，可以让页面在没有网络时正常使用，因为部分或全部页面从服务工作者线程中提供服务。来自一个域的多个页面共享一个服务工作者线程，相关页面关闭后线程也不会关闭，而是等待到来的推送事件。","headline":"服务工作者线程","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/%E6%9C%8D%E5%8A%A1%E5%B7%A5%E4%BD%9C%E8%80%85%E7%BA%BF%E7%A8%8B/"},"url":"http://localhost:4000/posts/%E6%9C%8D%E5%8A%A1%E5%B7%A5%E4%BD%9C%E8%80%85%E7%BA%BF%E7%A8%8B/"}</script>
 <!-- End Jekyll SEO tag -->
 
   
 
-  <title>共享工作者线程 | 安置屋
+  <title>服务工作者线程 | 安置屋
   </title>
 
   <!--
@@ -352,7 +352,7 @@
         
           
             
-              <span>共享工作者线程</span>
+              <span>服务工作者线程</span>
             
 
           
@@ -440,27 +440,6 @@
   
 
   
-    
-    
-
-    
-      
-        
-        
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-
-    
-  
 
   
   
@@ -491,6 +470,71 @@
   
   
 
+  
+    
+    
+
+    
+      
+        
+        
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+
+    
   
 
 
@@ -503,7 +547,7 @@
 
 <article class="px-1">
   <header>
-    <h1 data-toc-skip>共享工作者线程</h1>
+    <h1 data-toc-skip>服务工作者线程</h1>
 
     <div class="post-meta text-muted">
       <!-- published date -->
@@ -519,13 +563,13 @@
 
 <time
   
-  data-ts="1706457600"
+  data-ts="1706544000"
   data-df="YYYY/MM/DD"
   
     data-bs-toggle="tooltip" data-bs-placement="bottom"
   
 >
-  2024/01/29
+  2024/01/30
 </time>
 
       </span>
@@ -573,9 +617,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="525 字"
+  title="1272 字"
 >
-  <em>2 分钟</em>阅读</span>
+  <em>7 分钟</em>阅读</span>
 
       </div>
       <!-- .d-flex -->
@@ -584,41 +628,217 @@
   </header>
 
   <div class="content">
-    <h3 id="共享工作者线程"><span class="me-2">共享工作者线程</span><a href="#共享工作者线程" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+    <p>​	服务工作者线程拦截外出请求、缓存响应，可以让页面在没有网络时正常使用，因为部分或全部页面从服务工作者线程中提供服务。<u>来自一个域的多个页面共享一个服务工作者线程，相关页面关闭后线程也不会关闭</u>，而是等待到来的推送事件。</p>
 
-<p>​	<code class="language-plaintext highlighter-rouge">ShareWorker</code>被多个可信任的执行上下文访问，消息接口外部和内部接口与<code class="language-plaintext highlighter-rouge">Worker</code>有些不同。可以减少共享线程计算性消耗的情形，一个<code class="language-plaintext highlighter-rouge">ShareWorker</code>可以管理多个同源页面web Socket消息，或成为上下文之间的通信线程。</p>
+<p>​	主要任务：充当网络请求的缓存层 &amp; 启用推送通知</p>
 
-<p>🎈	在行内脚本中创建的共享工作者线程始终是唯一的：只有标识不存在时，才会创建新线程；否则静默新建失败，且调用<code class="language-plaintext highlighter-rouge">connect</code>与已有线程建立连接。</p>
+<h4 id="线程基础"><span class="me-2">线程基础</span><a href="#线程基础" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
 
-<p>​	<strong>共享工作者线程的标识</strong>：解析后的URL、工作者线程名称、文档源</p>
+<p>​	没有全局构造函数，通过 <code class="language-plaintext highlighter-rouge">ServiceWorkerContainer</code>管理，它的实例保存在<code class="language-plaintext highlighter-rouge">navigator.serviceWorker</code>属性中。</p>
 
 <div class="language-javascript highlighter-rouge"><div class="code-header">
         <span data-label-text="JavaScript"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
-</pre></td><td class="rouge-code"><pre><span class="k">new</span> <span class="nc">ShareWorker</span><span class="p">(</span><span class="dl">'</span><span class="s1">./worker.js</span><span class="dl">'</span><span class="p">,{</span><span class="na">name</span><span class="p">:</span><span class="dl">'</span><span class="s1">foo</span><span class="dl">'</span><span class="p">})</span>
-<span class="k">new</span> <span class="nc">ShareWorker</span><span class="p">(</span><span class="dl">'</span><span class="s1">https://www.example.com/worker.js</span><span class="dl">'</span><span class="p">,{</span><span class="na">name</span><span class="p">:</span><span class="dl">'</span><span class="s1">foo</span><span class="dl">'</span><span class="p">})</span>
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+</pre></td><td class="rouge-code"><pre><span class="k">if</span><span class="p">(</span><span class="dl">'</span><span class="s1">serviceWorker</span><span class="dl">'</span> <span class="k">in</span> <span class="nb">navigator</span><span class="p">){</span>
+    <span class="nb">window</span><span class="p">.</span><span class="nf">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">load</span><span class="dl">'</span><span class="p">,</span> <span class="p">()</span><span class="o">=&gt;</span><span class="p">{</span>
+        <span class="c1">// 创建服务工作者线程</span>
+        <span class="nb">navigator</span><span class="p">.</span><span class="nx">serviceWorke</span><span class="p">.</span><span class="nf">register</span><span class="p">(</span><span class="dl">'</span><span class="s1">./serviceWorker.js</span><span class="dl">'</span><span class="p">)</span>
+			<span class="p">.</span><span class="nf">then</span><span class="p">(</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">,</span> <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">)</span>
+        	<span class="c1">// 多次调用 同一个URL多次调用该方法返回相同的注册对象</span>
+        	 <span class="p">.</span><span class="nf">then</span><span class="p">((</span><span class="nx">registrationA</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+            	<span class="nb">navigator</span><span class="p">.</span><span class="nx">serviceWorke</span><span class="p">.</span><span class="nf">register</span><span class="p">(</span><span class="dl">'</span><span class="s1">./serviceWorker.js</span><span class="dl">'</span><span class="p">)</span>
+            		<span class="p">.</span><span class="nf">then</span><span class="p">((</span><span class="nx">registrationB</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+                    	<span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nx">registrationA</span> <span class="o">===</span> <span class="nx">registrationB</span><span class="p">)</span>
+                <span class="p">})</span>
+        <span class="p">});</span>
+    <span class="p">})</span>
+<span class="p">}</span>
 </pre></td></tr></tbody></table></code></div></div>
 
-<p>🎈	<code class="language-plaintext highlighter-rouge">ShareWorker.port</code>：特殊属性，专门用来与共享线程通信的Message</p>
+<p>​	<code class="language-plaintext highlighter-rouge">.register()</code> 返回一个期约，解决为<code class="language-plaintext highlighter-rouge">ServiceWorkerRegistration</code>对象，或在注册失败时拒绝。第一次调用并激活服务站工作者线程后，后续的调用（同一个源）不会执行。由于服务者线程不是所有浏览器都支持、对于页面不可视，所以注册行为常常需要配合 <u>特性检测，并在load事件中操作。</u></p>
 
-<p>🎈	<code class="language-plaintext highlighter-rouge">ShareWorker.cennect</code>： 事件</p>
+<h5 id="serviceworkercontainer"><span class="me-2"><code class="language-plaintext highlighter-rouge">ServiceWorkerContainer</code></span><a href="#serviceworkercontainer" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h5>
 
-<p>​	<code class="language-plaintext highlighter-rouge">worker.port.onmessage</code> &amp; <code class="language-plaintext highlighter-rouge">worker.port.start()</code> 与共享线程建立连接时触发；</p>
+<p>🎈 事件处理：</p>
 
-<p>​	包括<code class="language-plaintext highlighter-rouge">MessagePort</code>实例的<code class="language-plaintext highlighter-rouge">port</code>数组，可以用于把消息发回父上下文</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">oncontrollerchange</code>：获的新激活的<code class="language-plaintext highlighter-rouge">ServiceWorkerRegistration</code>线程注册器 触发</li>
+  <li><code class="language-plaintext highlighter-rouge">onerror</code>：触发<code class="language-plaintext highlighter-rouge">ErrorEvent</code>错误事件时</li>
+  <li><code class="language-plaintext highlighter-rouge">onmessage</code>：触发<code class="language-plaintext highlighter-rouge">MessageEvent</code>错误事件时</li>
+</ul>
 
-<p>🎈	<strong>共享工作者线程的生命周期</strong>： 只要还有一个上下文连接就会持续存在。</p>
+<p>🎈 属性：</p>
 
-<p>​	当线程连接数为0时（关联的所有页面被销毁且没有连接），线程被终止；没有办法以编程的方式终止它 —— 不存在<code class="language-plaintext highlighter-rouge"> ShareWorker.teminate()</code></p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">ready</code>：返回期约，解决为<code class="language-plaintext highlighter-rouge">ServiceWorkerRegistration</code>对象，不会拒绝</li>
+  <li><code class="language-plaintext highlighter-rouge">controller</code>：返回与当前页面关联的激活的 <code class="language-plaintext highlighter-rouge">ServiceWorker</code>对象，如果没有激活的线程则返回null</li>
+</ul>
 
-<p>​	共享线程端口上调用<code class="language-plaintext highlighter-rouge">close()</code>时，只要还有一个端口连接，就不会真正终止线程。</p>
+<p>🎈 方法：</p>
 
-<h4 id="连接到共享工作者线程"><span class="me-2">连接到共享工作者线程</span><a href="#连接到共享工作者线程" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">getRegistration(URL)</code>：返回的匹配的<code class="language-plaintext highlighter-rouge">ServiceWorkerContainer</code>对象，没有则返回null</li>
+  <li><code class="language-plaintext highlighter-rouge">getRegistrations()</code>：返回匹配的<code class="language-plaintext highlighter-rouge">ServiceWorkerContainer</code>对象数组，没有则返回空数组</li>
+</ul>
 
-<p>​	每次调用<code class="language-plaintext highlighter-rouge">ShareWorker.construct</code>时，无论是否创建新线程，都会触发<code class="language-plaintext highlighter-rouge">cennect</code>事件，隐式创建<code class="language-plaintext highlighter-rouge">MessageChannel</code>实例并将所有权给<code class="language-plaintext highlighter-rouge">ShareWorker</code>实例，这个<code class="language-plaintext highlighter-rouge">MessageChannel</code>实例保存在<code class="language-plaintext highlighter-rouge">connect</code>事件对象的<code class="language-plaintext highlighter-rouge">ports</code>数组中。</p>
+<h5 id="serviceworkerregistration"><span class="me-2"><code class="language-plaintext highlighter-rouge">ServiceWorkerRegistration</code></span><a href="#serviceworkerregistration" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h5>
 
-<p>​	没有任何事件可以断开与<code class="language-plaintext highlighter-rouge">ShareWorker</code>实例的连接。随着页面加入和退出连接，<code class="language-plaintext highlighter-rouge">connectPorts</code>集合会受到死端口的影响。一个方法是在页面注销前<code class="language-plaintext highlighter-rouge">beforeunlode</code>事情时，明确发送卸载消息，让共享线程有机会清除死端口。</p>
+<p>​	<code class="language-plaintext highlighter-rouge">ServiceWorkerRegistration</code>对象表示注册成功的服务工作者线程，可以在<code class="language-plaintext highlighter-rouge">register()</code>返回的解决期约处理程序中访问到。</p>
+
+<p>🎈 事件处理：</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">onupdatefound</code>：线程开始安装新版本时触发，<code class="language-plaintext highlighter-rouge">ServiceWorkerRegistration.installing</code>收到新的服务工作者线程</li>
+</ul>
+
+<p>🎈 属性：</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">scope</code>：获取注册的URL</li>
+  <li><code class="language-plaintext highlighter-rouge">navigationPreload</code>：返回与注册对象关联的<code class="language-plaintext highlighter-rouge">NavigationPreloadManager</code>实例</li>
+  <li><code class="language-plaintext highlighter-rouge">pushManager</code>：返回与注册对象关联的<code class="language-plaintext highlighter-rouge">PreloadManager</code>实例</li>
+  <li>判断生命周期阶段：（一次快照，除非<code class="language-plaintext highlighter-rouge">skipWaiting()</code>强制改变状态）
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">installing</code></li>
+      <li><code class="language-plaintext highlighter-rouge">waiting</code></li>
+      <li><code class="language-plaintext highlighter-rouge">active</code></li>
+    </ul>
+  </li>
+</ul>
+
+<p>🎈 方法：</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">getNotifications()</code></li>
+  <li><code class="language-plaintext highlighter-rouge">showNotifications('title',{options})</code></li>
+  <li><code class="language-plaintext highlighter-rouge">update()</code>：重写请求服务脚本，URL不同会重新初始化</li>
+  <li><code class="language-plaintext highlighter-rouge">unregister()</code>：取消服务工作者线程的注册，会在线程执行完成再取消注册</li>
+</ul>
+
+<h5 id="serviceworker"><span class="me-2"><code class="language-plaintext highlighter-rouge">ServiceWorker</code></span><a href="#serviceworker" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h5>
+
+<p>🎈 事件处理：</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">onstatechange</code></li>
+</ul>
+
+<p>🎈 属性：</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">scriptURL</code>：解析注册服务工作者的URL，解析为绝对地址</li>
+  <li><code class="language-plaintext highlighter-rouge">state</code>：可以有以下状态 ——
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">installing</code>  <code class="language-plaintext highlighter-rouge">installed</code></li>
+      <li><code class="language-plaintext highlighter-rouge">activating</code>   <code class="language-plaintext highlighter-rouge">activated</code></li>
+      <li><code class="language-plaintext highlighter-rouge">redundant</code></li>
+    </ul>
+  </li>
+</ul>
+
+<h5 id="安全限制"><span class="me-2">安全限制</span><a href="#安全限制" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h5>
+
+<p>​	受加载脚本对应源的常规限制；此外几乎可以任意修改和重定向网络请求、加载静态资源。</p>
+
+<p>​	API 只能在 安全上下文（HTTP）下使用，非安全上下文中<code class="language-plaintext highlighter-rouge">navigator.serviceWorker = undefined</code></p>
+
+<p>​	可以通过<code class="language-plaintext highlighter-rouge">window.issecureContext</code>判断当前上下文是否安全</p>
+
+<h5 id="serviceworkerglobalscope"><span class="me-2">ServiceWorkerGlobalScope</span><a href="#serviceworkerglobalscope" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h5>
+
+<p>🎈 属性：</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">caches</code>：返回线程的<code class="language-plaintext highlighter-rouge">Cachestorage</code>对象</li>
+  <li><code class="language-plaintext highlighter-rouge">clients</code>：返回线程的<code class="language-plaintext highlighter-rouge">clients</code>接口，可以访问底层<code class="language-plaintext highlighter-rouge">Client</code>对象</li>
+  <li><code class="language-plaintext highlighter-rouge">registration</code>：返回线程的<code class="language-plaintext highlighter-rouge">ServiceWorkerRegistration</code>对象</li>
+</ul>
+
+<p>🎈 方法：</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">skipWaiting()</code>：强制服务工作者线程进入活动状态，需要和<code class="language-plaintext highlighter-rouge">Clients.claim()</code>一起使用</li>
+  <li><code class="language-plaintext highlighter-rouge">fetch()</code>：在服务工作者线程内发生常规网络请求
+    <ul>
+      <li>可以截获主页面的<code class="language-plaintext highlighter-rouge">fetch()</code>请求，在必要时发生实际请求（而不是读取缓存）</li>
+      <li><code class="language-plaintext highlighter-rouge">self.onfetch</code>属性可以访问<code class="language-plaintext highlighter-rouge">FetchEvent</code>，根据需要调整输出</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">notificationclick</code>：浏览器元素点击<code class="language-plaintext highlighter-rouge">ServiceWorkerRegistration.showNotification()</code>触发</li>
+  <li><code class="language-plaintext highlighter-rouge">notificationclose</code>：浏览器元素关闭<code class="language-plaintext highlighter-rouge">ServiceWorkerRegistration.showNotification()</code>触发</li>
+  <li><code class="language-plaintext highlighter-rouge">pushsubscriptionchange</code>：在应用控制外的因素（非JavaScript显式操作）导致推送订阅状态变化</li>
+</ul>
+
+<p><strong>作用域限制</strong></p>
+
+<p>​	只能拦截其作用域内的客户端发生的请求，相对于获取服务脚本的路径定义的</p>
+
+<div class="language-javascript highlighter-rouge"><div class="code-header">
+        <span data-label-text="JavaScript"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+</pre></td><td class="rouge-code"><pre><span class="c1">// 默认根作用域</span>
+<span class="nb">navigator</span><span class="p">.</span><span class="nx">serviceWorke</span><span class="p">.</span><span class="nf">register</span><span class="p">(</span><span class="dl">'</span><span class="s1">./serviceWorker.js</span><span class="dl">'</span><span class="p">)</span>
+	<span class="c1">// scope: https://example.com/ </span>
+	<span class="c1">// 	—— https://example.com/foo.js 会被拦截</span>
+	<span class="c1">// 	—— https://example.com/foo/fooscript.js 会被拦截</span>
+
+<span class="c1">// 根目录获取脚本，限定目录作用域</span>
+<span class="nb">navigator</span><span class="p">.</span><span class="nx">serviceWorke</span><span class="p">.</span><span class="nf">register</span><span class="p">(</span><span class="dl">'</span><span class="s1">./serviceWorker.js</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span><span class="na">scope</span><span class="p">:</span><span class="dl">'</span><span class="s1">./foo</span><span class="dl">'</span><span class="p">})</span>
+	<span class="c1">// scope: https://example.com/foo/ </span>
+	<span class="c1">// 	—— https://example.com/foo.js 不会被拦截</span>
+	<span class="c1">// 	—— https://example.com/foo/fooscript.js 会被拦截</span>
+
+<span class="c1">// 嵌套的二级目录获取脚本，指定同一目录作用域</span>
+<span class="nb">navigator</span><span class="p">.</span><span class="nx">serviceWorke</span><span class="p">.</span><span class="nf">register</span><span class="p">(</span><span class="dl">'</span><span class="s1">./foo/serviceWorker.js</span><span class="dl">'</span><span class="p">)</span>
+	<span class="c1">// scope: https://example.com/foo/ </span>
+	<span class="c1">// 	—— https://example.com/foo.js 不会被拦截</span>
+	<span class="c1">// 	—— https://example.com/foo/fooscript.js 会被拦截</span>
+
+<span class="c1">// 作用域范围 ≤ 脚本所在路径</span>
+<span class="nb">navigator</span><span class="p">.</span><span class="nx">serviceWorke</span><span class="p">.</span><span class="nf">register</span><span class="p">(</span><span class="dl">'</span><span class="s1">./serviceWorker.js</span><span class="dl">'</span><span class="p">,{</span><span class="na">scope</span><span class="p">:</span> <span class="dl">'</span><span class="s1">/</span><span class="dl">'</span><span class="p">})</span> <span class="c1">// Error</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<p>​	作用域会使用末尾带斜杠的 <u>绝对路径</u>，将脚本文件的相对路径与其分开，同时将路径本身排除在作用域外。</p>
+
+<p>​	扩展作用域方法：</p>
+
+<ol>
+  <li>包含想要的作用域路径提供（获取）服务脚本</li>
+  <li>服务脚本响应头<u>`Service-Worker-Allowed = `目标作用域</u>，这个作用域应该和<code class="language-plaintext highlighter-rouge">register()</code>作用域一致。</li>
+</ol>
+
 
   </div>
 
@@ -680,7 +900,7 @@
     
       
       <a
-        href="https://twitter.com/intent/tweet?text=%E5%85%B1%E4%BA%AB%E5%B7%A5%E4%BD%9C%E8%80%85%E7%BA%BF%E7%A8%8B%20-%20%E5%AE%89%E7%BD%AE%E5%B1%8B&url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2F%25E5%2585%25B1%25E4%25BA%25AB%25E5%25B7%25A5%25E4%25BD%259C%25E8%2580%2585%25E7%25BA%25BF%25E7%25A8%258B%2F"
+        href="https://twitter.com/intent/tweet?text=%E6%9C%8D%E5%8A%A1%E5%B7%A5%E4%BD%9C%E8%80%85%E7%BA%BF%E7%A8%8B%20-%20%E5%AE%89%E7%BD%AE%E5%B1%8B&url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2F%25E6%259C%258D%25E5%258A%25A1%25E5%25B7%25A5%25E4%25BD%259C%25E8%2580%2585%25E7%25BA%25BF%25E7%25A8%258B%2F"
         data-bs-toggle="tooltip"
         data-bs-placement="top"
         title="Twitter"
@@ -693,7 +913,7 @@
     
       
       <a
-        href="https://www.facebook.com/sharer/sharer.php?title=%E5%85%B1%E4%BA%AB%E5%B7%A5%E4%BD%9C%E8%80%85%E7%BA%BF%E7%A8%8B%20-%20%E5%AE%89%E7%BD%AE%E5%B1%8B&u=http%3A%2F%2Flocalhost%3A4000%2Fposts%2F%25E5%2585%25B1%25E4%25BA%25AB%25E5%25B7%25A5%25E4%25BD%259C%25E8%2580%2585%25E7%25BA%25BF%25E7%25A8%258B%2F"
+        href="https://www.facebook.com/sharer/sharer.php?title=%E6%9C%8D%E5%8A%A1%E5%B7%A5%E4%BD%9C%E8%80%85%E7%BA%BF%E7%A8%8B%20-%20%E5%AE%89%E7%BD%AE%E5%B1%8B&u=http%3A%2F%2Flocalhost%3A4000%2Fposts%2F%25E6%259C%258D%25E5%258A%25A1%25E5%25B7%25A5%25E4%25BD%259C%25E8%2580%2585%25E7%25BA%25BF%25E7%25A8%258B%2F"
         data-bs-toggle="tooltip"
         data-bs-placement="top"
         title="Facebook"
@@ -706,7 +926,7 @@
     
       
       <a
-        href="https://t.me/share/url?url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2F%25E5%2585%25B1%25E4%25BA%25AB%25E5%25B7%25A5%25E4%25BD%259C%25E8%2580%2585%25E7%25BA%25BF%25E7%25A8%258B%2F&text=%E5%85%B1%E4%BA%AB%E5%B7%A5%E4%BD%9C%E8%80%85%E7%BA%BF%E7%A8%8B%20-%20%E5%AE%89%E7%BD%AE%E5%B1%8B"
+        href="https://t.me/share/url?url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2F%25E6%259C%258D%25E5%258A%25A1%25E5%25B7%25A5%25E4%25BD%259C%25E8%2580%2585%25E7%25BA%25BF%25E7%25A8%258B%2F&text=%E6%9C%8D%E5%8A%A1%E5%B7%A5%E4%BD%9C%E8%80%85%E7%BA%BF%E7%A8%8B%20-%20%E5%AE%89%E7%BD%AE%E5%B1%8B"
         data-bs-toggle="tooltip"
         data-bs-placement="top"
         title="Telegram"
@@ -907,19 +1127,19 @@
   
 
   
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
     
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
   
 
   
@@ -1042,7 +1262,7 @@ location.href; ...
         </article>
       
         <article class="col">
-          <a href="/posts/%E6%9C%8D%E5%8A%A1%E5%B7%A5%E4%BD%9C%E8%80%85%E7%BA%BF%E7%A8%8B/" class="post-preview card h-100">
+          <a href="/posts/%E5%85%B1%E4%BA%AB%E5%B7%A5%E4%BD%9C%E8%80%85%E7%BA%BF%E7%A8%8B/" class="post-preview card h-100">
             <div class="card-body">
               <!--
   Date format snippet
@@ -1054,14 +1274,14 @@ location.href; ...
 
 <time
   
-  data-ts="1706544000"
+  data-ts="1706457600"
   data-df="YYYY/MM/DD"
   
 >
-  2024/01/30
+  2024/01/29
 </time>
 
-              <h4 class="pt-0 my-2">服务工作者线程</h4>
+              <h4 class="pt-0 my-2">共享工作者线程</h4>
               <div class="text-muted">
                 <p>
                   
@@ -1070,13 +1290,11 @@ location.href; ...
 
 
 
-                  ​	服务工作者线程拦截外出请求、缓存响应，可以让页面在没有网络时正常使用，因为部分或全部页面从服务工作者线程中提供服务。来自一个域的多个页面共享一个服务工作者线程，相关页面关闭后线程也不会关闭，而是等待到来的推送事件。
+                  共享工作者线程
 
-​	主要任务：充当网络请求的缓存层 &amp;amp; 启用推送通知
+​	ShareWorker被多个可信任的执行上下文访问，消息接口外部和内部接口与Worker有些不同。可以减少共享线程计算性消耗的情形，一个ShareWorker可以管理多个同源页面web Socket消息，或成为上下文之间的通信线程。
 
-线程基础
-
-​	没有全局构造函数，通过 ServiceWorkerContainer管理，它的实例保存在na...
+🎈	在行内脚本中创建的共享工作者线程始终是唯一的：只有标识不存在时，才会创建新线程；否则静默新建失败，且调用connect与已有线程建立...
                 </p>
               </div>
             </div>
@@ -1098,22 +1316,18 @@ location.href; ...
 
   
     <a
-      href="/posts/%E4%B8%93%E7%94%A8%E5%B7%A5%E4%BD%9C%E8%80%85%E7%BA%BF%E7%A8%8B/"
+      href="/posts/%E5%85%B1%E4%BA%AB%E5%B7%A5%E4%BD%9C%E8%80%85%E7%BA%BF%E7%A8%8B/"
       class="btn btn-outline-primary"
       aria-label="上一篇"
     >
-      <p>专用工作者线程</p>
+      <p>共享工作者线程</p>
     </a>
   
 
   
-    <a
-      href="/posts/%E6%9C%8D%E5%8A%A1%E5%B7%A5%E4%BD%9C%E8%80%85%E7%BA%BF%E7%A8%8B/"
-      class="btn btn-outline-primary"
-      aria-label="下一篇"
-    >
-      <p>服务工作者线程</p>
-    </a>
+    <div class="btn btn-outline-primary disabled" aria-label="下一篇">
+      <p>-</p>
+    </div>
   
 </nav>
 
@@ -1410,16 +1624,9 @@ location.href; ...
 
   
 
-  
-    
-
-    
-
-  
 
 
-
-  <script src="https://cdn.jsdelivr.net/combine/npm/jquery@3.7.1/dist/jquery.min.js,npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js,npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js,npm/loading-attribute-polyfill@2.1.1/dist/loading-attribute-polyfill.umd.min.js,npm/magnific-popup@1.1.0/dist/jquery.magnific-popup.min.js,npm/clipboard@2.0.11/dist/clipboard.min.js,npm/dayjs@1.11.10/dayjs.min.js,npm/dayjs@1.11.10/locale/zh.min.js,npm/dayjs@1.11.10/plugin/relativeTime.min.js,npm/dayjs@1.11.10/plugin/localizedFormat.min.js,npm/tocbot@4.21.2/dist/tocbot.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/combine/npm/jquery@3.7.1/dist/jquery.min.js,npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js,npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js,npm/loading-attribute-polyfill@2.1.1/dist/loading-attribute-polyfill.umd.min.js,npm/magnific-popup@1.1.0/dist/jquery.magnific-popup.min.js,npm/clipboard@2.0.11/dist/clipboard.min.js,npm/dayjs@1.11.10/dayjs.min.js,npm/dayjs@1.11.10/locale/zh.min.js,npm/dayjs@1.11.10/plugin/relativeTime.min.js,npm/dayjs@1.11.10/plugin/localizedFormat.min.js"></script>
 
 
 
