@@ -1,0 +1,58 @@
+# ========== 基础信息 ==========
+title: 安置屋
+tagline: 学习笔记外置站
+description: 好记性不如烂笔头，处处记不如时时用
+url: "https://bug421-git.github.io"
+baseurl: ""
+lang: zh-CN
+timezone: Asia/Shanghai
+
+# ========== 作者 / 社交 ==========
+author:
+  name: 张晓岸
+  email: 57689675@qq.com
+  links:
+    - https://github.com/Bug421-GIT
+    - https://weibo.com/u/1960838465
+
+social:
+  name: 张晓岸
+  email: 57689675@qq.com
+  links:
+    - https://github.com/Bug421-GIT
+    - https://weibo.com/u/1960838465
+
+# ========== 主题 ==========
+theme: jekyll-theme-chirpy
+theme_mode: light          # light / dark
+avatar: /assets/img/avatar/doraemon.jpg
+
+# ========== 构建 ==========
+markdown: kramdown
+highlighter: rouge
+paginate: 10
+paginate_path: /page:num/
+
+plugins:
+  - jekyll-archives
+  - jekyll-paginate
+  - jekyll-redirect-from
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-imagemagick
+
+# jekyll-archives 配置（生成分类/标签聚合页）
+jekyll-archives:
+  enabled: [categories, tags]
+  layout: archives
+  permalinks:
+    category: /categories/:name/
+    tag: /tags/:name/
+
+# ========== 可选开关 ==========
+toc: true                  # 文章自动生成目录
+# math: true              # 需要公式时打开
+# mermaid: true           # 需要流程图时打开
+# comments:               # 评论系统（giscus/utterances）按需配置
+# analytics:              # 访问统计按需配置
