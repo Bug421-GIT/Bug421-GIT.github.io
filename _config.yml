@@ -50,6 +50,13 @@ jekyll-archives:
     category: /categories/:name/
     tag: /tags/:name/
 
+# ========== 集合（_tabs 顶部导航菜单）==========
+# 必须显式声明，否则 site.tabs 为空，左侧边栏的菜单不会渲染
+collections:
+  tabs:
+    output: true
+    sort_by: order
+
 # ========== 可选开关 ==========
 toc: true                  # 文章自动生成目录
 # math: true              # 需要公式时打开

@@ -16,5 +16,13 @@ group :jekyll_plugins do
   gem "jekyll-imagemagick"
 end
 
+# Ruby 3.4+ 不再默认包含这些 gem，Jekyll 4.3.x 启动时会报 LoadError
+gem "csv"
+gem "base64"
+
+# 时区支持（_config.yml 设了 timezone: Asia/Shanghai，Windows 需要 tzinfo-data）
+gem "tzinfo"
+gem "tzinfo-data"
+
 # 本地预览需要
 gem "webrick", "~> 1.8"
