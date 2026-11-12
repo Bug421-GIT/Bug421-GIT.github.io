@@ -1,0 +1,134 @@
+# 分类树的单一数据源。三级结构：
+#   一级（章目录）：parent 为空，children 列出它下面的「章」
+#   二级（章内节目录）：parent 指向所属一级 slug，文章按 section_order 排成「第 N 节」
+#
+# slug        : front matter categories[] 里的英文标识，必须与文章完全一致（含大小写）
+# name        : 中文显示名（面包屑、目录页标题、章目录列表）
+# url         : 聚合页地址，必须与 jekyll-archives 实际生成的路径一致（slugify 后小写）
+# description : 目录页副标题，一句话说明这层收什么内容
+# children    : 仅一级分类使用，数组顺序即「第 1 章 / 第 2 章」的顺序
+# parent      : 仅二级分类使用，指向一级分类 slug
+# flat        : 仅一级分类使用。设为 true 时忽略 children，不渲染章目录，
+#               直接把本分类下所有文章按日期升序平铺成一条列表。
+#               用于「章下面只有一两节」的分类——分成章反而比平铺更难扫。
+#
+# 未在此登记的 slug 也能正常工作（层级从文章 front matter 自动推导），
+# 登记的作用是：① 提供中文名 ② 固定章节顺序 ③ 提供目录页描述。
+
+# ========== 富交互（三级结构） ==========
+- slug: rich-interaction
+  name: 富交互
+  url: /categories/rich-interaction/
+  description: 富交互相关内容笔记：动画与过渡、Web Animations API、观察器、性能与渲染优化等。
+  children:
+    - interaction-animation
+    - performance-rendering
+
+- slug: interaction-animation
+  name: 交互与动画
+  url: /categories/interaction-animation/
+  parent: rich-interaction
+  description: animation / transition / @keyframes、WAAPI、观察器三件套（IntersectionObserver / ResizeObserver / MutationObserver）、progress-driven 动画。
+
+- slug: performance-rendering
+  name: 性能渲染与优化
+  url: /categories/performance-rendering/
+  parent: rich-interaction
+  description: 渲染性能、重排重绘、合成层、资源加载与关键渲染路径优化。
+
+# ========== JavaScript（三级结构） ==========
+- slug: JavaScript
+  name: JavaScript
+  url: /categories/javascript/
+  description: 语言基础、引用类型、对象模型、闭包与事件机制。
+  children:
+    - 基本类型
+    - 引用类型
+    - Object
+    - 对象
+    - 闭包
+    - Event
+    - Thread
+
+- slug: 基本类型
+  name: 基本类型
+  url: /categories/基本类型/
+  parent: JavaScript
+  description: Undefined、Null、Boolean、Number、String、Symbol 等原始值的语义与边界。
+
+- slug: 引用类型
+  name: 引用类型
+  url: /categories/引用类型/
+  parent: JavaScript
+  description: Date、RegExp、Array、Map、Set 等内置引用类型的用法与陷阱。
+
+- slug: Object
+  name: 对象
+  url: /categories/object/
+  parent: JavaScript
+  description: 对象的创建、属性描述符、原型链与继承。
+
+- slug: 对象
+  name: 对象（补充）
+  url: /categories/对象/
+  parent: JavaScript
+  description: 对象相关的补充笔记。
+
+- slug: 闭包
+  name: 闭包
+  url: /categories/闭包/
+  parent: JavaScript
+  description: 作用域链、闭包的形成条件与实际用途。
+
+- slug: Event
+  name: 事件
+  url: /categories/event/
+  parent: JavaScript
+  description: 事件流、事件处理程序、事件委托与自定义事件。
+
+- slug: Thread
+  name: 线程
+  url: /categories/thread/
+  parent: JavaScript
+  description: 工作者线程、消息通道与并发模型。
+
+# ========== 计算机网络（不设章：平铺成 1~8 的线性目录） ==========
+# 1~6 篇直接挂一级；7、8 篇分别落在 Ajax / Cookie 下，各自只有一节。
+# 章下面只有一节时，章目录纯属多一层点击，所以这里用 flat 关掉，全部平铺。
+# children 保留不删：它仍然决定 /categories/ajax/ 这类页面存在，也方便以后恢复章目录。
+- slug: 计算机网络
+  name: 计算机网络
+  url: /categories/计算机网络/
+  description: 分层模型、各层协议，以及浏览器发起网络请求与鉴权的完整链路。
+  flat: true
+  children:
+    - Ajax
+    - cookie
+
+- slug: Ajax
+  name: Ajax
+  url: /categories/ajax/
+  parent: 计算机网络
+  description: XMLHttpRequest、Fetch 与跨域请求。
+
+- slug: cookie
+  name: Cookie
+  url: /categories/cookie/
+  parent: 计算机网络
+  description: Cookie、Session、Storage 与请求鉴权。
+
+# ========== 其余一级分类（无章，文章直接挂一级） ==========
+- slug: Vue2
+  name: Vue2
+  url: /categories/vue2/
+  description: Vue2 实例、指令、组件、路由与生命周期。
+
+- slug: javascriptThread
+  name: JavaScript 线程
+  url: /categories/javascriptthread/
+  description: 专用 / 共享 / 服务工作者线程的模型与实践。
+
+- slug: DesignPatterns
+  name: 设计模式
+  url: /categories/designpatterns/
+  description: 设计原则与常见设计模式的 JavaScript 实现。

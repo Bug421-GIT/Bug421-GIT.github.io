@@ -1,0 +1,61 @@
+---
+layout: page
+# Archives. Used by jekyll-archives for /categories/:name/ and /tags/:name/.
+# Chirpy 原版遍历 site.posts 不过滤且按时间轴分组，不符合"二级聚合=该分类文章"的预期。
+# 本覆盖版：
+#   - category/tag 页：用 page.type + page.title 精准取该分类/标签的文章
+#   - 排序：按文章标题（按字母/中文）扁平列出
+#   - 其他（兜底）：原版时间轴（实际很少触发，因为 /archives/ 走 archives_by_title）
+---
+
+{% include lang.html %}
+
+{% assign df_strftime_m = site.data.locales[lang].df.archives.strftime | default: '/ %m' %}
+{% assign df_dayjs_m = site.data.locales[lang].df.archives.dayjs | default: '/ MM' %}
+
+{%- if page.type == 'categories' -%}
+  {%- assign posts = site.categories[page.title] -%}
+{%- elsif page.type == 'tags' -%}
+  {%- assign posts = site.tags[page.title] -%}
+{%- else -%}
+  {%- assign posts = site.posts -%}
+{%- endif -%}
+
+<div id="archives" class="pl-xl-3">
+  {%- if page.type == 'categories' or page.type == 'tags' -%}
+    {%- assign sorted_posts = posts | sort: 'title' -%}
+    <ul class="list-unstyled">
+      {%- for post in sorted_posts -%}
+        <li class="py-1">
+          <span class="text-muted small me-2">{{ post.date | date: '%Y-%m-%d' }}</span>
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </li>
+      {%- endfor -%}
+    </ul>
+  {%- else -%}
+    {%- comment -%} 兜底时间轴（/archives/ 已切到 archives_by_title，本分支基本不会进入）{%- endcomment -%}
+    {% for post in posts %}
+      {% assign cur_year = post.date | date: '%Y' %}
+
+      {% if cur_year != last_year %}
+        {% unless forloop.first %}</ul>{% endunless %}
+
+        <time class="year lead d-block">{{ cur_year }}</time>
+        {{ '<ul class="list-unstyled">' }}
+
+        {% assign last_year = cur_year %}
+      {% endif %}
+
+      <li>
+        {% assign ts = post.date | date: '%s' %}
+        <span class="date day" data-ts="{{ ts }}" data-df="DD">{{ post.date | date: '%d' }}</span>
+        <span class="date month small text-muted ms-1" data-ts="{{ ts }}" data-df="{{ df_dayjs_m }}">
+          {{ post.date | date: df_strftime_m }}
+        </span>
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      </li>
+
+      {% if forloop.last %}</ul>{% endif %}
+    {% endfor %}
+  {%- endif -%}
+</div>

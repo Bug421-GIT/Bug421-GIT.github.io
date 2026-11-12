@@ -7,11 +7,6 @@
     content="width=device-width, user-scalable=no initial-scale=1, shrink-to-fit=no, viewport-fit=cover"
   >
 
-  {%- comment -%} 国内镜像：fonts.googleapis.com / fonts.gstatic.com 在国内被墙，统一换成可访问的镜像。
-    切换镜像只需改下面两行（例如 loli：fonts.loli.net / gstatic.loli.net）。{%- endcomment -%}
-  {%- assign font_mirror = 'fonts.geekzu.org' -%}
-  {%- assign font_mirror_gstatic = 'gstatic.geekzu.org' -%}
-
   {%- capture seo_tags -%}
     {% seo title=false %}
   {%- endcapture -%}
@@ -78,9 +73,12 @@
   <!-- Resource Hints -->
   {% unless site.assets.self_host.enabled %}
     {% for hint in site.data.origin.cors.resource_hints %}
-      {% for link in hint.links %}
-        <link rel="{{ link.rel }}" href="{{ hint.url | replace: 'fonts.googleapis.com', font_mirror | replace: 'fonts.gstatic.com', font_mirror_gstatic }}" {{ link.opts | join: ' ' }}>
-      {% endfor %}
+      {%- comment -%} 字体域名（googleapis / geekzu / loli）当前均不可达，跳过其 preconnect 与 dns-prefetch，避免控制台噪音。 {%- endcomment -%}
+      {% unless hint.url contains 'fonts' %}
+        {% for link in hint.links %}
+          <link rel="{{ link.rel }}" href="{{ hint.url }}" {{ link.opts | join: ' ' }}>
+        {% endfor %}
+      {% endunless %}
     {% endfor %}
   {% endunless %}
 
@@ -93,7 +91,12 @@
   <link rel="stylesheet" href="{{ '/assets/css/:THEME.css' | replace: ':THEME', site.theme | relative_url }}">
 
   <!-- Web Font -->
-  <link rel="stylesheet" href="{{ site.data.origin[type].webfonts | replace: 'fonts.googleapis.com', font_mirror | relative_url }}">
+  {%- comment -%}
+    原版此处从 Google Fonts（或其国内镜像）加载 Lato / Source Sans Pro。
+    问题：<link rel="stylesheet"> 是阻塞渲染的资源，请求拿不到响应时浏览器会一直白屏等待。
+    实测 fonts.geekzu.org / fonts.loli.net / fonts.googleapis.cn 均不可达（10~16s 后失败），
+    因此这里不再外链字体，改由 _sass 中 $font-family-base 的系统字体栈兜底（中文落到微软雅黑）。
+  {%- endcomment -%}
 
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="{{ site.data.origin.cors.fontawesome.css | relative_url }}">

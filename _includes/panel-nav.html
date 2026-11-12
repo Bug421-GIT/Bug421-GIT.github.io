@@ -1,0 +1,187 @@
+{%- comment -%}
+  右侧栏上下文导航，替代 Chirpy 原版的「最近更新 + 热门标签」。
+
+  规则（见 _layouts/default.html 的 panel 分支）：
+    · 当前分类有父级（三级结构的第三级，章内节目录）
+        → 显示「父级目录」：与它同属一章的所有兄弟章
+    · 其余分类页（两级结构的第二级、三级结构的第二级）
+        → 显示「总目录」：所有一级分类
+
+  父级来源优先级：
+    1. _data/categories.yml 里登记的 parent
+    2. 未登记时，从文章 front matter 推导（谁把当前分类放在 categories[1]）
+{%- endcomment -%}
+
+<style>
+  .panel-nav .panel-nav-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+    font-size: 0.875rem;
+  }
+  .panel-nav .panel-nav-list li {
+    padding: 0.35rem 0 0.35rem 0.75rem;
+    border-left: 2px solid transparent;
+    line-height: 1.4;
+  }
+  .panel-nav .panel-nav-list li.is-current {
+    border-left-color: currentColor;
+    font-weight: 600;
+  }
+  .panel-nav .panel-nav-list a {
+    color: inherit;
+    text-decoration: none;
+  }
+  .panel-nav .panel-nav-list a:hover {
+    text-decoration: underline;
+  }
+  .panel-nav .panel-nav-sub {
+    padding-left: 1.1rem;
+    font-size: 0.8125rem;
+    opacity: 0.85;
+  }
+</style>
+
+{%- assign current = site.data.categories | where: 'slug', page.title | first -%}
+
+{%- comment -%} ===== 解析父级 ===== {%- endcomment -%}
+{%- assign parent_slug = current.parent -%}
+{%- unless parent_slug -%}
+  {%- for post in site.posts -%}
+    {%- if post.categories[1] == page.title -%}
+      {%- assign parent_slug = post.categories[0] -%}
+      {%- break -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endunless -%}
+
+{%- if parent_slug -%}
+  {%- comment -%} ===== 章内节目录页：右侧显示同章的所有章 ===== {%- endcomment -%}
+  {%- assign parent_cat = site.data.categories | where: 'slug', parent_slug | first -%}
+
+  {%- if parent_cat.children -%}
+    {%- comment -%}
+      与正文同一条规则：1 节的章不列（会被平铺），0 节的照常列但不给跳转。
+      当前页总是保留，否则侧栏没有「你在哪」的锚点。
+    {%- endcomment -%}
+    {%- assign siblings = '' | split: '' -%}
+    {%- for chapter_slug in parent_cat.children -%}
+      {%- assign chapter_posts = site.categories[chapter_slug] | size -%}
+      {%- if chapter_posts != 1 or chapter_slug == page.title -%}
+        {%- assign siblings = siblings | push: chapter_slug -%}
+      {%- endif -%}
+    {%- endfor -%}
+  {%- else -%}
+    {%- comment -%} 未登记的一级分类：从它的文章里推导出兄弟章 {%- endcomment -%}
+    {%- assign siblings = '' | split: '' -%}
+    {%- for post in site.categories[parent_slug] -%}
+      {%- assign sib = post.categories[1] -%}
+      {%- if sib and sib != parent_slug -%}
+        {%- unless siblings contains sib -%}
+          {%- assign siblings = siblings | push: sib -%}
+        {%- endunless -%}
+      {%- endif -%}
+    {%- endfor -%}
+    {%- assign siblings = siblings | sort -%}
+  {%- endif -%}
+
+  {%- if parent_cat -%}
+    {%- assign parent_name = parent_cat.name -%}
+    {%- assign parent_url = parent_cat.url -%}
+  {%- else -%}
+    {%- assign parent_name = parent_slug -%}
+    {%- capture parent_url -%}/categories/{{ parent_slug | slugify | url_encode }}/{%- endcapture -%}
+  {%- endif -%}
+
+  <section class="panel-nav">
+    <h2 class="panel-heading">
+      <a href="{{ parent_url | relative_url }}" class="text-reset text-decoration-none">
+        {{- parent_name -}}
+      </a>
+    </h2>
+    <ul class="panel-nav-list">
+      {%- for sib in siblings -%}
+        {%- assign sib_entry = site.data.categories | where: 'slug', sib | first -%}
+        {%- if sib_entry -%}
+          {%- assign sib_name = sib_entry.name -%}
+          {%- assign sib_url = sib_entry.url -%}
+        {%- else -%}
+          {%- assign sib_name = sib -%}
+          {%- capture sib_url -%}/categories/{{ sib | slugify | url_encode }}/{%- endcapture -%}
+        {%- endif -%}
+        {%- assign sib_count = site.categories[sib] | size -%}
+        <li class="{% if sib == page.title %}is-current{% endif %}">
+          {%- if sib_count > 0 -%}
+            <a href="{{ sib_url | relative_url }}">{{ sib_name }}</a>
+          {%- else -%}
+            <span class="text-muted">{{ sib_name }}</span>
+          {%- endif -%}
+        </li>
+      {%- endfor -%}
+    </ul>
+  </section>
+
+{%- else -%}
+  {%- comment -%} ===== 其余分类页：右侧显示总目录 ===== {%- endcomment -%}
+  <section class="panel-nav">
+    <h2 class="panel-heading">
+      <a href="{{ '/' | relative_url }}" class="text-reset text-decoration-none">
+        全部分类
+      </a>
+    </h2>
+    <ul class="panel-nav-list">
+      {%- assign sort_categories = site.categories | sort -%}
+
+      {%- for category in sort_categories -%}
+        {%- assign category_name = category | first -%}
+        {%- assign posts_of_category = category | last -%}
+        {%- assign first_post = posts_of_category | first -%}
+
+        {%- comment -%} 只取「作为文章第一级分类」的条目，避免二级分类重复出现 {%- endcomment -%}
+        {%- if category_name == first_post.categories[0] -%}
+          {%- assign display_name = category_name -%}
+          {%- assign entry = site.data.categories | where: 'slug', category_name | first -%}
+          {%- if entry -%}
+            {%- assign display_name = entry.name -%}
+          {%- endif -%}
+
+          {%- capture category_url -%}/categories/{{ category_name | slugify | url_encode }}/{%- endcapture -%}
+
+          <li class="{% if category_name == page.title %}is-current{% endif %}">
+            <a href="{{ category_url | relative_url }}">{{ display_name }}</a>
+
+            {%- comment -%}
+              已登记章节的一级分类，顺带列出章。
+              flat: true 的分类主内容区不显示章，这里也不列，否则右侧和正文对不上。
+              与 chapter-list.html 同一条规则：1 节的章不列，0 节的照常列但不给跳转。
+            {%- endcomment -%}
+            {%- if entry.children and entry.flat != true -%}
+              {%- assign visible_children = '' | split: '' -%}
+              {%- for chapter_slug in entry.children -%}
+                {%- assign chapter_posts = site.categories[chapter_slug] | size -%}
+                {%- if chapter_posts != 1 -%}
+                  {%- assign visible_children = visible_children | push: chapter_slug -%}
+                {%- endif -%}
+              {%- endfor -%}
+              {%- if visible_children.size > 0 %}
+                <ul class="panel-nav-list panel-nav-sub">
+                  {%- for chapter_slug in visible_children -%}
+                    {%- assign chapter = site.data.categories | where: 'slug', chapter_slug | first -%}
+                    {%- assign chapter_count = site.categories[chapter_slug] | size -%}
+                    <li class="{% if chapter_slug == page.title %}is-current{% endif %}">
+                      {%- if chapter_count > 0 -%}
+                        <a href="{{ chapter.url | relative_url }}">{{ chapter.name }}</a>
+                      {%- else -%}
+                        <span class="text-muted">{{ chapter.name }}</span>
+                      {%- endif -%}
+                    </li>
+                  {%- endfor -%}
+                </ul>
+              {%- endif -%}
+            {%- endif -%}
+          </li>
+        {%- endif -%}
+      {%- endfor -%}
+    </ul>
+  </section>
+{%- endif -%}

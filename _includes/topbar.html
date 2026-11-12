@@ -1,0 +1,149 @@
+<!-- The Top Bar -->
+<!--
+  覆盖 Chirpy 原版：原版按 page.url 拆 / 后，只对 layout == 'category'/'tag' 的中间路径渲染面包屑项，
+  对 layout == 'post' 的中间路径直接跳过，导致文章页面包屑只显示「首页 > 文章标题」。
+  本覆盖版：对 post 页改用 page.categories 重建三级面包屑（中文显示名来自 _data/categories.yml）。
+-->
+
+<header id="topbar-wrapper" class="flex-shrink-0" aria-label="Top Bar">
+  <div
+    id="topbar"
+    class="d-flex align-items-center justify-content-between px-lg-3 h-100"
+  >
+    <nav id="breadcrumb" aria-label="Breadcrumb">
+      {% if page.layout == 'home' %}
+        <!-- index page -->
+        <span>{{ site.data.locales[include.lang].tabs.home | capitalize }}</span>
+
+      {% elsif page.layout == 'catalog' %}
+        {%- comment -%} 首页即分类总目录，面包屑只有一项（不能走下面的 else：page.url 是 "/"，split 后为空）{%- endcomment -%}
+        <span>{{ page.title | default: '分类' }}</span>
+
+      {% else %}
+        <span>
+          <a href="{{ '/' | relative_url }}">
+            {{- site.data.locales[include.lang].tabs.home | capitalize -}}
+          </a>
+        </span>
+
+        {%- comment -%} 文章页：用 page.categories 渲染分类层级（中文显示名查 _data/categories.yml）{%- endcomment -%}
+        {%- if page.layout == 'post' and page.categories and page.categories.size > 0 -%}
+          {%- for category in page.categories -%}
+            {%- assign cat_name = category -%}
+            {%- assign cat_url = '/categories/' | append: category | append: '/' -%}
+            {%- if site.data.categories -%}
+              {%- for entry in site.data.categories -%}
+                {%- if entry.slug == category -%}
+                  {%- assign cat_name = entry.name -%}
+                  {%- assign cat_url = entry.url -%}
+                {%- endif -%}
+              {%- endfor -%}
+            {%- endif -%}
+            <span>
+              <a href="{{ cat_url | relative_url }}">{{ cat_name }}</a>
+            </span>
+          {%- endfor -%}
+          <span>{{ page.title }}</span>
+
+        {%- elsif page.layout == 'category-index' -%}
+          {%- comment -%}
+            分类目录页：一级显示「首页 > 富交互」，二级显示「首页 > 富交互 > 交互与动画」。
+            未在 _data/categories.yml 登记的分类（如 JavaScript 的章），父级从文章 front matter 推导。
+          {%- endcomment -%}
+          {%- assign current_cat = site.data.categories | where: 'slug', page.title | first -%}
+          {%- assign parent_slug = current_cat.parent -%}
+
+          {%- unless parent_slug -%}
+            {%- for post in site.posts -%}
+              {%- if post.categories[1] == page.title -%}
+                {%- assign parent_slug = post.categories[0] -%}
+                {%- break -%}
+              {%- endif -%}
+            {%- endfor -%}
+          {%- endunless -%}
+
+          {%- if parent_slug -%}
+            {%- assign parent_cat = site.data.categories | where: 'slug', parent_slug | first -%}
+            {%- if parent_cat -%}
+              <span>
+                <a href="{{ parent_cat.url | relative_url }}">{{ parent_cat.name }}</a>
+              </span>
+            {%- else -%}
+              {%- capture parent_url -%}/categories/{{ parent_slug | slugify | url_encode }}/{%- endcapture -%}
+              <span>
+                <a href="{{ parent_url | relative_url }}">{{ parent_slug }}</a>
+              </span>
+            {%- endif -%}
+          {%- endif -%}
+
+          <span>{{ current_cat.name | default: page.title }}</span>
+
+        {%- else -%}
+          {%- comment -%} 非文章页：保留 Chirpy 原版逻辑（按 URL 路径渲染）{%- endcomment -%}
+          {% assign paths = page.url | split: '/' %}
+
+          {% for item in paths %}
+            {%- if forloop.first -%}
+              {%- comment -%} 首页已渲染，跳过 {%- endcomment -%}
+            {%- elsif forloop.last -%}
+              {% if page.collection == 'tabs' %}
+                <span>{{ site.data.locales[include.lang].tabs[item] | default: page.title }}</span>
+              {% else %}
+                <span>{{ page.title }}</span>
+              {% endif %}
+
+            {%- elsif page.layout == 'category' or page.layout == 'tag' -%}
+              <span>
+                <a href="{{ item | append: '/' | relative_url }}">
+                  {{- site.data.locales[include.lang].tabs[item] | default: page.title -}}
+                </a>
+              </span>
+            {%- endif -%}
+          {% endfor %}
+        {%- endif -%}
+      {% endif %}
+    </nav>
+    <!-- endof #breadcrumb -->
+
+    <button type="button" id="sidebar-trigger" class="btn btn-link" aria-label="Sidebar">
+      <i class="fas fa-bars fa-fw"></i>
+    </button>
+
+    <div id="topbar-title">
+      {% if page.layout == 'home' %}
+        {{- site.data.locales[include.lang].title | default: site.title -}}
+      {% elsif page.layout == 'catalog' %}
+        {%- comment -%} 总目录页：不写这支会落到末尾兜底，显示成 "Catalog" {%- endcomment -%}
+        {{- page.title | default: '分类' -}}
+      {% elsif page.collection == 'tabs' or page.layout == 'page' %}
+        {%- capture tab_key -%}{{ page.url | split: '/' }}{%- endcapture -%}
+        {{- site.data.locales[include.lang].tabs[tab_key] | default: page.title -}}
+      {% elsif page.layout == 'category-index' %}
+        {%- comment -%} 分类目录页：显示中文分类名，而不是 "Category-index" {%- endcomment -%}
+        {%- assign title_cat = site.data.categories | where: 'slug', page.title | first -%}
+        {{- title_cat.name | default: page.title -}}
+      {% else %}
+        {{- site.data.locales[include.lang].layout[page.layout] | default: page.layout | capitalize -}}
+      {% endif %}
+    </div>
+
+    <button type="button" id="search-trigger" class="btn btn-link" aria-label="Search">
+      <i class="fas fa-search fa-fw"></i>
+    </button>
+
+    <search id="search" class="align-items-center ms-3 ms-lg-0">
+      <i class="fas fa-search fa-fw"></i>
+      <input
+        class="form-control"
+        id="search-input"
+        type="search"
+        aria-label="search"
+        autocomplete="off"
+        placeholder="{{ site.data.locales[include.lang].search.hint | capitalize }}..."
+      >
+    </search>
+    <button type="button" class="btn btn-link text-decoration-none" id="search-cancel">
+      {{- site.data.locales[include.lang].search.cancel -}}
+    </button>
+  </div>
+</header>

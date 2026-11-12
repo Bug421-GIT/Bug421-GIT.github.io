@@ -12,3 +12,6 @@ _site/
 # 平台相关的 Gemfile.lock（Windows 生成的锁含 x64-mingw-ucrt 原生 gem，
 # 无法在 GitHub Actions 的 Linux  runner 上安装，故不提交，由 CI 重新生成）
 /Gemfile.lock
+
+# DSH 工作区数据不提交
+__dsh_probe_tool.tmp

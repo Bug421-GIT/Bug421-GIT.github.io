@@ -1,0 +1,143 @@
+---
+layout: default
+# 全站总目录布局，供首页 index.html 使用（替代 Chirpy 原版的文章时间轴）。
+#
+# 只列「一级分类 → 章」两层，不列文章：
+#   一级分类 = 主题（JavaScript / 计算机网络 / rich-interaction …）
+#   章       = 主题下的章节（基本类型 / 引用类型 / 交互与动画 …）
+# 文章（节）留给 /categories/<章>/ 页面，避免首页变成一长串文章标题。
+#
+# 数据来源优先级与 category-index.html 一致：先查 _data/categories.yml，
+# 未登记的再回落到 site.categories 推导，新增分类不必先改数据文件。
+---
+
+{% include lang.html %}
+
+{%- comment -%} 已登记的 slug 全集，用于后面判断哪些一级分类还没登记 {%- endcomment -%}
+{%- assign registered_slugs = '' | split: '' -%}
+{%- for entry in site.data.categories -%}
+  {%- assign registered_slugs = registered_slugs | push: entry.slug -%}
+{%- endfor -%}
+
+{%- comment -%} 统计一级分类数量（含未登记的），用于标题下方那句概览 {%- endcomment -%}
+{%- assign top_count = 0 -%}
+{%- for pair in site.categories -%}
+  {%- assign _name = pair | first -%}
+  {%- assign _posts = pair | last -%}
+  {%- assign _first = _posts | first -%}
+  {%- if _name == _first.categories[0] -%}
+    {%- assign top_count = top_count | plus: 1 -%}
+  {%- endif -%}
+{%- endfor -%}
+
+<style>
+  .catalog-item:last-child {
+    border-bottom: 0 !important;
+  }
+  .catalog-chapters {
+    line-height: 2;
+  }
+  .catalog-sep {
+    margin: 0 0.45rem;
+    opacity: 0.45;
+  }
+</style>
+
+<article class="px-1">
+  <h1 class="dynamic-title">{{ page.title | default: '分类' }}</h1>
+
+  <p class="text-muted">
+    {%- if page.description -%}
+      {{ page.description }}
+    {%- else -%}
+      共 {{ top_count }} 个主题，{{ site.posts | size }} 篇笔记。点主题进入章目录，再点章进入文章。
+    {%- endif -%}
+  </p>
+
+  <div class="catalog-list mt-4">
+    {%- comment -%} ===== 1. 已登记的一级分类（顺序由 _data/categories.yml 决定）===== {%- endcomment -%}
+    {%- for entry in site.data.categories -%}
+      {%- if entry.parent -%}{%- continue -%}{%- endif -%}
+
+      {%- assign cat_posts = site.categories[entry.slug] -%}
+      {%- comment -%}
+        章数只算「真的会渲染成章」的条目，否则首页说的章数和分类页看到的对不上：
+        · flat: true 的分类整块不设章 → 0
+        · 1 节的章会被平铺成文章，不计（见 chapter-list.html）
+        · 0 节的章仍然列出（只是不给跳转），所以计
+      {%- endcomment -%}
+      {%- assign visible_chapters = '' | split: '' -%}
+      {%- unless entry.flat -%}
+        {%- for chapter_slug in entry.children -%}
+          {%- assign chapter_posts = site.categories[chapter_slug] | size -%}
+          {%- if chapter_posts != 1 -%}
+            {%- assign visible_chapters = visible_chapters | push: chapter_slug -%}
+          {%- endif -%}
+        {%- endfor -%}
+      {%- endunless -%}
+      {%- assign chapter_count = visible_chapters | size -%}
+
+      <section class="catalog-item py-4 border-bottom">
+        <div class="d-flex flex-wrap align-items-baseline justify-content-between">
+          <h2 class="h4 mb-0">
+            <a href="{{ entry.url | relative_url }}">{{ entry.name | default: entry.slug }}</a>
+          </h2>
+          <span class="text-muted small">
+            {%- if chapter_count > 0 %}{{ chapter_count }} 章 · {% endif -%}
+            {{ cat_posts | size }} 篇
+          </span>
+        </div>
+
+        {%- if entry.description %}
+          <p class="text-muted small mt-2 mb-2">{{ entry.description }}</p>
+        {%- endif %}
+
+        {%- if visible_chapters.size > 0 %}
+          <p class="catalog-chapters small mb-0">
+            {%- for chapter_slug in visible_chapters -%}
+              {%- assign chapter = site.data.categories | where: 'slug', chapter_slug | first -%}
+              {%- assign chapter_count_check = site.categories[chapter_slug] | size -%}
+              {%- if chapter -%}
+                {%- if chapter_count_check > 0 -%}
+                  <a href="{{ chapter.url | relative_url }}">{{ chapter.name }}</a>
+                {%- else -%}
+                  <span class="text-muted">{{ chapter.name }}</span>
+                {%- endif -%}
+              {%- else -%}
+                {%- if chapter_count_check > 0 -%}
+                  {%- capture chapter_url -%}/categories/{{ chapter_slug | slugify | url_encode }}/{%- endcapture -%}
+                  <a href="{{ chapter_url | relative_url }}">{{ chapter_slug }}</a>
+                {%- else -%}
+                  <span class="text-muted">{{ chapter_slug }}</span>
+                {%- endif -%}
+              {%- endif -%}
+              {%- unless forloop.last %}<span class="catalog-sep">·</span>{% endunless -%}
+            {%- endfor -%}
+          </p>
+        {%- endif %}
+      </section>
+    {%- endfor -%}
+
+    {%- comment -%} ===== 2. 未登记的一级分类，兜底列出（只显示名字与篇数）===== {%- endcomment -%}
+    {%- for pair in site.categories -%}
+      {%- assign cat_name = pair | first -%}
+      {%- assign cat_posts = pair | last -%}
+      {%- assign first_post = cat_posts | first -%}
+
+      {%- comment -%} 只取「作为文章第一级分类」的条目，否则二级分类会重复出现 {%- endcomment -%}
+      {%- if cat_name != first_post.categories[0] -%}{%- continue -%}{%- endif -%}
+      {%- if registered_slugs contains cat_name -%}{%- continue -%}{%- endif -%}
+
+      {%- capture cat_url -%}/categories/{{ cat_name | slugify | url_encode }}/{%- endcapture -%}
+
+      <section class="catalog-item py-4 border-bottom">
+        <div class="d-flex flex-wrap align-items-baseline justify-content-between">
+          <h2 class="h4 mb-0">
+            <a href="{{ cat_url | relative_url }}">{{ cat_name }}</a>
+          </h2>
+          <span class="text-muted small">{{ cat_posts | size }} 篇</span>
+        </div>
+      </section>
+    {%- endfor -%}
+  </div>
+</article>

@@ -1,0 +1,62 @@
+# 覆盖 Chirpy 主题自带的 _data/origin/cors.yml。
+#
+# 目的：把所有前端依赖从 cdn.jsdelivr.net 换成本地 assets/lib/。
+# 原因：本地开发时页面要等 4 条外部 CSS（Bootstrap 232KB / FontAwesome 90KB /
+# tocbot / polyfill），实测最慢一条 3.4s，期间浏览器不渲染任何内容，表现为「进页面非常卡」。
+# 本地化后首屏不再依赖外网，冷启动也从数秒降到几十毫秒。
+#
+# 更新依赖时：重新下载对应文件到 assets/lib/<lib>/，版本号写在这里做记录。
+
+# Resource Hints：全部本地化后不再需要任何外部 preconnect
+resource_hints: []
+
+# Web Fonts：已改用系统字体栈（见 _includes/head.html），留空避免误用
+webfonts: ""
+
+# ========== 样式与脚本（全部本地） ==========
+# bootstrap 5.x
+bootstrap:
+  css: /assets/lib/bootstrap/bootstrap.min.css
+
+# tocbot 4.x
+toc:
+  css: /assets/lib/tocbot/tocbot.min.css
+  js: /assets/lib/tocbot/tocbot.min.js
+
+# FontAwesome Free 7.x（含 webfonts/fa-*.woff2 四个字体文件）
+fontawesome:
+  css: /assets/lib/fontawesome-free/css/all.min.css
+
+# simple-jekyll-search 1.x
+search:
+  js: /assets/lib/simple-jekyll-search/simple-jekyll-search.min.js
+
+# mermaid 11.x（本站未启用，保留 CDN 地址，开启 site.mermaid 前请先本地化）
+mermaid:
+  js: https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js
+
+# dayjs 1.x（locale 由 js-selector.html 把 :LOCALE 替换成语言前缀，本站为 zh）
+dayjs:
+  js:
+    common: /assets/lib/dayjs/dayjs.min.js
+    locale: /assets/lib/dayjs/locale/:LOCALE.js
+    relativeTime: /assets/lib/dayjs/plugin/relativeTime.js
+    localizedFormat: /assets/lib/dayjs/plugin/localizedFormat.js
+
+# glightbox 3.x
+glightbox:
+  css: /assets/lib/glightbox/glightbox.min.css
+  js: /assets/lib/glightbox/glightbox.min.js
+
+# loading-attribute-polyfill 2.x
+lazy-polyfill:
+  css: /assets/lib/loading-attribute-polyfill/loading-attribute-polyfill.min.css
+  js: /assets/lib/loading-attribute-polyfill/loading-attribute-polyfill.umd.min.js
+
+# clipboard 2.x
+clipboard:
+  js: /assets/lib/clipboard/clipboard.min.js
+
+# mathjax 4.x（本站未启用，保留 CDN 地址，开启 site.math 前请先本地化）
+mathjax:
+  js: https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js

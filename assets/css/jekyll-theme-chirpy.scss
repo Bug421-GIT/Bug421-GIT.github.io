@@ -1,0 +1,52 @@
+---
+---
+
+@use 'abstracts/variables' with (
+  $theme: '{{ site.theme_mode }}'
+);
+
+/* prettier-ignore */
+@use 'main
+{%- if jekyll.environment == 'production' -%}
+  .bundle
+{%- endif -%}
+';
+
+/* ===== 自定义样式（本项目覆盖版，主题原文件没有这一段）===== */
+
+// 代码块内边距。
+//
+// kramdown 产出的标记是  div.highlight > pre.highlight > code，
+// 外层 div 和内层 pre 都带 highlight 这个类。所以只写一条
+//     .highlight { padding: 17px }
+// 会同时命中两层，实际内边距变成 34px，必须把内层清零。
+//
+// 内层 pre 原本继承主题 .highlight 的 padding-bottom: 0.75rem，
+// 清零后四周统一由外层给 17px。
+div.highlight {
+  padding: 17px;
+}
+
+div.highlight > pre.highlight {
+  padding: 0;
+}
+
+// Rouge 的 err token 中性化。
+//
+// Rouge 把「词法分析器不认识的字符」标成 <span class="err">。常见的触发源：
+//   · Vue 模板里的 @click / @自定义事件（HTML 词法器不认 @ 开头）
+//   · v-bind:title='x'+111 这种拼接表达式
+//   · 代码块里粘进来的不间断空格 \xa0
+//   · 代码块里误用的中文标点（，：、）
+// 换成 vue 词法器也没用，实测输出一样。
+//
+// 主题给 .err 配的是「红底白字」（_sass/themes/_light.scss 里
+//   color: #f6f8fa; background-color: #82071e;），本意是提醒「这里语法错了」，
+// 但在中文笔记里几乎全是误报，一片红块比原文更难读，所以改成跟随正文颜色。
+//
+// 选择器要压过主题的 :root[data-bs-theme=light] .highlight .err（特异性 0,4,0），
+// 这里补一个 div 和 [data-bs-theme] 属性选择器，凑到 0,4,1。
+:root[data-bs-theme] div.highlight .err {
+  color: inherit;
+  background-color: transparent;
+}

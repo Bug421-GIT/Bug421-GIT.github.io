@@ -1,0 +1,108 @@
+---
+layout: compress
+# 覆盖 Chirpy 原版 default 布局。
+#
+# 原版右侧栏固定渲染「最近更新 + 热门标签」，与本博客的三级目录导航冲突。
+# 本覆盖版按页面类型切换右侧栏内容：
+#   · post                    → 文章大纲（由布局的 panel_includes 决定，post.html 里是 toc）
+#   · catalog（首页总目录）   → 「最近更新 + 热门标签」
+#   · categories（分类总览）  → 留空，因为主内容区本身就是完整目录
+#   · 其余（category-index）  → 上下文目录，见 _includes/panel-nav.html
+#
+# 其余结构与原版保持一致，主题升级时只需 diff 这段 panel 区块。
+---
+
+<!doctype html>
+
+{% include origin-type.html %}
+
+{% include lang.html %}
+
+<!-- `site.alt_lang` can specify a language different from the UI -->
+<html
+  lang="{{ page.lang | default: site.alt_lang | default: site.lang }}"
+  {%- if site.theme_mode == 'light' or site.theme_mode == 'dark' -%}
+    data-bs-theme="{{ site.theme_mode }}"
+  {%- endif -%}
+>
+  {% include head.html lang=lang %}
+
+  <body>
+    {% include sidebar.html lang=lang %}
+
+    <div id="main-wrapper" class="d-flex justify-content-center">
+      <div class="container d-flex flex-column px-xxl-5">
+        {% include topbar.html lang=lang %}
+
+        <div class="row flex-grow-1">
+          <main aria-label="Main Content" class="col-12 col-lg-11 col-xl-9 px-md-4">
+            {% if layout.layout == 'default' %}
+              {% include refactor-content.html content=content lang=lang %}
+            {% else %}
+              {{ content }}
+            {% endif %}
+          </main>
+
+          <!-- panel -->
+          <aside aria-label="Panel" id="panel-wrapper" class="col-xl-3 ps-2 text-muted">
+            {%- if page.layout == 'post' -%}
+              {%- comment -%} 文章页：只保留文章大纲 {%- endcomment -%}
+              {% for _include in layout.panel_includes %}
+                {% assign _include_path = _include | append: '.html' %}
+                {% include {{ _include_path }} lang=lang %}
+              {% endfor %}
+
+            {%- elsif page.layout == 'home' or page.layout == 'categories' or page.layout == 'catalog' -%}
+              {%- comment -%}
+                首页 / 分类总览 / 总目录页没有「当前在哪一章」的概念，右侧放回「最近更新 + 热门标签」。
+                分类页（category-index）则走下面的上下文目录。
+              {%- endcomment -%}
+              <div class="access">
+                {% include_cached update-list.html lang=lang %}
+                {% include_cached trending-tags.html lang=lang %}
+              </div>
+
+            {%- else -%}
+              {% include panel-nav.html lang=lang %}
+            {%- endif %}
+          </aside>
+        </div>
+
+        <div class="row">
+          <!-- tail -->
+          <div id="tail-wrapper" class="col-12 col-lg-11 col-xl-9 px-md-4">
+            {% for _include in layout.tail_includes %}
+              {% assign _include_path = _include | append: '.html' %}
+              {% include {{ _include_path }} lang=lang %}
+            {% endfor %}
+
+            {% include_cached footer.html lang=lang %}
+          </div>
+        </div>
+
+        {% include_cached search-results.html lang=lang %}
+      </div>
+
+      <aside aria-label="Scroll to Top">
+        <button id="back-to-top" type="button" class="btn btn-lg btn-box-shadow">
+          <i class="fas fa-angle-up"></i>
+        </button>
+      </aside>
+    </div>
+
+    <div id="mask" class="d-none position-fixed w-100 h-100 z-1"></div>
+
+    {% if site.pwa.enabled %}
+      {% include_cached notification.html lang=lang %}
+    {% endif %}
+
+    <!-- Embedded scripts -->
+
+    {% for _include in layout.script_includes %}
+      {% assign _include_path = _include | append: '.html' %}
+      {% include {{ _include_path }} %}
+    {% endfor %}
+
+    {% include_cached search-loader.html lang=lang %}
+  </body>
+</html>

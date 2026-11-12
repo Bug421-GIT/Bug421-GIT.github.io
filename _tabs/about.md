@@ -24,7 +24,7 @@ order: 4
 ## 联系方式
 - Wechat: Ana-Anan
 
-  <img src="../assets/img/wechat-qr code.jpg" width="90" height="140" />
+  <img src="/assets/img/wechat-qr_code.jpg" alt="微信二维码" width="90" height="140" />
 - GitHub：[@421-GIT](https://github.com/Bug421-GIT)
 - 微博：[@Bug421-GIT](https://weibo.com/u/1960838465)
 - 邮箱：57689675@qq.com

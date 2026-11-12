@@ -1,0 +1,183 @@
+---
+layout: default
+# 分类聚合页布局，供 jekyll-archives 的 /categories/:name/ 使用。
+#
+# 层级判定不依赖手工登记，而是「先看 _data/categories.yml，缺失则从文章数据推导」：
+#   has_parent   → 它是某个分类的子分类（章）→ 渲染「第 N 节」列表
+#   has_children → 它下面还有子分类（总目录 / 章）→ 渲染「第 N 章」列表
+#   两者都不是   → 平铺文章列表
+#
+# 这样 rich-interaction（已登记中文名与章序）和 JavaScript（未登记、章名取自 front matter）
+# 能走同一套逻辑，新增分类时不必先改数据文件。
+---
+
+{% include lang.html %}
+
+{%- assign current = site.data.categories | where: 'slug', page.title | first -%}
+{%- assign cn_nums = '零,一,二,三,四,五,六,七,八,九,十' | split: ',' -%}
+
+{%- comment -%} ===== 1. 判定层级 ===== {%- endcomment -%}
+{%- assign has_parent = false -%}
+{%- assign has_children = false -%}
+
+{%- if current.parent -%}{%- assign has_parent = true -%}{%- endif -%}
+{%- if current.children -%}{%- assign has_children = true -%}{%- endif -%}
+
+{%- comment -%} 自动推导子分类：取本分类文章的 categories[1]，排除自身 {%- endcomment -%}
+{%- assign auto_children = '' | split: '' -%}
+{%- for post in site.categories[page.title] -%}
+  {%- assign sub = post.categories[1] -%}
+  {%- if sub and sub != page.title -%}
+    {%- unless auto_children contains sub -%}
+      {%- assign auto_children = auto_children | push: sub -%}
+    {%- endunless -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- assign auto_children = auto_children | sort -%}
+{%- if auto_children.size > 0 -%}{%- assign has_children = true -%}{%- endif -%}
+
+{%- comment -%} 自动推导父分类：看有没有文章把它放在 categories[1] {%- endcomment -%}
+{%- unless has_parent -%}
+  {%- for post in site.posts -%}
+    {%- if post.categories[1] == page.title -%}
+      {%- assign has_parent = true -%}
+      {%- assign auto_parent = post.categories[0] -%}
+      {%- break -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endunless -%}
+
+<article class="px-1">
+  <h1 class="dynamic-title">{{ current.name | default: page.title }}</h1>
+
+  {%- if current.description %}
+    <p class="text-muted">{{ current.description }}</p>
+  {%- endif %}
+
+  <div class="content">
+    {%- if current.flat -%}
+      {%- comment -%}
+        ===== 显式声明「不设章」的分类：平铺全部文章 =====
+        _data/categories.yml 里写了 flat: true 的一级分类走这支，即使它登记了 children。
+        适用场景：章下面只有一两节，分成「第 N 章」反而比平铺更难扫。
+
+        排序用日期升序。Jekyll 的 site.categories 默认是最新在前（倒序），
+        而笔记类文章的文件名和标题通常自带「1. 2. 3.」序号，日期升序正好还原写作顺序。
+      {%- endcomment -%}
+      {%- assign flat_posts = site.categories[page.title] | sort: 'date' -%}
+
+      {%- if flat_posts.size > 0 %}
+        <div class="section-list">
+          {%- for post in flat_posts %}
+            <div class="section-item py-3 border-bottom">
+              <a class="h5" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+              {%- if post.description %}
+                <p class="text-muted small mb-0 mt-1">{{ post.description }}</p>
+              {%- endif %}
+            </div>
+          {%- endfor -%}
+        </div>
+      {%- else %}
+        <p class="text-muted">本分类暂无文章。</p>
+      {%- endif -%}
+
+    {%- elsif has_parent -%}
+      {%- comment -%} ===== 章内节目录：按 section_order 排「第 N 节」 ===== {%- endcomment -%}
+      {%- assign chapter_posts = site.categories[page.title] -%}
+      {%- assign sorted_posts = chapter_posts | sort: 'section_order' -%}
+
+      {%- if sorted_posts.size > 0 %}
+        <div class="section-list">
+          {%- for post in sorted_posts -%}
+            {%- assign idx = forloop.index -%}
+            <div class="section-item py-3 border-bottom">
+              <div class="text-muted small mb-1">
+                第 {% if idx > 10 %}{{ idx }}{% else %}{{ cn_nums[idx] }}{% endif %} 节
+              </div>
+              <a class="h5" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+              {%- if post.description %}
+                <p class="text-muted small mb-0 mt-1">{{ post.description }}</p>
+              {%- endif %}
+            </div>
+          {%- endfor -%}
+        </div>
+      {%- else %}
+        <p class="text-muted">本章暂无文章。</p>
+      {%- endif -%}
+
+    {%- elsif has_children -%}
+      {%- comment -%} ===== 章目录：优先用登记数据，否则用自动推导的子分类 ===== {%- endcomment -%}
+      {%- if current.children -%}
+        {% include chapter-list.html parent=page.title %}
+      {%- else %}
+        {%- comment -%}
+          未登记 children 的分类，从文章数据推导章。
+          与 chapter-list.html 同一条规则：不足两节（0 节或 1 节）的章不渲染成章，
+          1 节交给下面的平铺区，0 节不会出现（没有文章就推导不出这个章）。
+        {%- endcomment -%}
+        {%- assign auto_chapter_no = 0 -%}
+        <div class="chapter-list">
+          {%- for sub in auto_children -%}
+            {%- assign sub_posts = site.categories[sub] -%}
+            {%- assign sub_count = sub_posts | size -%}
+            {%- if sub_count == 1 -%}{%- continue -%}{%- endif -%}
+
+            {%- assign auto_chapter_no = auto_chapter_no | plus: 1 -%}
+            {%- capture sub_url -%}/categories/{{ sub | slugify | url_encode }}/{%- endcapture -%}
+
+            <section class="chapter-item mb-4 pb-3 border-bottom">
+              <h2 class="h4 mb-1">
+                <span class="text-muted me-1">
+                  第 {% if auto_chapter_no > 10 %}{{ auto_chapter_no }}{% else %}{{ cn_nums[auto_chapter_no] }}{% endif %} 章
+                </span>
+                <a href="{{ sub_url | relative_url }}">{{ sub }}</a>
+              </h2>
+              <span class="badge text-bg-secondary">{{ sub_count }} 节</span>
+            </section>
+          {%- endfor %}
+        </div>
+      {%- endif -%}
+
+      {%- comment -%}
+        ===== 平铺区：没有做成「章」的文章 =====
+        两类合并成同一条列表，否则会出现两块内容性质相同、样式却不一样的区域：
+          · 只有一节的章里的那一篇（chapter-list.html 跳过它，到这里来）
+          · 直接挂在本分类、没有二级分类的文章
+        按日期升序：笔记的文件名与标题自带 1. 2. 3. 序号，日期升序正好是阅读顺序。
+      {%- endcomment -%}
+      {%- assign flat_posts = '' | split: '' -%}
+      {%- for post in site.categories[page.title] -%}
+        {%- assign sub = post.categories[1] -%}
+        {%- if sub == nil -%}
+          {%- assign flat_posts = flat_posts | push: post -%}
+        {%- else -%}
+          {%- assign sub_size = site.categories[sub] | size -%}
+          {%- if sub_size == 1 -%}
+            {%- assign flat_posts = flat_posts | push: post -%}
+          {%- endif -%}
+        {%- endif -%}
+      {%- endfor -%}
+      {%- assign flat_posts = flat_posts | sort: 'date' -%}
+
+      {%- if flat_posts.size > 0 %}
+        <div class="flat-list mt-4">
+          {%- for post in flat_posts %}
+            <div class="chapter-single py-3 border-bottom">
+              <a class="h5" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            </div>
+          {%- endfor -%}
+        </div>
+      {%- endif %}
+
+    {%- else -%}
+      {%- comment -%} ===== 叶子分类：平铺文章 ===== {%- endcomment -%}
+      <ul class="list-unstyled">
+        {%- for post in site.categories[page.title] %}
+          <li class="py-1">
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          </li>
+        {%- endfor %}
+      </ul>
+    {%- endif %}
+  </div>
+</article>

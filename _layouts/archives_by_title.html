@@ -1,0 +1,18 @@
+---
+layout: page
+# The Archives of posts, sorted by title (instead of timeline)
+---
+
+{% include lang.html %}
+
+<div id="archives" class="pl-xl-3">
+  <ul class="list-unstyled">
+    {% assign sorted_posts = site.posts | sort: 'title' %}
+    {% for post in sorted_posts %}
+      <li class="py-1">
+        <span class="text-muted small me-2">{{ post.date | date: '%Y-%m-%d' }}</span>
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>

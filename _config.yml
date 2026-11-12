@@ -30,12 +30,12 @@ avatar: /assets/img/avatar/doraemon.jpg
 # ========== 构建 ==========
 markdown: kramdown
 highlighter: rouge
-paginate: 10
-paginate_path: /page:num/
+# 首页已改为总目录（index.html → layout: catalog），文章时间轴不复存在。
+# 关掉 jekyll-paginate：留着它会把 index.html 当成分页模板，
+# 生成 /page2/ /page3/ 这些和首页内容完全相同的副本。
 
 plugins:
   - jekyll-archives
-  - jekyll-paginate
   - jekyll-redirect-from
   - jekyll-seo-tag
   - jekyll-sitemap
@@ -45,7 +45,10 @@ plugins:
 # jekyll-archives 配置（生成分类/标签聚合页）
 jekyll-archives:
   enabled: [categories, tags]
-  layout: archives
+  layouts:
+    # 分类页走三级目录布局：一级列章、二级列节（见 _layouts/category-index.html）
+    category: category-index
+    tag: archives
   permalinks:
     category: /categories/:name/
     tag: /tags/:name/
@@ -63,3 +66,14 @@ toc: true                  # 文章自动生成目录
 # mermaid: true           # 需要流程图时打开
 # comments:               # 评论系统（giscus/utterances）按需配置
 # analytics:              # 访问统计按需配置
+
+# ========== 默认值 ==========
+# Chirpy 的 _includes/toc-status.html 判定条件是 `site.toc and page.toc`，
+# 而 page.toc 来自文章 front matter，不写就是 nil → 目录永远不渲染。
+# 这里用 defaults 给所有 posts 补上 toc: true，单篇想关掉时在 front matter 写 toc: false 即可覆盖。
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      toc: true

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>独立演示页 · iframe sandbox</title>
+  <style>
+    /* 注意：下面所有样式都封闭在本页面内，不会泄漏到宿主博客，也不会被博客主题影响 */
+    :root {
+      --bg: #0f172a;
+      --panel: #1e293b;
+      --panel-2: #334155;
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent-2: #f472b6;
+      --ok: #34d399;
+      --radius: 12px;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; }
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: radial-gradient(120% 120% at 0% 0%, #111c33 0%, var(--bg) 60%);
+      color: var(--text);
+      padding: 20px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    .demo-head { display: flex; align-items: center; gap: 10px; margin-bottom: 4px; }
+    .demo-head .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 12px var(--accent); }
+    h1 { font-size: 16px; margin: 0; font-weight: 600; letter-spacing: .3px; }
+    .sub { color: var(--muted); font-size: 12px; margin: 0 0 16px; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .card {
+      background: var(--panel);
+      border: 1px solid rgba(148,163,184,.15);
+      border-radius: var(--radius);
+      padding: 14px;
+    }
+    .card h2 { font-size: 13px; margin: 0 0 10px; color: var(--muted); font-weight: 500; }
+    button {
+      font: inherit; cursor: pointer; border: 0; border-radius: 8px;
+      padding: 8px 14px; background: var(--accent); color: #04293f; font-weight: 600;
+      transition: transform .12s ease, filter .12s ease;
+    }
+    button:hover { filter: brightness(1.08); }
+    button:active { transform: scale(.96); }
+    button.ghost { background: var(--panel-2); color: var(--text); }
+
+    /* 过渡动画演示 */
+    .stage { height: 64px; display: flex; align-items: center; }
+    .box {
+      width: 44px; height: 44px; border-radius: 10px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      transition: transform .5s cubic-bezier(.34,1.56,.64,1), border-radius .5s ease, background .5s ease;
+    }
+    .box.moved {
+      transform: translateX(160px) rotate(180deg) scale(1.15);
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--ok), var(--accent));
+    }
+
+    /* 拖拽演示 */
+    .drag-area {
+      position: relative; height: 96px; border-radius: 10px;
+      background: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(148,163,184,.07) 10px, rgba(148,163,184,.07) 20px);
+      border: 1px dashed rgba(148,163,184,.3); overflow: hidden; touch-action: none;
+    }
+    .ball {
+      position: absolute; left: 8px; top: 8px; width: 40px; height: 40px; border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, #fff, var(--accent-2));
+      cursor: grab; user-select: none; box-shadow: 0 6px 18px rgba(244,114,182,.4);
+    }
+    .ball:active { cursor: grabbing; }
+
+    /* 计数器 */
+    .counter { display: flex; align-items: center; gap: 12px; }
+    .counter .val { font-size: 28px; font-weight: 700; min-width: 48px; text-align: center; color: var(--accent); }
+
+    .full { grid-column: 1 / -1; }
+    .note { color: var(--muted); font-size: 11px; margin-top: 14px; text-align: center; }
+    code { background: rgba(148,163,184,.15); padding: 1px 6px; border-radius: 5px; font-size: 12px; }
+  </style>
+</head>
+<body>
+  <div class="demo-head"><span class="dot"></span><h1>独立演示页（iframe sandbox）</h1></div>
+  <p class="sub">这个页面完全自包含，通过 <code>&lt;iframe&gt;</code> 嵌入文章，与博客主题样式互不污染。</p>
+
+  <div class="grid">
+    <div class="card">
+      <h2>① CSS 过渡动画</h2>
+      <div class="stage"><div class="box" id="box"></div></div>
+      <button id="toggleBtn">切换状态</button>
+    </div>
+
+    <div class="card">
+      <h2>② 拖拽（Pointer Events）</h2>
+      <div class="drag-area" id="dragArea"><div class="ball" id="ball"></div></div>
+      <p class="sub" style="margin:8px 0 0">在区域内拖动小球</p>
+    </div>
+
+    <div class="card full">
+      <h2>③ 计数器</h2>
+      <div class="counter">
+        <button class="ghost" id="dec">−</button>
+        <span class="val" id="count">0</span>
+        <button id="inc">+</button>
+      </div>
+    </div>
+  </div>
+
+  <p class="note">样式与脚本均封闭在本文档内 · 宿主页面的全局 CSS / JS 不会影响这里</p>
+
+  <script>
+    // ① 过渡动画
+    var box = document.getElementById('box');
+    document.getElementById('toggleBtn').addEventListener('click', function () {
+      box.classList.toggle('moved');
+    });
+
+    // ② 拖拽
+    (function () {
+      var area = document.getElementById('dragArea');
+      var ball = document.getElementById('ball');
+      var dragging = false, offX = 0, offY = 0;
+      ball.addEventListener('pointerdown', function (e) {
+        dragging = true;
+        var r = ball.getBoundingClientRect(), ar = area.getBoundingClientRect();
+        offX = e.clientX - r.left; offY = e.clientY - r.top;
+        ball.setPointerCapture(e.pointerId);
+      });
+      ball.addEventListener('pointermove', function (e) {
+        if (!dragging) return;
+        var ar = area.getBoundingClientRect();
+        var x = e.clientX - ar.left - offX;
+        var y = e.clientY - ar.top - offY;
+        x = Math.max(0, Math.min(x, ar.width - ball.offsetWidth));
+        y = Math.max(0, Math.min(y, ar.height - ball.offsetHeight));
+        ball.style.left = x + 'px';
+        ball.style.top = y + 'px';
+      });
+      ball.addEventListener('pointerup', function () { dragging = false; });
+      ball.addEventListener('pointercancel', function () { dragging = false; });
+    })();
+
+    // ③ 计数器
+    var n = 0, count = document.getElementById('count');
+    document.getElementById('inc').addEventListener('click', function () { count.textContent = ++n; });
+    document.getElementById('dec').addEventListener('click', function () { count.textContent = --n; });
+  </script>
+</body>
+</html>
