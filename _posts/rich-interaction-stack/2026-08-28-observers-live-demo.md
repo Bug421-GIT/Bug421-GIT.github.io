@@ -7,7 +7,7 @@ categories: ["rich-interaction", "interaction-animation"]
 section_order: 2
 render_with_liquid: true
 layout: post
-pin: false
+published: false
 ---
 
 <h2 class="sr-only">IntersectionObserver、ResizeObserver、MutationObserver 的实时触发演示</h2>

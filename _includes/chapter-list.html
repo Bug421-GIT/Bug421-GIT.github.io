@@ -44,6 +44,13 @@
   {%- assign first_chapter_date = chapter_keys | first | split: '|' | first -%}
 {%- endif -%}
 
+{%- comment -%} 0 节的章：即便一个真章都没有，也要单独列出「待写」 {%- endcomment -%}
+{%- assign pending_chapters = '' | split: '' -%}
+{%- for child in top.children -%}
+  {%- assign csize = site.categories[child] | size -%}
+  {%- if csize == 0 -%}{%- assign pending_chapters = pending_chapters | push: child -%}{%- endif -%}
+{%- endfor -%}
+
 {%- comment -%} 2. 把文章分成章成员与散篇，散篇再分「基础 / 专题」 {%- endcomment -%}
 {%- assign pre_posts = '' | split: '' -%}
 {%- assign post_posts = '' | split: '' -%}
@@ -117,7 +124,7 @@
     </div>
   {%- endif %}
 
-  {%- if chapter_slugs.size > 0 %}
+  {%- if chapter_slugs.size > 0 or pending_chapters.size > 0 %}
     <h2 class="topic-group-heading">章</h2>
     <div class="chapter-grid">
       {%- for slug in chapter_slugs %}
@@ -137,11 +144,8 @@
       {%- endfor %}
 
       {%- comment -%} 0 节的章：列在末尾，保留编号与说明，不给链接 {%- endcomment -%}
-      {%- assign chapter_no = chapter_slugs.size -%}
-      {%- for child in top.children %}
-        {%- assign csize = site.categories[child] | size -%}
-        {%- if csize != 0 -%}{%- continue -%}{%- endif -%}
-        {%- assign chapter_no = chapter_no | plus: 1 -%}
+      {%- for child in pending_chapters %}
+        {%- assign chapter_no = chapter_slugs.size | plus: forloop.index -%}
         {%- assign chapter = site.data.categories | where: 'slug', child | first %}
         <section class="chapter-card">
           <div class="chapter-kicker">第 {% if chapter_no > 10 %}{{ chapter_no }}{% else %}{{ cn_nums[chapter_no] }}{% endif %} 章 · 待写</div>
