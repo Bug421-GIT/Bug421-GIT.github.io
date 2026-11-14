@@ -7,7 +7,7 @@ layout: default
 #   has_children → 它下面还有子分类（总目录 / 章）→ 渲染「第 N 章」列表
 #   两者都不是   → 平铺文章列表
 #
-# 这样 rich-interaction（已登记中文名与章序）和 JavaScript（未登记、章名取自 front matter）
+# 这样 rich-interaction（已登记中文名与章序）和 JavaScript（登记了 基本类型/引用类型 两章）
 # 能走同一套逻辑，新增分类时不必先改数据文件。
 ---
 
@@ -106,7 +106,7 @@ layout: default
       {%- endif -%}
 
     {%- elsif has_children -%}
-      {%- comment -%} ===== 章目录：优先用登记数据，否则用自动推导的子分类 ===== {%- endcomment -%}
+      {%- comment -%} ===== 章与单篇都交给 chapter-list.html：同一时间轴混排 ===== {%- endcomment -%}
       {%- if current.children -%}
         {% include chapter-list.html parent=page.title %}
       {%- else %}
@@ -136,14 +136,13 @@ layout: default
             </section>
           {%- endfor %}
         </div>
-      {%- endif -%}
 
       {%- comment -%}
-        ===== 平铺区：没有做成「章」的文章 =====
-        两类合并成同一条列表，否则会出现两块内容性质相同、样式却不一样的区域：
-          · 只有一节的章里的那一篇（chapter-list.html 跳过它，到这里来）
+        ===== 平铺区（仅自动推导章的分支）=====
+        两类合并成同一条列表：
+          · 只有一节的章里的那一篇（上面跳过了它）
           · 直接挂在本分类、没有二级分类的文章
-        按日期升序：笔记的文件名与标题自带 1. 2. 3. 序号，日期升序正好是阅读顺序。
+        登记了 children 的分类不走这里——chapter-list.html 已把单篇按时间轴混排。
       {%- endcomment -%}
       {%- assign flat_posts = '' | split: '' -%}
       {%- for post in site.categories[page.title] -%}
@@ -169,10 +168,13 @@ layout: default
         </div>
       {%- endif %}
 
+      {%- endif -%}
+
     {%- else -%}
-      {%- comment -%} ===== 叶子分类：平铺文章 ===== {%- endcomment -%}
+      {%- comment -%} ===== 叶子分类：按日期升序平铺文章 ===== {%- endcomment -%}
+      {%- assign leaf_posts = site.categories[page.title] | sort: 'date' -%}
       <ul class="list-unstyled">
-        {%- for post in site.categories[page.title] %}
+        {%- for post in leaf_posts %}
           <li class="py-1">
             <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
           </li>

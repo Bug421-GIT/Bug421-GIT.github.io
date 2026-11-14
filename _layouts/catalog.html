@@ -2,10 +2,11 @@
 layout: default
 # 全站总目录布局，供首页 index.html 使用（替代 Chirpy 原版的文章时间轴）。
 #
-# 只列「一级分类 → 章」两层，不列文章：
+# 列「一级分类 → 章」两层，并把不属于任何章的文章收进可折叠的「散篇」入口：
 #   一级分类 = 主题（JavaScript / 计算机网络 / rich-interaction …）
-#   章       = 主题下的章节（基本类型 / 引用类型 / 交互与动画 …）
-# 文章（节）留给 /categories/<章>/ 页面，避免首页变成一长串文章标题。
+#   章       = 主题下的章节（基本类型 / 引用类型 / 集合引用类型 …）
+#   散篇     = 直挂主题或只占 1 节的章内文章，默认折叠，避免首页标题过长
+# 章目录与散篇的具体顺序由 /categories/<主题>/ 页面负责。
 #
 # 数据来源优先级与 category-index.html 一致：先查 _data/categories.yml，
 # 未登记的再回落到 site.categories 推导，新增分类不必先改数据文件。
@@ -40,6 +41,12 @@ layout: default
   .catalog-sep {
     margin: 0 0.45rem;
     opacity: 0.45;
+  }
+  .catalog-singles summary {
+    cursor: pointer;
+  }
+  .catalog-singles summary:hover {
+    color: var(--bs-link-color, #0d6efd);
   }
 </style>
 
@@ -114,6 +121,29 @@ layout: default
               {%- unless forloop.last %}<span class="catalog-sep">·</span>{% endunless -%}
             {%- endfor -%}
           </p>
+        {%- endif %}
+
+        {%- comment -%} 不属于任何章的散篇：默认折叠，只露「散篇 N 篇」 {%- endcomment -%}
+        {%- assign single_posts = '' | split: '' -%}
+        {%- for post in cat_posts -%}
+          {%- assign sub = post.categories[1] -%}
+          {%- assign post_is_chapter = false -%}
+          {%- unless entry.flat -%}
+            {%- if sub and visible_chapters contains sub -%}{%- assign post_is_chapter = true -%}{%- endif -%}
+          {%- endunless -%}
+          {%- unless post_is_chapter -%}{%- assign single_posts = single_posts | push: post -%}{%- endunless -%}
+        {%- endfor -%}
+        {%- assign single_posts = single_posts | sort: 'date' -%}
+        {%- if single_posts.size > 0 %}
+          <details class="catalog-singles mt-2 mb-0">
+            <summary class="text-muted small">散篇 {{ single_posts.size }} 篇</summary>
+            <p class="catalog-chapters small mb-0 mt-1">
+              {%- for post in single_posts -%}
+                <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                {%- unless forloop.last %}<span class="catalog-sep">·</span>{% endunless -%}
+              {%- endfor -%}
+            </p>
+          </details>
         {%- endif %}
       </section>
     {%- endfor -%}

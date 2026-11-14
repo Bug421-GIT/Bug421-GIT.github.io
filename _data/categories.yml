@@ -40,15 +40,11 @@
 - slug: JavaScript
   name: JavaScript
   url: /categories/javascript/
-  description: 语言基础、引用类型、对象模型、闭包与事件机制。
+  description: 从「2. 数据类型」总览进入三册：基本类型、引用类型、集合引用类型；3. 对象之后的专题（对象、展开、构造函数、类、函数、闭包、Proxy、事件、垃圾回收）按篇顺序阅读。
   children:
     - 基本类型
     - 引用类型
-    - Object
-    - 对象
-    - 闭包
-    - Event
-    - Thread
+    - 集合引用类型
 
 - slug: 基本类型
   name: 基本类型
@@ -60,37 +56,13 @@
   name: 引用类型
   url: /categories/引用类型/
   parent: JavaScript
-  description: Date、RegExp、Array、Map、Set 等内置引用类型的用法与陷阱。
+  description: 原始值包装类型、RegExp、Date 与单例内置对象等基本引用类型。
 
-- slug: Object
-  name: 对象
-  url: /categories/object/
+- slug: 集合引用类型
+  name: 集合引用类型
+  url: /categories/集合引用类型/
   parent: JavaScript
-  description: 对象的创建、属性描述符、原型链与继承。
-
-- slug: 对象
-  name: 对象（补充）
-  url: /categories/对象/
-  parent: JavaScript
-  description: 对象相关的补充笔记。
-
-- slug: 闭包
-  name: 闭包
-  url: /categories/闭包/
-  parent: JavaScript
-  description: 作用域链、闭包的形成条件与实际用途。
-
-- slug: Event
-  name: 事件
-  url: /categories/event/
-  parent: JavaScript
-  description: 事件流、事件处理程序、事件委托与自定义事件。
-
-- slug: Thread
-  name: 线程
-  url: /categories/thread/
-  parent: JavaScript
-  description: 工作者线程、消息通道与并发模型。
+  description: Array、Map、Set 及其弱引用版本等集合引用类型的用法与陷阱。
 
 # ========== 计算机网络（不设章：平铺成 1~8 的线性目录） ==========
 # 1~6 篇直接挂一级；7、8 篇分别落在 Ajax / Cookie 下，各自只有一节。

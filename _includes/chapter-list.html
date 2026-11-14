@@ -1,69 +1,167 @@
 {%- comment -%}
-  渲染一级分类下的「章」目录。
+  渲染一级分类下的目录：先「基础」散篇，再「分册」章卡，最后「专题」散篇。
 
   用法：
     {% include chapter-list.html parent="rich-interaction" %}
 
   数据源：_data/categories.yml 中该条目的 children 数组。
-  数组顺序即「第一章 / 第二章」的顺序，改章序只需调整 children 的排列。
 
-  每章显示：章序号、章名（链到章内节目录页）、章描述、节数。
+  ===== 层级与排序 =====
+  1. 只有「已登记在 children 且 >= 2 节」的二级分类才算章；其余文章一律是散篇。
+  2. 章按「章内最早一篇的 date」排序，编号「第 N 章」。
+  3. 散篇按 date 升序。位于第一册之前的散篇归入「基础」，之后的归入「专题」。
+     这样 1.变量 / 2.数据类型 不会再被读成「包含」后面几章：它们是主题级的基础篇，
+     章是与它们并列的更高一层容器，而不是它们的子目录。
 
-  ===== 例外一：只有一节的章不渲染成章 =====
-  章目录本身要点击一次才进得去。如果章里只有一节，读者点进去只看到一条内容，
-  等于凭空多一层。所以这类条目在这里直接跳过，由 category-index.html 的「平铺区」
-  收进文章列表，和「没归章的文章」排在同一条按日期升序的列表里。
-
-   ===== 例外二：0 节的章照常列出，但不给跳转 =====
-  登记了 children 但还没写文章的章，页面上仍然占一行（章序号 + 章名 + 描述），
-  这样读者能看到「这一章规划了、还没写」。但它的聚合页没有被 jekyll-archives
-  生成（该插件只给有文章的分类建页），链接点进去是 404，所以章名渲染成纯文本，
-  不包 <a>。同时不渲染任何状态徽章——「筹备中」这类占位态已经去掉。
-
-  ⚠️ 可见性规则在两处各写了一遍（这里、panel-nav.html 的侧栏章列表），
-     章数统计在 catalog.html，1 节平铺在 category-index.html，
-     改判定条件时必须同时改，否则文章会从页面上消失，或者重新冒出死链。
-
-  章序号单独用一个计数器，跳过的（1 节）条目不占号，
-  所以剩下的章仍然是连续的第一章、第二章……不会出现断号。
+  ===== 例外 =====
+  · 0 节的章仍列在「分册」末尾（「待写」，无链接）。
+  · 1 节的章不渲染成章，该篇按散篇处理。
 {%- endcomment -%}
 
 {%- assign cn_nums = '零,一,二,三,四,五,六,七,八,九,十' | split: ',' -%}
 {%- assign top = site.data.categories | where: 'slug', include.parent | first -%}
-{%- assign chapter_no = 0 -%}
+
+{%- comment -%} 1. 真正的章：登记在 children 且 >= 2 节，按章内最早一篇的日期排序 {%- endcomment -%}
+{%- assign chapter_keys = '' | split: '' -%}
+{%- for child in top.children -%}
+  {%- assign cposts = site.categories[child] -%}
+  {%- assign csize = cposts | size -%}
+  {%- if csize >= 2 -%}
+    {%- assign cfirst = cposts | sort: 'date' | first -%}
+    {%- capture ckey -%}{{ cfirst.date | date: '%Y-%m-%d' }}|{{ child }}{%- endcapture -%}
+    {%- assign chapter_keys = chapter_keys | push: ckey -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- assign chapter_keys = chapter_keys | sort -%}
+{%- assign chapter_slugs = '' | split: '' -%}
+{%- for ckey in chapter_keys -%}
+  {%- assign cparts = ckey | split: '|' -%}
+  {%- assign chapter_slugs = chapter_slugs | push: cparts[1] -%}
+{%- endfor -%}
+
+{%- assign first_chapter_date = '' -%}
+{%- if chapter_keys.size > 0 -%}
+  {%- assign first_chapter_date = chapter_keys | first | split: '|' | first -%}
+{%- endif -%}
+
+{%- comment -%} 2. 把文章分成章成员与散篇，散篇再分「基础 / 专题」 {%- endcomment -%}
+{%- assign pre_posts = '' | split: '' -%}
+{%- assign post_posts = '' | split: '' -%}
+{%- assign all_posts = site.categories[include.parent] | sort: 'date' -%}
+{%- for post in all_posts -%}
+  {%- assign sub = post.categories[1] -%}
+  {%- assign is_chapter = false -%}
+  {%- if sub and chapter_slugs contains sub -%}{%- assign is_chapter = true -%}{%- endif -%}
+  {%- unless is_chapter -%}
+    {%- assign pdate = post.date | date: '%Y-%m-%d' -%}
+    {%- if first_chapter_date != '' and pdate >= first_chapter_date -%}
+      {%- assign post_posts = post_posts | push: post -%}
+    {%- else -%}
+      {%- assign pre_posts = pre_posts | push: post -%}
+    {%- endif -%}
+  {%- endunless -%}
+{%- endfor -%}
+
+<style>
+  .chapter-list .topic-group-heading {
+    font-size: .78rem;
+    letter-spacing: .14em;
+    color: var(--bs-secondary-color, #6c757d);
+    margin: 1.9rem 0 .7rem;
+    padding-bottom: .35rem;
+    border-bottom: 1px solid var(--bs-border-color, #dee2e6);
+  }
+  .chapter-list .topic-group-heading:first-child { margin-top: 0; }
+  .chapter-list .chapter-grid { display: grid; gap: .85rem; }
+  .chapter-list .chapter-card {
+    background: var(--bs-tertiary-bg, #f8f9fa);
+    border: 1px solid var(--bs-border-color, #dee2e6);
+    border-radius: .6rem;
+    padding: 1rem 1.15rem;
+  }
+  .chapter-list .chapter-kicker {
+    font-size: .75rem;
+    letter-spacing: .08em;
+    color: var(--bs-secondary-color, #6c757d);
+    margin-bottom: .2rem;
+  }
+  .chapter-list .chapter-title { font-size: 1.2rem; margin: 0 0 .35rem; }
+  .chapter-list .chapter-title a { text-decoration: none; }
+  .chapter-list .chapter-desc {
+    font-size: .88rem;
+    color: var(--bs-secondary-color, #6c757d);
+    margin: 0 0 .55rem;
+  }
+  .chapter-list .topic-post {
+    border-bottom: 1px solid var(--bs-border-color-translucent, rgba(0, 0, 0, .08));
+  }
+  .chapter-list .topic-post:last-child { border-bottom: 0; }
+  .chapter-list .topic-post a {
+    display: block;
+    padding: .6rem .25rem;
+    font-weight: 500;
+    text-decoration: none;
+  }
+  .chapter-list .topic-post a:hover { text-decoration: underline; }
+</style>
 
 <div class="chapter-list">
-  {%- for chapter_slug in top.children -%}
-    {%- assign chapter = site.data.categories | where: 'slug', chapter_slug | first -%}
-    {%- assign chapter_posts = site.categories[chapter_slug] -%}
-    {%- assign section_count = chapter_posts | size -%}
+  {%- if pre_posts.size > 0 %}
+    <h2 class="topic-group-heading">基础</h2>
+    <div class="topic-post-list">
+      {%- for post in pre_posts %}
+        <div class="topic-post">
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </div>
+      {%- endfor %}
+    </div>
+  {%- endif %}
 
-    {%- comment -%}
-      只有一节的章在这里跳过（由平铺区收走）；0 节的章保留，但下面不渲染链接。
-    {%- endcomment -%}
-    {%- if section_count == 1 -%}{%- continue -%}{%- endif -%}
+  {%- if chapter_slugs.size > 0 %}
+    <h2 class="topic-group-heading">章</h2>
+    <div class="chapter-grid">
+      {%- for slug in chapter_slugs %}
+        {%- assign chapter = site.data.categories | where: 'slug', slug | first -%}
+        {%- assign csize = site.categories[slug] | size %}
+        {%- assign idx = forloop.index %}
+        <section class="chapter-card">
+          <div class="chapter-kicker">第 {% if idx > 10 %}{{ idx }}{% else %}{{ cn_nums[idx] }}{% endif %} 章</div>
+          <h3 class="chapter-title">
+            <a href="{{ chapter.url | relative_url }}">{{ chapter.name | default: slug }}</a>
+          </h3>
+          {%- if chapter.description %}
+            <p class="chapter-desc">{{ chapter.description }}</p>
+          {%- endif %}
+          <span class="badge text-bg-secondary">{{ csize }} 节</span>
+        </section>
+      {%- endfor %}
 
-    {%- assign chapter_no = chapter_no | plus: 1 -%}
+      {%- comment -%} 0 节的章：列在末尾，保留编号与说明，不给链接 {%- endcomment -%}
+      {%- assign chapter_no = chapter_slugs.size -%}
+      {%- for child in top.children %}
+        {%- assign csize = site.categories[child] | size -%}
+        {%- if csize != 0 -%}{%- continue -%}{%- endif -%}
+        {%- assign chapter_no = chapter_no | plus: 1 -%}
+        {%- assign chapter = site.data.categories | where: 'slug', child | first %}
+        <section class="chapter-card">
+          <div class="chapter-kicker">第 {% if chapter_no > 10 %}{{ chapter_no }}{% else %}{{ cn_nums[chapter_no] }}{% endif %} 章 · 待写</div>
+          <h3 class="chapter-title">{{ chapter.name | default: child }}</h3>
+          {%- if chapter.description %}
+            <p class="chapter-desc">{{ chapter.description }}</p>
+          {%- endif %}
+        </section>
+      {%- endfor %}
+    </div>
+  {%- endif %}
 
-    <section class="chapter-item mb-4 pb-3 border-bottom">
-      <h2 class="h4 mb-1">
-        <span class="text-muted me-1">
-          第 {% if chapter_no > 10 %}{{ chapter_no }}{% else %}{{ cn_nums[chapter_no] }}{% endif %} 章
-        </span>
-        {%- if section_count > 0 -%}
-          <a href="{{ chapter.url | relative_url }}">{{ chapter.name }}</a>
-        {%- else -%}
-          <span class="text-muted">{{ chapter.name }}</span>
-        {%- endif -%}
-      </h2>
-
-      {%- if chapter.description %}
-        <p class="text-muted mb-2">{{ chapter.description }}</p>
-      {%- endif %}
-
-      {%- if section_count > 0 %}
-        <span class="badge text-bg-secondary">{{ section_count }} 节</span>
-      {%- endif %}
-    </section>
-  {%- endfor -%}
+  {%- if post_posts.size > 0 %}
+    <h2 class="topic-group-heading">专题</h2>
+    <div class="topic-post-list">
+      {%- for post in post_posts %}
+        <div class="topic-post">
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </div>
+      {%- endfor %}
+    </div>
+  {%- endif %}
 </div>
