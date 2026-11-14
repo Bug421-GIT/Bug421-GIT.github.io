@@ -82,6 +82,74 @@
     {% endfor %}
   {% endunless %}
 
+  <!-- 正文字体：先在渲染前决定用哪套字族，避免「兜底字体画完再换成 Maple」的重排。
+       详见 assets/css/jekyll-theme-chirpy.scss 底部的大段注释：
+         · 只有 localStorage 里记过「字体确实可用」时才加 .maple-font；
+         · 没有这个类时整站用主题原来的 Source Sans Pro / Lato，首帧就是最终样子；
+         · 首次访问在本页后台把 woff2 拉进缓存并写入标记，跳一次页/刷新后即以 Maple 起绘。
+       localStorage 不可用（隐私模式）时静默保持兜底字体。 -->
+  <script>
+    (function () {
+      try {
+        if (window.localStorage.getItem('maple-font') === '1') {
+          document.documentElement.classList.add('maple-font');
+        }
+      } catch (e) {
+        /* localStorage 被禁用，保持兜底字体 */
+      }
+    })();
+  </script>
+
+  <!-- 预加载两个 woff2：没有 .maple-font 时浏览器本不会请求它们，
+       这里主动拉一次，是为了让本页 load 之后 document.fonts.load() 能立即完成、
+       从而写入标记，让下一次导航起就用 Maple。已缓存时是零成本命中。
+       as="font" 必须带 crossorigin，即使同源，否则会被当成普通 fetch 重复下载。 -->
+  <link
+    rel="preload"
+    href="{{ '/assets/fonts/maplen-mono-nf-cn-regular.woff2' | relative_url }}"
+    as="font"
+    type="font/woff2"
+    crossorigin
+  >
+  <link
+    rel="preload"
+    href="{{ '/assets/fonts/maplen-mono-nf-cn-bold.woff2' | relative_url }}"
+    as="font"
+    type="font/woff2"
+    crossorigin
+  >
+  <script>
+    (function () {
+      var root = document.documentElement;
+      /* 注意：这里只能写块注释。站点用 jekyll-compress-html 压缩 HTML，
+         它会把 <script> 里的换行压成空格，行注释 // 会吞掉后面的代码
+         （实测报 Uncaught SyntaxError: Unexpected end of input）。 */
+      if (root.classList.contains('maple-font')) return;
+      if (!window.localStorage || !document.fonts || typeof document.fonts.load !== 'function') return;
+      window.addEventListener(
+        'DOMContentLoaded',
+        function () {
+          /* 只等 400 这一张。Bold 与它是同一条加载管线、同一批预加载，
+             而且 700 的 FontFace 在没人使用时会一直停在 unloaded，
+             如果等两个都 ready 再写标记，标记就永远写不进去。 */
+          document.fonts.load("400 16px 'Maple Mono NF CN'").then(
+            function () {
+              try {
+                window.localStorage.setItem('maple-font', '1');
+              } catch (e) {
+                /* 写不进去就算了，下次照样走兜底 */
+              }
+            },
+            function () {
+              /* 字体拿不到（离线/被拦/老浏览器）：不写标记，永远走兜底 */
+            }
+          );
+        },
+        { once: true }
+      );
+    })();
+  </script>
+
   <!-- Bootstrap -->
   {% unless jekyll.environment == 'production' %}
     <link rel="stylesheet" href="{{ site.data.origin.cors.bootstrap.css }}">
@@ -94,8 +162,10 @@
   {%- comment -%}
     原版此处从 Google Fonts（或其国内镜像）加载 Lato / Source Sans Pro。
     问题：<link rel="stylesheet"> 是阻塞渲染的资源，请求拿不到响应时浏览器会一直白屏等待。
-    实测 fonts.geekzu.org / fonts.loli.net / fonts.googleapis.cn 均不可达（10~16s 后失败），
-    因此这里不再外链字体，改由 _sass 中 $font-family-base 的系统字体栈兜底（中文落到微软雅黑）。
+    国内镜像实测均不可达（10~16s 后失败），因此这里不再外链字体：
+    正文用本仓库 assets/fonts/ 下的 Maple Mono NF CN 子集（@font-face 在
+    assets/css/jekyll-theme-chirpy.scss 里，只有 html.maple-font 时才生效），
+    兜底仍是系统字体栈 Source Sans Pro → 微软雅黑。
   {%- endcomment -%}
 
   <!-- Font Awesome Icons -->

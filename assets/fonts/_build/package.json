@@ -1,0 +1,8 @@
+{
+  "private": true,
+  "description": "Font subsetting tools for assets/fonts. Run: npm install --prefix .",
+  "dependencies": {
+    "fontverter": "^2.0.0",
+    "subset-font": "^2.9.0"
+  }
+}

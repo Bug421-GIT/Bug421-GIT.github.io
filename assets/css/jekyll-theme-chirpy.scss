@@ -1,9 +1,7 @@
 ---
 ---
 
-@use 'abstracts/variables' with (
-  $theme: '{{ site.theme_mode }}'
-);
+@use 'abstracts/variables' with ($theme: '{{ site.theme_mode }}');
 
 /* prettier-ignore */
 @use 'main
@@ -49,4 +47,90 @@ div.highlight > pre.highlight {
 :root[data-bs-theme] div.highlight .err {
   color: inherit;
   background-color: transparent;
+}
+
+/* ===== 正文字体替换：Maple Mono NF CN（只在字体已缓存时启用）===== */
+
+// 字体来自本地包 MapleMono-NF-CN-unhinted.zip（v7.8），只保留 Regular / Bold
+// 两个字重，并按站点实际用字裁剪成 woff2（Regular 约 304 KiB、Bold 约 312 KiB）。
+// 完整字体单个 20 MB，直接引原文件会让首屏多背几十 MB。
+
+// 为什么不用 font-display 硬扛：
+//
+// 换字必然改变行宽。Maple Mono 是等宽字体，拉丁字符步进 0.6em；主题兜底的
+// Source Sans Pro → 微软雅黑，其中 "M" 接近 1em。同一篇文章
+// （/javascript/2022/08/02/2.数据类型.html）在「Maple 生效」与「兜底字体」两种
+// 状态下，整页高度差 445px，40px 的 "MMMMM" 从 51.8px 变成 84.4px。
+//
+// 实测（Edge 157，CDP 限速 60KB/s，用 layout-shift 观测）：
+//   font-display: swap      首屏先画兜底，字体到了再换 → FCP 之后 CLS 0.1287
+//   font-display: optional  同样在字体到达后换了一次 → FCP 之后 CLS 0.1287
+//   font-display: block     文字先不可见，但出现后仍把图片推下去 → CLS 0.1285
+// 也就是说只要「页面首帧用哪套字体」是渲染后才决定的，就一定会动。
+//
+// 所以改成渲染前决定：
+//   1. _includes/head.html 里一段内联脚本读 localStorage['maple-font']，
+//      命中才给 <html> 加 .maple-font；没有这个类时整站保持主题原来的
+//      Source Sans Pro / Lato，首访、清缓存后、禁用 localStorage 都是这一种，
+//      不存在「先兜底后换字」；
+//   2. 同一页把两个 woff2 预加载进 HTTP 缓存，load 后调 document.fonts.load()
+//      确认真的能用，成功才写入 localStorage；之后站内跳转、再次访问都会在
+//      第一帧就用 Maple，零重排；
+//   3. 字体加载失败（离线、被拦截、老浏览器）就永远不写标记，站点一直是兜底栈。
+//
+// 代价：首次访问落地页显示的是 Source Sans Pro / 微软雅黑，跳一次页（或刷新）后
+// 才是 Maple。这是「零位移」与「首访即见目标字体」之间必须选一个。
+//
+// @font-face 的 font-display 用 block：有 .maple-font 的前提下字体通常已缓存，
+// block 只是缓存被清空时的保险——宁可短暂无字，也不出现「先兜底再换字」的重排。
+@font-face {
+  font-family: 'Maple Mono NF CN';
+  src: url('/assets/fonts/maplen-mono-nf-cn-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Maple Mono NF CN';
+  src: url('/assets/fonts/maplen-mono-nf-cn-bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: block;
+}
+
+// Bootstrap 的 code / pre / kbd 走这个变量
+html.maple-font {
+  --bs-font-monospace: 'Maple Mono NF CN', SFMono-Regular, Menlo, Monaco, Consolas,
+    'Liberation Mono', 'Courier New', monospace;
+}
+
+// 主题里所有吃到 $font-family-base / $font-family-heading 的规则，以及几处
+// 把 Lato / Oswald / sans-serif 写死的规则，全部列在这里。
+// 没有 .maple-font 时这些规则一条都不生效。
+html.maple-font body,
+html.maple-font h1,
+html.maple-font h2,
+html.maple-font h3,
+html.maple-font h4,
+html.maple-font h5,
+html.maple-font h6,
+html.maple-font header .post-desc,
+html.maple-font #toc-bar .label,
+html.maple-font #search-results a,
+html.maple-font kbd,
+html.maple-font .pagination,
+html.maple-font #archives .date.day,
+html.maple-font .tag span,
+html.maple-font #topbar-title,
+html.maple-font #notification.toast .toast-body,
+html.maple-font #toc-popup .header .label,
+html.maple-font #toc-popup #toc-popup-content,
+html.maple-font #toc-solo-trigger .label {
+  font-family: 'Maple Mono NF CN', 'Source Sans Pro', 'Microsoft Yahei', sans-serif;
+}
+
+// 分享到 Mastodon 的 web component 用自定义属性传字体，shadow DOM 里不吃外面的规则
+html.maple-font .share-mastodon {
+  --wc-stm-font-family: 'Maple Mono NF CN', 'Source Sans Pro', 'Microsoft Yahei', sans-serif;
 }
